@@ -1,2 +1,2 @@
 # ConnectingKONNEXIO
-# Fanshawe BIA Capstone Project
+Fanshawe BIA Capstone Project
