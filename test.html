@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MH-Care | St. Joseph&#039;s Health Care London</title>
+    <link rel="icon" href="https://www.sjhc.london.on.ca/themes/custom/de_theme/favicon.ico" type="image/vnd.microsoft.icon"/>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    
+    <!-- Google Translate API script -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</head>
+<body>
+    <header id="header">
+        <div class="layout-header">
+            <div block="block-config-pages" region="masthead_actions" class="config_pages">
+                <div class="home-sjhc">
+                    <a href="#" title="Home" rel="home">
+                        <img alt="The logo for St. Joseph's Health Care London" src="https://www.sjhc.london.on.ca/sites/default/files/2019-10/logo.svg" loading="lazy" class="home-image"/>
+                    </a>
+
+                    <a href="#" title="Foundation" rel="foundation">
+                        <img alt="The logo for St. Joseph's Health Care Foundation." src="https://www.sjhc.london.on.ca/sites/default/files/2019-10/logo-foundation.svg" loading="lazy" class="home-image1"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <!-- Language Selector -->
+        <div class="language-selector">
+        <div id="google_translate_element"></div></div>
+
+        <script type="text/javascript">
+        function changeLanguage() {
+            // Get the selected language code from the dropdown
+            var selectedLanguage = document.getElementById('targetLanguage').value;
+        
+            if (typeof google.translate.TranslateElement != 'undefined') {
+                new google.translate.TranslateElement({
+                    pageLanguage: selectedLanguage,
+                    includedLanguages: 'en,fr'
+                }, 'google_translate_element');
+            }
+        }
+        
+        // Initialize the Google Translate widget on page load
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fr'
+            }, 'google_translate_element');
+        }
+        </script>
+
+        <!-- Breadcrumb Navigation -->
+        <ul class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Areas of Care</a></li>
+            <li><a href="#">MH-Care</a></li>
+        </ul>
+    </nav>
+    <br>
+
+    <div class="main-container">
+
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+        <button class="back-button">Back to Areas of Care</button>
+        <div class="categories">
+            <ul>
+                <li class="main-category">
+                    <a href="#">Mental Health</a>
+                    <ul class="sub-categories">
+                        <li><a href="#">Finding Help</a></li>
+                        <li><a href="#">Brochures</a></li>
+                        <li><a href="#">Your Mental Health Questionnaire</a></li>
+                    </ul>
+                </li>
+                <li class="main-category">
+                    <a href="#">Services</a>
+                    <ul class="sub-categories">
+                        <li class="sub-category">
+                            <a href="#">Psychiatry</a>
+                            <ul>
+                                <li><a href="appointment.html">Book appointments</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="main-category">
+                    <a href="#">News</a>
+                    <ul class="sub-categories">
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+                <li class="main-category">
+                    <a href="#">About</a>
+                    <ul class="sub-categories">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </li>
+                <br>
+                <li class="main-category">
+                    <a href="login.php">Staff Login</a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <!-- Main Welcome Content -->
+        <h1>Welcome to MH-Care</h1>
+        <p>
+            At St. Joseph’s we are committed to helping individuals with mental illness achieve their personal goals while supporting the patient’s family/support network. Our vision at St. Joseph’s is to earn complete confidence in the care we provide and to make a lasting difference in the quest to live fully. 
+            <br>
+            <br>            
+            Mental health care has seen a vast amount of change in our community. In June 2013, St. Joseph’s opened Southwest Centre for Forensic Mental Health Care in Elgin County and in November 2014, two of St. Joseph’s health care facilities – Parkwood Hospital and Regional Mental Health Care London – came together in one location under one new name: Parkwood Institute, with the opening of the new Mental Health Care Building.
+            <br>
+            <br>
+            Southwest Centre for Forensic Mental Health Care is a facility for individuals with a mental illness who have come into contact with the law.
+            <br>
+            <br>
+            The Mental Health Care Building at Parkwood Institute is dedicated to those with severe and persistent mental illness in need of longer-stay specialized mental health care.
+        </p>
+    </main>
+    </div>
+
+    <script type="text/javascript">
+        // Highlight the current navigation item
+        $('.sub-categories li').hover(function() {
+            $(this).parents('.main-category').children('a').addClass('active');
+        }, function() {
+            $(this).parents('.main-category').children('a').removeClass('active');
+        });
+    </script>
+</body>
+</html>
