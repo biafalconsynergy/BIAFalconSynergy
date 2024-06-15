@@ -1,140 +1,308 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.navbar-brand img {
+    max-width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.logo {
-    height: 80px;
+.navbar-nav .nav-link {
+    color: #ffffff; /* Set text color */
+    margin-right: 1em;
+    margin-left: 1em;
 }
 
-.nav-link {
-    color: #000;
-    margin-right: 20px;
-    text-decoration: none;
+/* Small devices (576px and up) */
+@media (min-width: 576px) {
+    .navbar-nav .nav-link {
+        font-size: medium;
+    }
 }
 
-.nav-link:hover {
-    text-decoration: underline;
+/* Medium devices (768px and up) */
+@media (min-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: x-large;
+    }
 }
+
+.navbar-nav .nav-link:hover {
+    color: #ff2727; /* Set hover text color */
+}
+
+.dropdown-menu .dropdown-item {
+    color: #000000; /* Set dropdown item text color */
+    font-size: larger;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #2f2f2f; /* Set dropdown item hover background color */
+    color: #ffffff; /* Set dropdown item hover text color */
+    font-size: larger;
+}
+
+/* Hide dropdown menu by default */
+.dropdown-menu {
+    display: none;
+}
+
+/* Display dropdown menu on hover */
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute; /* Position relative to .carousel-item */
+    top: 50%; /* Move to the vertical center */
+    left: 50%; /* Move to the horizontal center */
+    transform: translate(-50%, -50%); /* Center the caption precisely */
+    text-align: center; /* Center text horizontally */
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    color: white; /* Example text color */
+    width: 100%; /* Full width of parent */
+    height: 100%;
+    padding-top: 20%;
+}
+
+.carousel-caption h1 {
+    font-size: 5rem; /* Example font size */
+    margin: 0; /* Remove default margin */
+}
+
 
 .image-container {
     position: relative;
-    text-align: center;
-    color: white;
     width: 100%;
-    height: auto;
+    padding-top: 100%; /* Adjust this to control the aspect ratio */
+    overflow: hidden;
 }
-
-.transparent-card {
+.image-container img {
     position: absolute;
-    top: 50%;
-    left: 30%;
-    width: 500px; /* Set the width of the square */
-    height: 500px; /* Set the height of the square */
-    background-color: rgba(255, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, -50%);
-    border-radius: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
 }
 
-.firstSection {
-    background: url('https://konnexio.com/wp-content/themes/KXIO2/img/slidePic1.jpg') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.firstSection h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
+.row.no-gutters > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-.firstSection .btn-danger {
-    background-color: #ff0000;
-    border-color: #ff0000;
-}
-
-.firstSection .btn-light {
-    background-color: #ffffff;
-    border-color: #ffffff;
-    color: #000000;
-}
-
-.firstSection .btn-light i {
-    color: #000000;
-}
-
-.dropdown-item:hover {
-    background-color: #f8f9fa;
-}
-
-.dropdown-menu {
+.card {
+    position: relative;
+    width: 100%; /* Adjust as necessary */
+    aspect-ratio: 4/3;
+    perspective: 1000px; /* Added perspective for 3D effect */
+    overflow: hidden;
+    margin: 0;
     border-radius: 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: none;
 }
 
-.flip-card {
-    background-color: transparent;
-    width: 400px;
-    height: 400px;
-    perspective: 1000px;
-    margin: 20px;
-}
-
-.flip-card-image {
-    background-color: transparent;
-    width: 400px;
-    height: 400px;
-    perspective: 1000px;
-}
-  
-.flip-card-inner {
+.card-inner {
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-  
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Flip the card on hover */
 }
-  
-.flip-card-front, .flip-card-back {
+
+.card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-  
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
+
+.card-back {
+    transform: rotateY(180deg); /* Initially hidden on the back */
 }
-  
-.flip-card-back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Change the color to contrast with the image */
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+}
+
+.sec2a {
+    background-color: rgba(18, 52, 139, 0.6); /* semi-transparent background */
+    color: rgb(255, 255, 255); /* Change the color to contrast with the image */
+}
+
+.sec2b {
+    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
+    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
+}
+
+.sec2c {
+    background-color: rgba(18, 52, 139, 0.6); /* semi-transparent background */
+    color: rgb(255, 255, 255); /* Change the color to contrast with the image */
+}
+
+.sec2d {
+    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
+    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
+}
+
+.stretch {
+    padding-top: 30%;
+    position: relative;
+    overflow: hidden;
+}
+
+.transparent-overlay-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.7); /* 70% transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-text-left {
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+}
+
+.overlay-text-left p {
+    font-size: 1.1rem;
+    padding-left: 6em;
+    padding-right: 6em;
+    text-align: left;
+}
+
+.transparent-overlay-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* 70% transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-text-right {
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
+}
+
+.overlay-text-right p {
+    font-size: 1.1rem;
+    padding-left: 6em;
+    padding-right: 6em;
+    text-align: left;
+}
+
+.container-fluid h1 {
+    text-align: center;
+}
+
+.sec4, .sec5 {
+    aspect-ratio: 5/3;
+}
+
+.sec4a {
+    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
+    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
+}
+
+.sec4b {
+    background-color: rgba(18, 52, 139, 0.6); /* semi-transparent background */
+    color: rgb(255, 255, 255); /* Change the color to contrast with the image */
+}
+
+.sec4c {
+    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
+    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
+}
+
+.partners {
+    background-color: #1e3e5e; /* Change to your desired background color */
+    color: white; /* Change text color if needed */
+}
+
+.partners-image {
+    color: white; /* Change the color to contrast with the image */
+    background-color: rgba(0, 0, 0, 0); /* removing background */
+}
+
+.partners-title {
+    margin: 0; /* Remove default margin from h1 */
+    font-size: 4em; /* Adjust font size as needed */
+}
+
+.sec6a {
+    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
+    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
+}
+
+.sec6b {
+    background-color: rgba(18, 52, 139, 0.6); /* semi-transparent background */
+    color: rgb(255, 255, 255); /* Change the color to contrast with the image */
+}
+
+.sec6c {
+    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
+    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
+}
+
+.sec6d {
+    background-color: rgba(18, 52, 139, 0.6); /* semi-transparent background */
+    color: rgb(255, 255, 255); /* Change the color to contrast with the image */
 }
 
 .footer {
-    background-color: #343a40;
+    background-color: #1e3e5e;
     color: white;
-    padding: 40px 0;
+    padding: 40px;
 }
 .footer a {
     color: #f8f9fa;
     text-decoration: none;
 }
 .footer a:hover {
-    color: #adb5bd;
+    color: #bdadad;
 }
 .footer .footer-heading {
     font-weight: bold;
@@ -142,4 +310,13 @@ body {
 }
 .footer .footer-section {
     margin-bottom: 30px;
+}
+
+.company-details p {
+    font-size: 1.2em;
+}
+
+.f-icon {
+    margin-right: 1em;
+    font-size: 2em;
 }
