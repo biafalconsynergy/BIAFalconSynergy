@@ -16,8 +16,8 @@
 
 //Credentials to stablish the connection
 $servername = "localhost";
-$username = "konnexio";
-$password = "BIA2024$";
+$username = "root";
+$password = "";
 $dbname = "capstonetest";
 
 //Connection
