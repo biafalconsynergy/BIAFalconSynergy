@@ -4,7 +4,7 @@
 }
 
 .navbar-nav .nav-link {
-    color: #ffffff; /* Set text color */
+    color: #000000; /* Set text color */
     margin-right: 1em;
     margin-left: 1em;
 }
@@ -59,17 +59,21 @@
     transform: translate(-50%, -50%); /* Center the caption precisely */
     text-align: center; /* Center text horizontally */
     background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
-    color: white; /* Example text color */
+    color: white; /* text color */
     width: 100%; /* Full width of parent */
     height: 100%;
     padding-top: 20%;
 }
 
 .carousel-caption h1 {
-    font-size: 5rem; /* Example font size */
-    margin: 0; /* Remove default margin */
+    font-size: 5rem; /* font size */
+    margin: 0; /* set margin */
 }
 
+.carousel-caption p {
+    font-size: 2rem; /* font size */
+    padding-block: 2rem; /* set padding */
+}
 
 .image-container {
     position: relative;
@@ -156,105 +160,139 @@
     background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
 }
 
-.sec2a {
-    background-color: rgba(18, 52, 139, 0.6); /* semi-transparent background */
-    color: rgb(255, 255, 255); /* Change the color to contrast with the image */
-}
-
-.sec2b {
-    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
+.sec2a, .sec2c {
+    background-color: rgba(255, 255, 255, 0.8); /* semi-transparent background */
     color: rgb(0, 0, 0); /* Change the color to contrast with the image */
 }
 
-.sec2c {
-    background-color: rgba(18, 52, 139, 0.6); /* semi-transparent background */
+.sec2b, .sec2d {
+    background-color: rgba(55, 55, 55, 0.8); /* semi-transparent background */
     color: rgb(255, 255, 255); /* Change the color to contrast with the image */
 }
 
-.sec2d {
-    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
-    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
-}
+.sec3 p { 
+    display: block;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    font-size: 2em;
+  }
+
+.container-fluid hr { /* single lines to separate the sections */
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+    border-style: inset;
+    border-width: 2px;
+  } 
 
 .stretch {
-    padding-top: 30%;
+    padding-top: 40%;
     position: relative;
     overflow: hidden;
 }
 
-.transparent-overlay-left {
+.transparent-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 100%;
     height: 100%;
-    background-color: rgba(255, 0, 0, 0.7); /* 70% transparency */
+    background-color: rgba(0, 0, 0, 0.5); /* 70% transparency */
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.overlay-text-left {
+.sec3a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align items to the bottom */
+    align-items: flex-start;  /* Align items to the left */
+    width: 50%;
+    padding: 5%;
+}
+
+.sec3a h1 {
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+}
+
+.sec3a p {
     font-size: 1.5em;
     color: rgb(255, 255, 255);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.container-fluid h1, h3 {
     text-align: center;
-    padding: 10px;
 }
 
-.overlay-text-left p {
-    font-size: 1.1rem;
-    padding-left: 6em;
-    padding-right: 6em;
-    text-align: left;
-}
-
-.transparent-overlay-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.7); /* 70% transparency */
+.sec3b {
+    position: relative;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%; /* Adjust as necessary */
+    aspect-ratio: 4/3;
+    padding: 10%;
 }
 
-.overlay-text-right {
+.sec3b h1 {
+    font-size: 3em;
+    color: rgb(0, 0, 0);
+}
+
+.sec3b p {
     font-size: 1.5em;
     color: rgb(0, 0, 0);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.sec3b img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec4 {
+    position: relative;
+    aspect-ratio: 1/1;
+    padding: 5%;
+}
+
+.sec4 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec4-body {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 10px;
+    color: white; /* Change the color to contrast with the image */
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
 }
 
-.overlay-text-right p {
-    font-size: 1.1rem;
-    padding-left: 6em;
-    padding-right: 6em;
-    text-align: left;
-}
-
-.container-fluid h1 {
-    text-align: center;
-}
-
-.sec4, .sec5 {
-    aspect-ratio: 5/3;
-}
-
-.sec4a {
-    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
-    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
-}
-
-.sec4b {
-    background-color: rgba(18, 52, 139, 0.6); /* semi-transparent background */
-    color: rgb(255, 255, 255); /* Change the color to contrast with the image */
-}
-
-.sec4c {
-    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
-    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
+.sec4-body h1 {
+    font-size: 3em;
+    font-weight: bold;
 }
 
 .partners {
@@ -270,26 +308,6 @@
 .partners-title {
     margin: 0; /* Remove default margin from h1 */
     font-size: 4em; /* Adjust font size as needed */
-}
-
-.sec6a {
-    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
-    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
-}
-
-.sec6b {
-    background-color: rgba(18, 52, 139, 0.6); /* semi-transparent background */
-    color: rgb(255, 255, 255); /* Change the color to contrast with the image */
-}
-
-.sec6c {
-    background-color: rgba(255, 255, 255, 0.6); /* semi-transparent background */
-    color: rgb(0, 0, 0); /* Change the color to contrast with the image */
-}
-
-.sec6d {
-    background-color: rgba(18, 52, 139, 0.6); /* semi-transparent background */
-    color: rgb(255, 255, 255); /* Change the color to contrast with the image */
 }
 
 .footer {
