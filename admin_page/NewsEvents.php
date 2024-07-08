@@ -2,13 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Careers</title>
+
+    <!-- References Top -->
+    <?php include 'ReferencesTop.php'; ?>
+    <!-- End of References -->
+
 </head>
-<body>
-  <?php include 'menu.php'; ?>
-    <h1>This is the News and Events page</h1>
+
+<body id="page-top">
+
+    <?php
+        //DB Connection
+        include 'Connection.php';
+
+        //Variables particular to this page
+        $tableTitles = ['News and Events Id', 'User id', 'Title', 'Content', 'Content Type', 'Date Posted','Image', 'Is active'];
+        $tableColumnNames = ['newsid', 'userid', 'title', 'content', 'content_type', 'posted_date','image','isactive'];
+        $tableName = 'News and Events';
+        $tableDbName = 'news_events';
+
+        //Creates and assigns the query 
+        $query = 'SELECT ' . implode(',', $tableColumnNames) . ' FROM ' . $tableDbName;
+        $result = $conn->query($query);
+
+        //Page standard body
+        include 'AdminPagesBody.php';
+    ?>
 </body>
+</html>
