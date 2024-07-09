@@ -16,9 +16,9 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Admin.php">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
+                <div class="sidebar-brand-icon rotate-n-0">
+                    <!--<i class="fas fa-laugh-wink"></i>-->
+                    <img src="smallLogo2.png" class="img-fluid" alt="Company Logo" width="30" height="auto">                </div>
                 <div class="sidebar-brand-text mx-3">Menu</div>
             </a>
 
@@ -33,21 +33,21 @@
             <!-- Nav Item - Admin Panel -->
             <li class="nav-item">
                 <a class="nav-link" href="Admin.php">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-home"></i>
                 <span>Home</span></a>
             </li>
 
             <!-- Nav Item - User Management -->
             <li class="nav-item">
                 <a class="nav-link" href="UserManagement.php">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-user"></i>
                     <span>Users</span></a>
             </li>
 
             <!-- Nav Item - Log Out -->
             <li class="nav-item">
                 <a class="nav-link" href="Login.php">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Log Out</span></a>
             </li>
 
@@ -62,29 +62,36 @@
             <!-- Nav Item - Case Studies -->
             <li class="nav-item">
                 <a class="nav-link" href="CaseStudy.php">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-star"></i>
                 <span>Case Studies</span></a>
             </li>
 
             <!-- Nav Item - Careers -->
             <li class="nav-item">
                 <a class="nav-link" href="Careers.php">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-smile"></i>
                 <span>Careers</span></a>
             </li>
 
             <!-- Nav Item - Testimonials -->
             <li class="nav-item">
                 <a class="nav-link" href="Testimonials.php">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-bullhorn"></i>
                 <span>Testimonials</span></a>
             </li>
 
             <!-- Nav Item - News and events -->
             <li class="nav-item">
                 <a class="nav-link" href="NewsEvents.php">
-                    <i class="fas fa-fw fa-table"></i>
+                    <i class="fas fa-fw fa-rss"></i>
                 <span>News & Events</span></a>
+            </li>
+
+            <!-- Nav Item - Support Tickets -->
+                <li class="nav-item">
+                <a class="nav-link" href="SupportTicket.php">
+                    <i class="fas fa-fw fa-exclamation-triangle"></i>
+                <span>Support Tickets</span></a>
             </li>
 
             <!-- Divider -->

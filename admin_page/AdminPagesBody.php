@@ -24,7 +24,7 @@
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
-                <!-- DataTables Example -->
+                <!-- DataTables -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <?php
@@ -41,8 +41,10 @@
                                                 for ($i=0; $i < count($tableTitles); $i++) {
                                                     echo '<th scope="col">'.$tableTitles[$i].'</th>';
                                                 }
-                                                echo '<th scope="col">Action</th>
-                                            </tr>
+                                                if ($tableDbName != 'Support_Ticket') {
+                                                    echo '<th scope="col">Action</th>';
+                                                }
+                                            echo'</tr>
                                         </thead>
                                         <tbody>';
                                     
@@ -53,7 +55,7 @@
                                           for ($i=0; $i < count($tableColumnNames); $i++){
                                               echo '<td>'.$row[$tableColumnNames[$i]].'</td>';
                                           }
-                                          echo' <td><a href="#">Edit</a></td>
+                                          echo' <td><a href="CaseStudyEdit.php">Edit</a></td>
                                                 </tr>';
                                       }
                                       echo '</tbody>
@@ -77,7 +79,7 @@
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <footer class="sticky-footer bg-white">
+        <footer class="sticky-footer" background-color:#F0F1F5>
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
                     <span>Copyright &copy; Konnexio 2024</span>
