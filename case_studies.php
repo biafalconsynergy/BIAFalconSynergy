@@ -1,19 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "konnexio";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "SELECT * FROM case_study where isactive = 1";
-$result = $conn->query($sql);
+	include 'db_connection.php'
 ?>
 
 <!DOCTYPE html>
