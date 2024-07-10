@@ -8,6 +8,18 @@
 
 <body>
 
+<?php
+session_start();
+if(!isset($_SESSION['first_name'])) {
+    header('Location: Login.php');
+
+    exit();
+}
+?>
+
+
+
+	
 <!-- Page Wrapper -->
 <div id="wrapper">
 
@@ -26,12 +38,11 @@
 
                 <!-- DataTables -->
                 <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <?php
-
-                        echo '<h6 class="m-0 font-weight-bold text-primary">'.$tableName.'</h6>';
-                        ?>
-                        <a class="btn btn-primary" href="CaseStudyCreate.php">Create</a>
+                    <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                        <h6 class="m-0 font-weight-bold text-primary"><?php echo $tableName; ?></h6>
+                        <div class="top-right">
+                            Logged in as: <?php echo $_SESSION['first_name']; ?>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

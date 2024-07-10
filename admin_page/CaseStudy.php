@@ -15,11 +15,11 @@
 
     <?php
         //DB Connection
-        include 'Connection.php';
+        include 'db_connection.php';
 
         //Variables particular to this page
-        $tableTitles = ['Case id', 'User id', 'Title', 'Content', 'Date Posted', 'Image', 'Is active'];
-        $tableColumnNames = ['caseid', 'userid', 'title', 'content', 'posted_date', 'image', 'isactive'];
+        $tableTitles = [ 'User id', 'Title', 'Content', 'Date Posted', 'Image', 'Is active'];
+        $tableColumnNames = [ 'userid', 'title', 'content', 'posted_date', 'image', 'isactive'];
         $tableName = 'Case Studies';
         $tableDbName = 'case_study';
         
