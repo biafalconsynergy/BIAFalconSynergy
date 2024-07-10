@@ -1,23 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">User name</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-      </div>
-      <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">Password</label>
-        <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
-      </div>
-        <!--Logout-->
-        <a class="btn btn-primary" href="Admin.php">Log In</a><br><br>
-        <!--End Logoout-->
-</body>
+<?php
+session_start();
+include 'db_connection.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+	
+
+    $sql = "SELECT username, first_name, password FROM user_credentials JOIN user ON user_credentials.userid = user.userid WHERE username='$username'";
+
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+		$row = $result->fetch_assoc();
+        $hashed_password = $row['password'];
+		
+		if (password_verify($password, $hashed_password)) {
+			session_start();
+			$_SESSION['loggedin'] = true;
+			$_SESSION['username'] = $username;
+			$_SESSION['first_name'] = $row['first_name'];
+            header("Location: Admin.php");
+		
+    } else {
+            // Password is incorrect
+            $error = "Invalid username or password.";
+            header("Location: LoginPage.php?error=" . urlencode($error));
+            exit;
+	}
+    } else {
+        // Username not found
+        $error = "Invalid username or password.";
+        header("Location: LoginPage.php?error=" . urlencode($error));
+        exit;
+    }
+}
+
+$conn->close();
+?>
+
+
+
+
+
+
+

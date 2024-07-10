@@ -46,7 +46,7 @@
 
             <!-- Nav Item - Log Out -->
             <li class="nav-item">
-                <a class="nav-link" href="Login.php">
+                <a class="nav-link" href="LoginPage.php">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Log Out</span></a>
             </li>

@@ -9,8 +9,19 @@
     <!-- End of References --> 
 </head>
 <body>
+
+<?php
+session_start();
+if(!isset($_SESSION['first_name'])) {
+    header('Location: Login.php');
+
+    exit();
+}
+?>
+
+
 <div>
-    <h1>Welcome to the Admin Panel</h1>
+    <h1>Welcome to the Admin Panel, <?php echo $_SESSION['first_name']; ?></h1>
 </div>
 
     <!-- Sidebar -->
