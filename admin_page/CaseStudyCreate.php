@@ -2,16 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>CaseStudies</title>
+
+    <!-- References Top -->
+    <?php include 'ReferencesTop.php'; ?>
+    <!-- End of References -->
+
 </head>
 
-<body>
+<body id="page-top">
 
-    <?php 
+    <?php
+        //DB Connection
+        include 'Connection.php';
+
+        //Variables particular to this page
+        $Date = date('Y-m-d H:i:s');
+        $tableTitles = ['Case id', 'User id', 'Title', 'Content', 'Date Posted', 'Image', 'Is active'];
+        $tableColumnNames = ['caseid', 'userid', 'title', 'content', 'posted_date', 'image', 'isactive'];
+        $tableDefaultValues = ['','userid', '', '', $Date, '', '0'];
+        $tableName = 'Case Studies';
+        $tableDbName = 'case_study';
+        $id ='';
+        
+    ?>
+
+<?php 
         //Creates and assigns the query 
-        $query = 'SELECT ' . implode(',', $tableColumnNames) . ' FROM ' . $tableDbName . ' WHERE ' .$tableColumnNames[0].'='.$id;
-        $result = $conn->query($query);
+        //$query = 'SELECT ' . implode(',', $tableColumnNames) . ' FROM ' . $tableDbName . ' WHERE ' .$tableColumnNames[0].'='.$id;
+        //$result = $conn->query($query);
     ?>
 
     <!-- Page Wrapper -->
@@ -39,40 +59,14 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <!--Table-->
-                            <?php
-                                echo '<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                        <thead>
-                                            <tr>';
-                                                for ($i=0; $i < count($tableTitles); $i++) {
-                                                    echo '<th scope="col">'.$tableTitles[$i].'</th>';
-                                                }
-                                            echo'</tr>
-                                        </thead>
-                                        <tbody>';
-                                    
-                                    //Shows the result in the table previously created
-                                    while ($row = $result->fetch_assoc()) {
-                                        //  echo '<td>'.$row['$tableColumnNames[$i]'].'</td>
-                                        echo '<tr>';
-                                        for ($i=0; $i < count($tableColumnNames); $i++){
-                                            echo '<td>'.$row[$tableColumnNames[$i]].'</td>';
-                                        }
-                                        echo' </tr>';
-                                    }
-                                    echo '</tbody>
-                                        </table>';
-                                // <!--End of Table-->
-                                ?>
-                                <br><br>
                                 <?php 
                                     //<!--Form-->
-                                    $result = $conn->query($query);
-                                    $row = $result->fetch_assoc();
+                                    //$result = $conn->query($query);
+                                    //$row = $result->fetch_assoc();
                                     for ($i=0; $i < count($tableColumnNames); $i++){
                                     echo '<div class="mb-3">
                                     <label for="formGroupExampleInput" class="form-label">'.$tableTitles[$i].'</label>
-                                    <input type="text" class="form-control" id="formGroupExampleInput'.$i.'" value ="'.$row[$tableColumnNames[$i]].'">
+                                    <input type="text" class="form-control" id="formGroupExampleInput'.$i.'" value ="'.$tableDefaultValues[$i].'">
                                     </div>';
                                     }
                                     echo '
@@ -80,10 +74,10 @@
                                     <!--End of Form-->';
 
                                     //deletes the information stored in $result
-                                    $result->free();
+                                    //$result->free();
                         
                                     //Close the connection
-                                    $conn->close();   
+                                    //$conn->close();   
                                 ?>
 
                         </div>
@@ -112,7 +106,7 @@
     </div>
     <!-- End of Page Wrapper -->
 
-    <?php include 'ReferencesBottom.php' ?>
+    <?php include 'ReferencesBottom.php'?>
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>

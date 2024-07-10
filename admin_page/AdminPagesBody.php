@@ -28,8 +28,10 @@
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
                         <?php
+
                         echo '<h6 class="m-0 font-weight-bold text-primary">'.$tableName.'</h6>';
                         ?>
+                        <a class="btn btn-primary" href="CaseStudyCreate.php">Create</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -93,6 +95,11 @@
 
 </div>
 <!-- End of Page Wrapper -->
+
+<?php include 'ReferencesBottom.php'?>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
 
 </body>
 </html>
