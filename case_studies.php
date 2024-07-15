@@ -1,63 +1,93 @@
 <?php
-	include 'db_connection.php'
+	include 'db_connection.php';
+
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
+
+	$sql = "SELECT * FROM case_study WHERE isactive = 1";
+	$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>KONNEXIO</title>
+    <title>KONNEXIO | Case Studies</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
 
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="konnexio-icon.png" type="image/vnd.microsoft.icon" />
 
-	<!-- put JS library first  --> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>	
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     
-<script>
-$(document).ready(function() {
-    $('.learn-more-btn').click(function() {
-        var title = $(this).data('title');
-        $('#caseStudyTitle').val(title);
-        $('#emailModal').modal('show');
-    });
+    <script>
+    $(document).ready(function() {
+        $('.learn-more-btn').click(function() {
+            var title = $(this).data('title');
+            $('#caseStudyTitle').val(title);
+            $('#emailModal').modal('show');
+        });
 
-    $('#emailForm').submit(function(event) {
-        event.preventDefault();
-        var formData = $(this).serialize(); // Serialize form data
+        $('#emailForm').submit(function(event) {
+            event.preventDefault();
+            var formData = $(this).serialize(); // Serialize form data
 
-        $.ajax({
-            type: 'POST',
-            url: 'handle_email.php', // PHP script to handle email
-            data: formData, // Send serialized form data
-            success: function(response) {
-                alert(response); // Display response from PHP script
-                $('#emailModal').modal('hide');
-            },
-            error: function(xhr, status, error) {
-                console.error(xhr.responseText); // Log the detailed error
-                alert('Error submitting email. Please try again.');
-            }
+            $.ajax({
+                type: 'POST',
+                url: 'handle_email.php', // PHP script to handle email
+                data: formData, // Send serialized form data
+                success: function(response) {
+                    alert(response); // Display response from PHP script
+                    $('#emailModal').modal('hide');
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText); // Log the detailed error
+                    alert('Error submitting email. Please try again.');
+                }
+            });
         });
     });
-});
-</script>
+    </script>
 
+    <style>
+        #main-content {
+            margin-top: 20px; 
+        }
+        .section-separator {
+            margin-top: 40px; /* Added margin to separate sections */
+        }
+    </style>
+	
 </head>
 
 <body>
 	<!--Header Data-->
     <?php include 'header.php'; ?>
 
-    <main>
-        <!--Third Section (Image Containers)-->
-        <section class="container">
+    <main id="main-content">
+		<!--Third Section (Image Containers)-->
+		<section class="container-fluid sec3 p-5 bg-light text-dark">
+			<hr>
+			<h1 class="text-center text-black font-weight-bold">Case Studies</h1>
+			<p><i>Discover how Konnexio Inc.transforms intricate challenges into remarkable successes, optimizing client operations and pioneering advancements across the industry</i></p>
+			<hr>
+		</section>
+
+        <section class="container section-separator">
             <?php
             // Check if there are any rows in the result set
             if ($result->num_rows > 0) {
@@ -67,16 +97,14 @@ $(document).ready(function() {
                     <div class="row mb-4">
                         <div class="col-md-6">
                             <div class="sec3b bg-light">
-                                <img src="image/<?php echo $row['image']; ?>" alt="Case Study Image"
-                                    class="img-fluid">
+                                <img src="upload/<?php echo $row['image']; ?>" alt="Case Study Image" class="img-fluid">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="sec3b bg-light p-3">
                                 <h2><?php echo $row["title"]; ?></h2>
                                 <p><?php echo $row["content"]; ?></p>
-                                <button class="btn btn-danger btn-lg learn-more-btn"
-                                    data-title="<?php echo $row['title']; ?>">Learn More</button>
+                                <button class="btn btn-danger btn-lg learn-more-btn" data-title="<?php echo $row['title']; ?>">Learn More</button>
                             </div>
                         </div>
                     </div>
@@ -102,7 +130,7 @@ $(document).ready(function() {
                                 <label for="emailInput" class="form-label">Email address</label>
                                 <input type="email" class="form-control" id="emailInput" name="email" required>
                             </div>
-                            <input type="hidden" id="caseStudyTitle">
+                            <input type="hidden" id="caseStudyTitle" name="case_study_title">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
@@ -111,8 +139,8 @@ $(document).ready(function() {
         </div>
     </main>
 
-  <!--footer data -->
-  <?php include 'footer.php'; ?>  
+    <!--footer data -->
+    <?php include 'footer.php'; ?>  
 
 </body>
 
