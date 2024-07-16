@@ -47,19 +47,19 @@
                         <form action="email.php" method="post">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input type="text" class="form-control mb-4" name="fullname" id="fullname" placeholder="Full Name">
+                                <input type="text" class="form-control mb-4" name="fullname" id="fullname" placeholder="Full Name" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control mb-4" name="email" id="email" placeholder="Enter Email">
+                                <input type="email" class="form-control mb-4" name="email" id="email" placeholder="Enter Email" required>
                             </div>
                             <div class="form-group">
                                 <label for="subject">Subject</label>
-                                <input type="text" class="form-control mb-4" name="subject" id="subject" placeholder="Enter Subject">
+                                <input type="text" class="form-control mb-4" name="subject" id="subject" placeholder="Enter Subject" required>
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea class="form-control mb-4" name="message" id="message" placeholder="Enter Message"></textarea>
+                                <textarea class="form-control mb-4" name="message" id="message" placeholder="Enter Message" required></textarea>
                             </div>
                             <div class="text-center">
                                 <input type="submit" class="btn btn-primary mt-4" value="Submit" name="submit">
