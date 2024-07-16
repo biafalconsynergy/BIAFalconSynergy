@@ -6,6 +6,16 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     $email = $_POST["email"];
     $subject = $_POST["subject"];
     $message = $_POST["message"];
+
+    // Custom message
+    $customMessage = "Hello " . $name . ",\n\n";
+    $customMessage .= "Thank you for reaching out to us.\n\nWe have received your message:\n";
+    $customMessage .= "\"" . $message . "\"\n\n";
+    $customMessage .= "We will get back to you shortly.\n\n";
+    $customMessage .= "Best Regards,\nTeam Konnexio";
+
+    $message = $customMessage;
+
     $to = $email;
     $headers = "From: $email";
     if(mail($to, $subject, $message, $headers)) {
@@ -16,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         $_SESSION['message'] = "Email Sending Failed";
         //echo "Email Sending Failed";
     }
-    header("Location: index.php");
+    header("Location: contact.php");
     exit();
 }
 ?>
