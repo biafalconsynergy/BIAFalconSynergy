@@ -50,7 +50,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-dark btn-lg">Contact</button>
+                        <a href="Contact/contact.php" class="btn btn-dark btn-lg">Contact</a>
                     </li>
                 </ul>
             </div>
