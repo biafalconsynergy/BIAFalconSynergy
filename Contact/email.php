@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         $_SESSION['message'] = "Email Sending Failed";
         //echo "Email Sending Failed";
     }
-    header("Location: index.php");
+    header("Location: contact.php");
     exit();
 }
 ?>
