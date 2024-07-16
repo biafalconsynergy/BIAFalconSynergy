@@ -16,8 +16,12 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
 
     $message = $customMessage;
 
+    // Email recipients
     $to = $email;
-    $headers = "From: $email";
+    $cc = "saikat.datta16@gmail.com";
+    $headers = "From: biafalconsynergy2024@gmail.com\r\n";
+    $headers .= "Cc: " . $cc . "\r\n";
+    
     if(mail($to, $subject, $message, $headers)) {
         $_SESSION['message'] = "Email Sent";
         //echo "Email Sent";
