@@ -1,7 +1,0 @@
-To replicate
-
-1. Download the files to this path
-    C:\xampp\htdocs
-2. Start xampp
-3. Upload the sql file to http://localhost/phpmyadmin/index.php
-4. Open the admin page using this path: http://localhost/admin_page/Admin.php
