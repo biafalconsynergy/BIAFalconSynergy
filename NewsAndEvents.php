@@ -1,30 +1,49 @@
+<?php
+include 'db_connection.php';
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM news_events WHERE isactive = 1 order by posted_date desc";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>Konnexio - News & Events</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="newsevents.css">
-  <link rel="stylesheet" href="fundingpartners.css">
-  <link rel="stylesheet" href="upcomingevents.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>KONNEXIO | News & Events</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
 
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="newsevents.css">
+    <!-- JS Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script scr="newsevents_script.js"></script>
+       
 </head>
 
 <body>
-  <!-- Header Section -->
-  <?php include 'header.php'; ?>
+    <!-- Header -->
+    <?php include 'header.php'; ?>
 
-  <!-- News and Events Section -->
+     <!-- News and Events Section -->
   <section class="news-events-section">
     <div class="container my-5">
       <h1>News and Events</h1>
-      <p class="news-events-para">Stay updated with the latest news and events happening in our industry.</p>
+      <p class="news-events-para"><i>Stay updated with the latest news and events happening in our industry.</i></p>
     </div>
   </section>
 
@@ -40,6 +59,7 @@
           aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
+      <h1 class="carousel-heading">News Highlights</h1>
         <div class="carousel-item active">
           <img src="Images/Image2c.jpg" class="d-block w-100" alt="Hydrogen Fuel Cells">
           <div class="carousel-caption d-none d-md-block">
@@ -80,8 +100,50 @@
       </button>
     </div>
   </div>
+  
+        <!-- Third Section (Image Containers) -->
+        
+        <div class="container mt-4">
+            <!-- Search bar -->
+            <div class="input-group mb3">
+                <input type="text" class="form-control" id="searchInput" onkeyup="filterCards()" placeholder="Search by title or content...">
+                <div class="input-group-append">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                </div>
+            </div>
 
-  <!-- Funding Partners Section -->
+            <div id="newsContainer" class="news-grid">
+                <?php
+                // Check if there are any rows in the result set
+                if ($result->num_rows > 0) {
+                    // Output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                        <div class="news-card">
+                            <img src="Upload/<?php echo $row['image']; ?>" alt="News and Events">
+                            <div class="news-content">
+                                <h3 class="news-title"><?php echo $row["title"]; ?></h3>
+                                <p class="news-content-text"><?php echo $row["content"]; ?></p>
+                                <p class="content-type"><?php echo strtoupper($row["content_type"]); ?></p>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    // Ensure the number of cards in a row is always 4
+                    $remainingCards = $result->num_rows % 4;
+                    if ($remainingCards > 0) {
+                        for ($i = $remainingCards; $i < 4; $i++) {
+                            echo '<div class="news-card placeholder-card"></div>';
+                        }
+                    }
+                } else {
+                    echo "<p>No active news found.</p>";
+                }
+                ?>
+            </div>
+        </div>
+
+         <!-- Funding Partners Section -->
   <section class="funding-partners-section">
     <div class="container my-5 text-center">
       <h2>Funding Partners for Automation</h2>
@@ -168,31 +230,10 @@
     </div>
   </section>
 
-  <!-- Pagination Section -->
-  <section class="pagination-section">
-    <div class="pagination-container">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </section>
+        <!-- Footer Data -->
+        <?php include 'footer.php'; ?>
 
-  <!-- Footer Section -->
-  <?php include 'footer.php'; ?>
+    </main>
 </body>
 
 </html>
