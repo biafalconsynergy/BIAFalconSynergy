@@ -1,0 +1,201 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Custom Machines */
+.cm_container-fluid {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.cm_image-container {
+    position: relative;
+    max-height: 700px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    max-height: 600px; /* Set max height */
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+    object-position: center; /* Center the image */
+}
+
+.cm_transparent-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3%;
+    align-items: flex-start; /* Align items to the left */
+}
+
+.cm_caption {
+    width: 40%;
+    margin-top: 10%;
+    margin-bottom: 0%;
+    text-align: left; /* Align text to the left */
+}
+
+.cm_slide_up {
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries to adjust the overlay width on smaller screens */
+@media (max-width: 768px) {
+    .cm_transparent-overlay {
+        width: 70%; /* Adjust width to 70% on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .cm_transparent-overlay {
+        width: 90%; /* Adjust width to 90% on extra small screens */
+    }
+}
+
+/* Custom Machines Section */
+.cm_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cm_section .cm_tabs {
+    display: flex;
+    max-width: 1200px; /* Maximum width for the entire section */
+    width: 100%;
+}
+
+/* Custom Machines Tabs */
+.cm_tab_nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Arrange tabs vertically */
+    width: 250px; /* Set a fixed width for the tabs */
+    border-right: 2px solid #ddd; /* Vertical divider */
+    margin-right: 20px; /* Space between tabs and content */
+}
+
+.cm_tab_nav li {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.cm_tab_nav li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.cm_tab_nav li.active a {
+    border-right: 2px solid #333; /* Highlight active tab */
+    color: #333;
+    font-weight: bold;
+}
+
+.cm_tab_nav li a:hover {
+    color: #1e3e5e;
+    font-weight: bold;
+}
+
+.cm_tab_content_wrap {
+    display: flex; /* Arrange tabs and content side by side */
+    flex-direction: row; /* Ensures content is side by side */
+    align-items: center;
+}
+
+.cm_tab_content {
+    display: none;
+    padding: 20px;
+    flex-grow: 1; /* Allow the content to take the remaining space */
+    max-width: 1000px; /* Restrict maximum width for content */
+    margin: 0 auto; /* Center the content */
+}
+
+.cm_tab_content.active {
+    display: block; /* Show active content */
+}
+
+/* Image adjustments within tab content */
+.cm_tab_content img {
+    max-width: 500px; /* Ensure images fit within the content area */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between the image and the text */
+}
+
+.cm_tab_content h2 {
+    margin-bottom: 10px;
+}
+
+.cm_tab_content ul {
+    font-size: 2rem;
+}
+
+/* Media Queries for better responsiveness */
+@media (max-width: 768px) {
+    .cm_tab_nav {
+        width: 100%; /* Full width for tabs on smaller screens */
+        border-right: none;
+        border-bottom: 2px solid #ddd; /* Horizontal divider */
+        margin-right: 0;
+        margin-bottom: 10px; /* Space between tabs and content */
+        flex-direction: row; /* Arrange tabs horizontally */
+        align-items: center;
+    }
+
+    .cm_tab_nav li {
+        flex: 1; /* Equal width for each tab */
+    }
+
+    .cm_tab_content_wrap {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .cm_tab_content {
+        max-width: 100%; /* Ensure full width on smaller screens */
+    }
+
+    .cm_tab_content img {
+        margin-right: 0; /* Remove margin on smaller screens */
+        margin-bottom: 20px; /* Add space below the image on smaller screens */
+    }
+}
+
+
+.cta-section {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 40px 0; /* Padding for top and bottom */
+}
+
+.cta-section h2 {
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.cta-section p {
+    margin-bottom: 20px; /* Space below the paragraph */
+}
