@@ -212,11 +212,14 @@ ul {
     color: white;
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-block: 20%;
 }
 
-.carousel-caption h1, 
-.carousel-caption h4 {
+.carousel-caption p {
     padding-block: 2rem;
 }
 
@@ -224,6 +227,47 @@ ul {
     max-width: 100%;
     max-height: 80vh;
     object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    width: 5%; /* Adjust width as needed */
+    height: 100%;
+    border: none; /* Remove border if needed */
+    color: white; /* Color of the icons */
+    z-index: 1000; /* Ensure buttons are on top of other elements */
+}
+
+.carousel-control-prev {
+    left: 0;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.carousel-control-next {
+    right: 0;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+/* Optional: Increase button size */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 100%, 100%;
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-indicators {
+    z-index: 1000;
+}
+
+.carousel-indicators button {
+    background-color: #000; /* Color of the inactive indicators */
+}
+
+.carousel-indicators .active {
+    background-color: #fff; /* Color of the active indicator */
 }
 
 /* Image Container Styles */
@@ -241,6 +285,12 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.stretch {
+    padding-top: 50%;
+    position: relative;
+    overflow: hidden;
 }
 
 .row.no-gutters {
@@ -358,12 +408,6 @@ ul {
     border-width: 2px;
 }
 
-.stretch {
-    padding-top: 40%;
-    position: relative;
-    overflow: hidden;
-}
-
 .transparent-overlay {
     position: absolute;
     top: 0;
@@ -377,9 +421,9 @@ ul {
 .sec3a {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    width: 50%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     padding: 5%;
 }
 
@@ -409,6 +453,7 @@ ul {
 
 .sec3a p {
     /*font-size: 1em; /* Default size */
+    text-align: center;
     color: rgb(255, 255, 255);
     padding-top: 1em;
     padding-bottom: 1em;
@@ -448,7 +493,6 @@ ul {
     height: 100%;
     width: 100%;
     aspect-ratio: 4/3;
-    padding: 10%;
 }
 
 .sec3b h1 {
@@ -456,9 +500,12 @@ ul {
 }
 
 .sec3b p {
+    text-align: center;
     color: rgb(0, 0, 0);
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin-left: 3em;
+    margin-right: 3em;
 }
 
 .sec3b img {
@@ -466,6 +513,7 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    padding: 10%;
 }
 
 .sec4 {
