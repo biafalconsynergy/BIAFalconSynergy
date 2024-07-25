@@ -1,9 +1,12 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    
 if (!isset($_SESSION['first_name'])) {
     header('Location: Login.php');
     exit();
-}
+    }
 
 // Define the page name or identifier
 $pageName = basename($_SERVER['PHP_SELF']);
