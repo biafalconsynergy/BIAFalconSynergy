@@ -1,3 +1,5 @@
+@import url('header-footer.css');
+
 /* General Styles */
 html {
     font-size: 62.5%; /* 10px base for easy rem calculation */
@@ -31,7 +33,15 @@ h5 {
     font-size: 1.65rem; /* 15px */
 }
 
-p, li, ul {
+p{
+    font-size: 1.4rem; /* 12.5px */
+}
+
+li{
+    font-size: 1.4rem; /* 12.5px */
+}
+
+ul {
     font-size: 1.4rem; /* 12.5px */
 }
 
@@ -61,7 +71,15 @@ p, li, ul {
         font-size: 1.65rem; /* 15px */
     }
     
-    p, li, ul {
+    p{
+        font-size: 1.4rem; /* 12.5px */
+    }
+
+    li{
+        font-size: 1.4rem; /* 12.5px */
+    }
+
+    ul{
         font-size: 1.4rem; /* 12.5px */
     }
     
@@ -92,7 +110,15 @@ p, li, ul {
         font-size: 1.75rem; /* 17.5px */
     }
 
-    p, li,ul {
+    p{
+        font-size: 1.5rem; /* 15px */
+    }
+
+    li{
+        font-size: 1.5rem; /* 15px */
+    }
+
+    ul{
         font-size: 1.5rem; /* 15px */
     }
 
@@ -123,7 +149,15 @@ p, li, ul {
         font-size: 2rem; /* 20px */
     }
 
-    p, li, ul {
+    p{
+        font-size: 1.75rem; /* 17.5px */
+    }
+
+    li{
+        font-size: 1.75rem; /* 17.5px */
+    }
+
+    ul{
         font-size: 1.75rem; /* 17.5px */
     }
 
@@ -154,57 +188,13 @@ p, li, ul {
         font-size: 2.25rem; /* 22.5px */
     }
 
-    p, li, ul {
+    p ul li{
         font-size: 2rem; /* 20px */
     }
 
     .btn {
         font-size: 2rem;
     }
-}
-
-/* Navbar Styles */
-.navbar {
-    padding-right: 15px;
-    display: flex;
-    justify-content: space-between; /* Ensure brand and nav items are spaced out */
-}
-
-.navbar-brand img {
-    max-width: 300px; /* Optimize logo size for various devices */
-    height: auto;
-    padding: 1%;
-}
-
-/* Navbar Links */
-.navbar-nav .nav-link {
-    color: #000;
-    margin-right: 10px;
-    margin-left: 10px;
-    text-decoration: none;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #ff2727;
-}
-
-/* Dropdown Styles */
-.dropdown-menu {
-    display: none;
-    position: absolute; /* Ensure dropdowns are positioned correctly */
-}
-
-.navbar-nav .dropdown:hover .dropdown-menu {
-    display: block; /* Show dropdown on hover */
-}
-
-.dropdown-menu .dropdown-item {
-    color: #000000;
-}
-
-.dropdown-menu .dropdown-item:hover {
-    background-color: #2f2f2f;
-    color: #ffffff;
 }
 
 /* Carousel Styles */
@@ -232,7 +222,7 @@ p, li, ul {
 
 .carousel-inner img {
     max-width: 100%;
-    max-height: 600px;
+    max-height: 80vh;
     object-fit: cover;
 }
 
@@ -609,54 +599,4 @@ p, li, ul {
 
 .testi-carousel-indicators .active {
     background-color: #2a577e;
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #1e3e5e;
-    color: white;
-    padding: 40px 0;
-}
-
-.footer a {
-    color: #f8f9fa;
-    text-decoration: none;
-    font-size: 1.75rem;
-    margin-bottom: 10px;
-}
-
-.footer a:hover {
-    color: #bdadad;
-}
-
-.footer-logo {
-    margin-bottom: 20px;
-    margin-left: -10px;
-}
-
-.footer-logo img {
-    max-width: 230px;
-    height: auto;
-}
-
-.footer .footer-heading {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.footer .footer-section {
-    margin-bottom: 30px;
-}
-
-.footer p {
-    font-size: 1.75rem;
-    margin-bottom: 10px;
-}
-
-.f-icon {
-    margin-right: 15px;
-}
-
-.f-icon:hover {
-    color: #bdadad;
 }
