@@ -1,0 +1,31 @@
+/* career_style.css */
+
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card .job-location {
+    color: #6c757d;
+}
+
+.card .job-description {
+    color: #212529;
+    margin-bottom: 10px;
+}
+
+.card .apply-button {
+    margin-top: 10px;
+}

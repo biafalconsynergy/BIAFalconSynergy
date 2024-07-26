@@ -1,0 +1,89 @@
+/* Custom CSS */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+    max-height: 50px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.carousel-item img {
+    height: 400px; /* Adjust as needed */
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.carousel-caption h3, .carousel-caption p {
+    color: #fff;
+    margin: 0;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-logo img {
+    max-height: 40px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.footer-section {
+    margin-bottom: 20px; /* Adjust spacing between sections */
+}
+
+.footer-section h5 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.f-icon {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.f-icon:hover {
+    color: #fff;
+}
