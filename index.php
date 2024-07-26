@@ -81,7 +81,7 @@
         <!--Second Section (Cards)-->
         <section id="cardsSection" class="container-fluid" style="padding: 0;">
             <div class="row no-gutters">
-                <div class="col-sm-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="card">
                         <div class="card-inner">
                             <div class="card-front">
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="card">
                         <div class="card-inner">
                             <div class="card-front">
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="card">
                         <div class="card-inner">
                             <div class="card-front">
@@ -138,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-12 col-sm-6 col-md-3">
                     <div class="card">
                         <div class="card-inner">
                             <div class="card-front">
@@ -169,12 +169,12 @@
         <section class="container-fluid" style="padding: 0;">
             <div class="row no-gutters">
                 <div class="image-container stretch">
-                    <img src="Images/Image3a.jpg" alt="Image3a">
+                    <img src="Images/Image3a.gif" alt="Image3a">
                     <div class="transparent-overlay">
                         <div class="sec3a">
                             <h1>adapto™ Technology</h1>
                             <p>A unique and innovative assembly automation and testing machine system comprised of modular Smart Cells.</p>
-                            <button class="btn btn-danger btn-lg">Learn More</button>
+                            <button class="btn btn-danger btn-lg" onclick="location.href='adapto.php';">Learn More</button>
                         </div>
                     </div>
                 </div>
