@@ -45,7 +45,7 @@
         <div class="row no-gutters" id="industrial">
             <div class="col-sm-6">
                 <div class="sec3b bg-light">
-                    <img src="Images/Image3a.jpg" alt="Image3b">
+                    <img src="Images/Image3b.jpg" alt="Image3b">
                 </div>
             </div>
             <div class="col-sm-6">
