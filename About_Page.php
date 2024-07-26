@@ -37,7 +37,7 @@
       width: 100px;
       height: 100px;
       object-fit: cover;
-      margin: 0 auto 1rem; /* Center image and space below it */
+      margin: 0 auto 1rem; 
       display: block; /* Ensure image is centered */
     }
     .carousel-caption {
