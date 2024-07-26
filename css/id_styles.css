@@ -1,0 +1,11 @@
+.ind-main {
+    text-align: center;
+    color: #ffffff;
+    background-color: #1e3e5e;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.ind-text {
+    width: 70%;
+    margin: 0 auto; /* Center the text container */
+}

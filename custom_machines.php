@@ -21,10 +21,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" defer></script>
-    <script src="js/scripts.js" defer></script>
-    <script src="js/cm_script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -40,24 +38,26 @@
                 <div class="cm_caption">
                     <h1 class="cm_slide_up">Custom Machines</h1><br>
                     <p class="cm_slide_up">KONNEXIO's team of industry experts will guide you, from inquiry to delivery, through every aspect of your project.</p><br>
-                    <button class="btn btn-danger btn-lg cm_slide_up">Contact Us</button>
+                    <button class="btn btn-danger btn-lg cm_slide_up" onclick="location.href='contact.php'">Contact Us</button>
                 </div>
             </div>
         </div>
-    </section><br><br><br>
+    </section>
+    
+    <br><br><br>
 
     <section class="cm_section">
     <div class="row animate-box">
         <div class="cm_tabs col-md-12">
             <div class="row justify-content-center">
                 <div class="col-md-3">
-                    <ul class="cm_tab_nav">
-                        <li class="active"><a href="#" data-tab="1"><span class="icon visible-xs"><i class="icon-command"></i></span><span class="hidden-xs">Automation Consulting</span></a></li>
-                        <li><a href="#" data-tab="2"><span class="icon visible-xs"><i class="icon-bar-graph"></i></span><span class="hidden-xs">Project Management</span></a></li>
-                        <li><a href="#" data-tab="3"><span class="icon visible-xs"><i class="icon-cogs"></i></span><span class="hidden-xs">Controls</span></a></li>
-                        <li><a href="#" data-tab="4"><span class="icon visible-xs"><i class="icon-tools"></i></span><span class="hidden-xs">Engineering & Construction</span></a></li>
-                        <li><a href="#" data-tab="5"><span class="icon visible-xs"><i class="icon-wrench"></i></span><span class="hidden-xs">Machine Shop</span></a></li>
-                    </ul>
+                <ul class="cm_tab_nav">
+                    <li class="active"><a href="#" data-tab="1"><span class="icon d-block d-sm-none"><i class="bi bi-person-workspace"></i></span><span class="d-none d-sm-inline">Automation Consulting</span></a></li>
+                    <li><a href="#" data-tab="2"><span class="icon d-block d-sm-none"><i class="bi bi-bar-chart"></i></span><span class="d-none d-sm-inline">Project Management</span></a></li>
+                    <li><a href="#" data-tab="3"><span class="icon d-block d-sm-none"><i class="bi bi-gear"></i></span><span class="d-none d-sm-inline">Controls</span></a></li>
+                    <li><a href="#" data-tab="4"><span class="icon d-block d-sm-none"><i class="bi bi-tools"></i></span><span class="d-none d-sm-inline">Engineering & Construction</span></a></li>
+                    <li><a href="#" data-tab="5"><span class="icon d-block d-sm-none"><i class="bi bi-wrench"></i></span><span class="d-none d-sm-inline">Machine Shop</span></a></li>
+                </ul>
                 </div>
                 <div class="col-md-9">
                     <div class="cm_tab_content_wrap">
@@ -154,17 +154,21 @@
 </section>
 
 
-    <!-- CTA Section -->
-    <section class="cta-section text-center py-5">
-        <div class="container">
-            <h3>Ready to take your project to the next level?</h3>
-            <p>Our team is here to provide you with more information and answer any questions you may have.</p>
-            <button class="btn btn-danger btn-lg">Contact Us</button>
-        </div>
-    </section>
+<!-- CTA Section -->
+<section class="cta-section text-center py-5">
+    <div class="container">
+        <h3>Ready to take your project to the next level?</h3>
+        <p>Our team is here to provide you with more information and answer any questions you may have.</p>
+        <button class="btn btn-danger btn-lg" onclick="location.href='contact.php'">Contact Us</button>
+    </div>
+</section>
 
-    <!-- Footer Section -->
-    <?php include 'footer.php'; ?>
-   
+
+<!-- Footer Section -->
+<?php include 'footer.php'; ?>
+
+<script src="js/cm_script.js"></script>
+
+    
 </body>
 </html>

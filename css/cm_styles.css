@@ -1,3 +1,4 @@
+/* General adjustments for smaller screens */
 html {
     font-size: 62.5%;
 }
@@ -6,7 +7,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Custom Machines */
+/* Custom Machines Section */
 .cm_container-fluid {
     position: relative;
     text-align: center;
@@ -16,15 +17,15 @@ body {
 .cm_image-container {
     position: relative;
     max-height: 700px;
-    overflow: hidden; /* Ensure content doesn't overflow */
+    overflow: hidden;
 }
 
 .img-fluid {
     width: 100%;
     height: auto;
-    max-height: 600px; /* Set max height */
-    object-fit: cover; /* Ensure the image covers the container without stretching */
-    object-position: center; /* Center the image */
+    max-height: 600px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .cm_transparent-overlay {
@@ -37,14 +38,14 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     padding: 3%;
-    align-items: flex-start; /* Align items to the left */
+    align-items: flex-start;
 }
 
 .cm_caption {
     width: 40%;
     margin-top: 10%;
     margin-bottom: 0%;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .cm_slide_up {
@@ -62,48 +63,56 @@ body {
     }
 }
 
-/* Media Queries to adjust the overlay width on smaller screens */
-@media (max-width: 768px) {
-    .cm_transparent-overlay {
-        width: 70%; /* Adjust width to 70% on smaller screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .cm_transparent-overlay {
-        width: 90%; /* Adjust width to 90% on extra small screens */
-    }
-}
-
-/* Custom Machines Section */
+/* Tabs and Content */
 .cm_section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 20px 0;
 }
 
-.cm_section .cm_tabs {
+/* .cm_tabs {
     display: flex;
-    max-width: 1200px; /* Maximum width for the entire section */
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+
+.cm_tabs {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap; /* Prevent wrapping by default */
 }
 
-/* Custom Machines Tabs */
+/* .cm_tab_nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+} */
+
 .cm_tab_nav {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Arrange tabs vertically */
-    width: 250px; /* Set a fixed width for the tabs */
+    flex-direction: column; /* Vertical alignment */
+    width: 250px;
     border-right: 2px solid #ddd; /* Vertical divider */
-    margin-right: 20px; /* Space between tabs and content */
+    margin-right: 20px;
 }
 
+
 .cm_tab_nav li {
-    margin: 0;
-    font-size: 1.8rem;
+    margin: 0px;
 }
+
+/* .cm_tab_nav li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+} */
 
 .cm_tab_nav li a {
     display: block;
@@ -112,90 +121,136 @@ body {
     color: #333;
 }
 
-.cm_tab_nav li.active a {
-    border-right: 2px solid #333; /* Highlight active tab */
-    color: #333;
-    font-weight: bold;
+.cm_tab_nav li.active a,
+.cm_tab_nav li a:hover {
+    background-color: #1e3e5e;
+    color: #fff;
 }
 
-.cm_tab_nav li a:hover {
-    color: #1e3e5e;
-    font-weight: bold;
-}
+/* .cm_tab_content_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+} */
 
 .cm_tab_content_wrap {
-    display: flex; /* Arrange tabs and content side by side */
-    flex-direction: row; /* Ensures content is side by side */
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-grow: 1;
 }
 
 .cm_tab_content {
     display: none;
     padding: 20px;
-    flex-grow: 1; /* Allow the content to take the remaining space */
-    max-width: 1000px; /* Restrict maximum width for content */
-    margin: 0 auto; /* Center the content */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .cm_tab_content.active {
-    display: block; /* Show active content */
+    display: block;
 }
 
-/* Image adjustments within tab content */
 .cm_tab_content img {
-    max-width: 500px; /* Ensure images fit within the content area */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 10px; /* Add space between the image and the text */
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.cm_tab_content h2 {
-    margin-bottom: 10px;
-}
-
+.cm_tab_content h2,
+.cm_tab_content p,
 .cm_tab_content ul {
-    font-size: 2rem;
+    text-align: left;
 }
 
-/* Media Queries for better responsiveness */
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
+    .cm_transparent-overlay {
+        width: 70%;
+        padding: 5%;
+    }
+    .cm_caption {
+        width: 40%;
+        text-align: left;
+    }
+    .cm_caption h1, .cm_caption p {
+        font-size: 1.8rem; /* Adjusted font size for better readability on smaller screens */
+    }
+    .cm_caption p {
+        font-size: 1.2rem;
+    }
+    .cm_caption button {
+        font-size: 1.4rem;
+        padding: 0.5rem 1rem;
+    }
+
     .cm_tab_nav {
-        width: 100%; /* Full width for tabs on smaller screens */
+        flex-direction: row;
         border-right: none;
         border-bottom: 2px solid #ddd; /* Horizontal divider */
         margin-right: 0;
-        margin-bottom: 10px; /* Space between tabs and content */
-        flex-direction: row; /* Arrange tabs horizontally */
-        align-items: center;
+        margin-bottom: 20px;
+        width: 100%; /* Full width */
+        justify-content: space-around; /* Space the items evenly */
     }
 
     .cm_tab_nav li {
-        flex: 1; /* Equal width for each tab */
+        margin-bottom: 0; /* Remove bottom margin */
     }
 
     .cm_tab_content_wrap {
-        flex-direction: column; /* Stack content vertically on smaller screens */
-    }
-
-    .cm_tab_content {
-        max-width: 100%; /* Ensure full width on smaller screens */
-    }
-
-    .cm_tab_content img {
-        margin-right: 0; /* Remove margin on smaller screens */
-        margin-bottom: 20px; /* Add space below the image on smaller screens */
+        flex-direction: column;
+        align-items: center;
     }
 }
 
+@media (max-width: 576px) {
+    .cm_transparent-overlay {
+        width: 90%;
+    }
+    .cm_caption {
+        margin-top: 0;
+        width: 45%;
+        text-align: left;
+    }
+    .cm_caption h1, .cm_caption p {
+        font-size: 1.5rem; /* Further adjust font size */
+    }
+    .cm_caption p {
+        font-size: 1rem;
+    }
+    .cm_caption button {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Additional adjustments for small devices */
+@media (max-width: 375px) {
+    .cm_caption h1, .cm_caption p {
+        font-size: 1.2rem; /* Further adjust font size for very small screens */
+    }
+    .cm_caption p {
+        font-size: 0.9rem;
+    }
+    .cm_caption button {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+
+/* CTA */
 
 .cta-section {
-    background-color: #f8f9fa; /* Light background color */
-    padding: 40px 0; /* Padding for top and bottom */
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    text-align: left;
 }
 
-.cta-section h2 {
-    margin-bottom: 10px; /* Space below the heading */
-}
-
+.cta-section h3,
 .cta-section p {
-    margin-bottom: 20px; /* Space below the paragraph */
+    margin-bottom: 20px;
 }
