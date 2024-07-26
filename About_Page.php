@@ -53,7 +53,7 @@
       text-align: center;
     }
     .carousel-control-prev, .carousel-control-next {
-      filter: invert(1); /* Lightens the control icons for better visibility */
+      filter: invert(1); /* edit1 Lightens the control icons for better visibility */
     }
   </style>
 
