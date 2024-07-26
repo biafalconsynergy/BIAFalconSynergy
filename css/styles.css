@@ -600,3 +600,15 @@ ul {
 .testi-carousel-indicators .active {
     background-color: #2a577e;
 }
+
+.page-sec-main {
+    text-align: center;
+    color: #ffffff;
+    background-color: #1e3e5e;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.page-sec-main-text {
+    width: 70%;
+    margin: 0 auto; /* Center the text container */
+}

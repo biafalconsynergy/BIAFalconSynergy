@@ -33,10 +33,10 @@
     <?php include 'header.php'; ?>
 
     <!-- Main -->
-    <div class="ind-main">
+    <div class="page-sec-main">
         <h1>Industries</h1>
         <br>
-        <div class="ind-text">
+        <div class="page-sec-main-text">
             <h5>At Konnexio, we specialize in providing innovative solutions across various industries, leveraging cutting-edge technology and deep industry expertise. Explore the sectors we serve and discover how we can help drive your business forward.</h5>
         </div>
     </div>

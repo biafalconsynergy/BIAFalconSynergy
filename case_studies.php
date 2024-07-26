@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cs_styles.css">
 
     <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
@@ -80,13 +81,13 @@
 
     <main id="main-content">
 
-		<!--Third Section (Image Containers)-->
-		<section class="container-fluid sec3 p-5 bg-light text-dark">
-			<hr>
-			<h1 class="text-center text-black font-weight-bold">Case Studies</h1>
-			<p><i>Discover how Konnexio Inc.transforms intricate challenges into remarkable successes, optimizing client operations and pioneering advancements across the industry</i></p>
-			<hr>
-		</section>
+    <div class="page-sec-main">
+        <h1>Case Studies</h1>
+        <br>
+        <div class="page-sec-main-text">
+            <h5>Explore how Konnexio has transformed businesses through innovative solutions and cutting-edge technology in our comprehensive case studies.</h5>
+        </div>
+    </div>
 
         <section class="container section-separator">
             <?php
