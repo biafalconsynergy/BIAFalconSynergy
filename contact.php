@@ -7,7 +7,7 @@
         <title>Contact Us | KONNEXIO</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Konnexio is a custom machine builder located in London Ontario. Our specialty is adapto™ which is a modular assembly line construction technology.">
+        <meta name="description" content="Konnexio is a custom machine builder located in London Ontario. Our specialty is adaptoï¿½ which is a modular assembly line construction technology.">
         <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
     
         <!-- CSS Libraries -->
@@ -69,7 +69,8 @@
                         </ul>
                         <div class="tab-content pt-3" id="myTabContent">
                           <div class="tab-pane fade show active" id="formSales" role="tabpanel" aria-labelledby="formSales-tab">
-                            <form method="POST" id="salesForm" name="salesForm" class="contactForm">
+                          <?php include 'contact_lead_form.php' ?>
+                          <form method="POST" id="salesForm" name="salesForm" class="contactForm">
                               <div class="row">
                                 <div class="col-md-6">
                                   <div class="form-group">
