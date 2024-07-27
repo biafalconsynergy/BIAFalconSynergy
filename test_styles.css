@@ -1,0 +1,236 @@
+/* General font styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.services-section {
+    background-color: #1e3e5e;
+    color: #ffffff;
+    padding: 30px;
+}
+
+.services-section h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+/* Style for the Design Heading */
+.subheading h1 {
+    position: relative;
+    font-size: 50px;
+    color: #1e3e5e;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+    text-underline-position: below;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.subheading h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 5px;
+    background-color: #1e3e5e;
+    border-radius: 2px;
+}
+
+/* Section padding */
+.section-padding {
+    padding: 3rem 0;
+}
+
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 1rem 0;
+    }
+}
+
+/* Grid container */
+.grid-container {
+    max-width: 90vw;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+/* Creates columns of equal size */
+@media screen and (min-width: 768px) {
+    .grid-container--medium-2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .grid-container {
+        max-width: 80vw;
+    }
+}
+
+/* Section title */
+.section-title {
+    padding: 1rem 1rem;
+}
+
+.section-title-heading {
+    font-size: 2rem; 
+    text-align: center;
+}
+
+.section-title-text {
+    letter-spacing: 0.05rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+.design-img-item {
+    width: 100%;
+    height: 350px;
+    display: block;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.design-container,
+.build .box,
+.support-box {
+    background: #f8f9fa;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    height: 100%; /* Set height to 100% to ensure full height of the parent */
+}
+
+@media (max-width: 768px) {
+    .design-container,
+    .build .box,
+    .support-box {
+        margin-bottom: 1rem;
+    }
+
+    .design-img-item,
+    .build-img-item,
+    .support-img-item {
+        height: auto;
+    }
+}
+
+.design-container .design-img,
+.build .build-img-item,
+.support-img-item {
+    width: 100%;
+    height: 350px;
+}
+
+.design-container .section-title,
+.build .box .section-title,
+.support-box .section-title {
+    text-align: justify;
+}
+
+/* Learn more button */
+.learn-more-btn {
+    background-color: #1e3e5e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+.learn-more-btn:hover {
+    background-color: #16314a;
+    color: #fff;
+}
+
+.build .build-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem; 
+}
+
+.build .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .build .col-md-4 {
+        flex: 0 0 calc(33.333% - 1rem); 
+        max-width: calc(33.333% - 1rem); 
+    }
+
+    .container {
+        max-width: 85vw;
+    }
+}
+
+.build .box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.build-img-item {
+    width: 100%;
+    height: 350px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.build .box .section-title-heading {
+    margin-bottom: 1rem; 
+}
+
+/* Support */
+.support section-padding {
+    padding: 20vmin 0;
+}
+
+.support-box {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    
+}
+
+.support-img-item {
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%; /* Ensure the image width fills the box */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* General media query adjustments */
+@media (min-width: 768px) {
+    .support-box {
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    .support-img-item {
+        height: auto;
+    }
+}
