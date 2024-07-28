@@ -154,9 +154,12 @@ body {
 }
 
 .cm_tab_content img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: auto;
     margin-bottom: 20px;
+    display: block; /* Makes the image a block element */
+    margin-left: auto; /* Centers the image */
+    margin-right: auto; /* Centers the image */
 }
 
 .cm_tab_content h2,
@@ -185,7 +188,6 @@ body {
         font-size: 1.4rem;
         padding: 0.5rem 1rem;
     }
-
     .cm_tab_nav {
         flex-direction: row;
         border-right: none;
@@ -195,14 +197,20 @@ body {
         width: 100%; /* Full width */
         justify-content: space-around; /* Space the items evenly */
     }
-
     .cm_tab_nav li {
         margin-bottom: 0; /* Remove bottom margin */
     }
-
     .cm_tab_content_wrap {
         flex-direction: column;
         align-items: center;
+    }
+    .cm_tab_content img {
+        max-width: 75%;
+        max-height: auto;
+        margin-bottom: 20px;
+        display: block; /* Makes the image a block element */
+        margin-left: auto; /* Centers the image */
+        margin-right: auto; /* Centers the image */
     }
 }
 
@@ -225,6 +233,14 @@ body {
         font-size: 1.2rem;
         padding: 0.5rem 1rem;
     }
+    .cm_tab_content img {
+        max-width: 75%;
+        max-height: auto;
+        margin-bottom: 20px;
+        display: block; /* Makes the image a block element */
+        margin-left: auto; /* Centers the image */
+        margin-right: auto; /* Centers the image */
+    }
 }
 
 /* Additional adjustments for small devices */
@@ -238,6 +254,14 @@ body {
     .cm_caption button {
         font-size: 1rem;
         padding: 0.4rem 0.8rem;
+    }
+    .cm_tab_content img {
+        max-width: 75%;
+        max-height: auto;
+        margin-bottom: 20px;
+        display: block; /* Makes the image a block element */
+        margin-left: auto; /* Centers the image */
+        margin-right: auto; /* Centers the image */
     }
 }
 
