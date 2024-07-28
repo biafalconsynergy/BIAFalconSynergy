@@ -2,221 +2,307 @@
 <html lang="en">
 
 <head>
-    <title>KONNEXIO</title>
+    <title>Home | KONNEXIO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/konnexio-icon.png" type="image/vnd.microsoft.icon" />
+    <meta name="description" content="Konnexio is a custom machine builder located in London Ontario. Our specialty is adapto™ which is a modular assembly line construction technology.">
+    <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <!--Navigation Pane-->
-        <nav class="navbar navbar-expand-lg bg-light" aria-label="Main Navigation">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="images/konnexio-logo.png" alt="Konnexio Logo" class="rounded img-fluid" loading="lazy" typeof="foaf:Image">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solutions</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">adapto™</a></li>
-                                <li><a class="dropdown-item" href="#">Custom Machines</a></li>
-                                <li><a class="dropdown-item" href="#">Case Studies</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Design</a></li>
-                                <li><a class="dropdown-item" href="#">Build</a></li>
-                                <li><a class="dropdown-item" href="#">Support</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Industries</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Industrial</a></li>
-                                <li><a class="dropdown-item" href="#">Agriculture</a></li>
-                                <li><a class="dropdown-item" href="#">Hydrogen Fuel Cells</a></li>
-                                <li><a class="dropdown-item" href="#">Other Industries</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">News & Events</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Company Story</a></li>
-                                <li><a class="dropdown-item" href="#">Our People</a></li>
-                                <li><a class="dropdown-item" href="#">Associations</a></li>
-                                <li><a class="dropdown-item" href="#">Testimonials</a></li>
-                                <li><a class="dropdown-item" href="#">Careers</a></li>
-                                <li><a class="dropdown-item" href="#">News & Events</a></li>
-                                <li><a class="dropdown-item" href="#">Contact</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-dark btn-lg">Contact</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    
+    <!-- Header Section -->
+    <?php include 'header.php'; ?>
 
     <main>
-        <!-- Adapto Intro Section -->
-        <section class="adapto_intro" id="ad_intro">
-            <div class="heroText">
-                <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
-                    adapto™
-                </h1>
-                <p class="text-secondary-white-color" data-aos="fade-up" data-aos-delay="1000">
-                    Modular Automation for a Dynamic Future 
-                </p>
-            </div>
+        <!-- First Section (Carousel) -->
+        <section id="carouselSection">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
 
-            <div class="videoWrapper">
-                <img src="images/adapto.gif" alt="Adapto Intro GIF" class="custom-video">
-            </div>
-            
-            <div class="overlay"></div>
-        </section>
-
-        <!-- Adapto Text Section -->
-        <section class="section-padding pb-0 adapto_text" id="about">
-            <div class="container mb-5 pb-lg-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 col-12">
-                        <h2 class="mb-3" data-aos="fade-up">Let us create...</h2>
-                        <p class="me-4" data-aos="fade-up" data-aos-delay="300">
-                            Adapto® Smart Cell Technology by KONNEXIO is a customizable <strong>Lego-like</strong> automation system with modular smart cells. It allows quick adaptation to new processes and requirements, offering exceptional quality, efficiency, and flexibility for evolving customer needs.
-                        </p>
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Images/Image1a.jpg" alt="Image1a" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h1>Welcome</h1>
+                            <p>This is the welcome page!</p>
+                            <button class="btn btn-danger btn-lg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/Image1b.jpg" alt="Image1b" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h1>adapto™</h1>
+                            <p>This is the adapto page!</p>
+                            <button class="btn btn-danger btn-lg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Images/Image1c.jpg" alt="Image1c" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h1>Mission</h1>
+                            <p>This is the mission page!</p>
+                            <button class="btn btn-danger btn-lg">Contact Us</button>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </section>
 
-        <!-- Adapto Key Features Section -->
-        <div class="bg_full" id="adapto_keyfeatures">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-4 margin_bott">
-                                <div class="services_box">
-                                    <figure><img src="images/01.png" alt="#"/></figure>
-                                    <h3>Modular Assembly</h3>
-                                    <p>Smart Cells can function alone or be integrated into larger systems</p>
+        <!--Second Section (Cards)-->
+        <section id="cardsSection" class="container-fluid" style="padding: 0;">
+            <div class="row no-gutters">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="box sec2a-front"></div>
+                                <div class="card-body sec2a">
+                                    <h1 class="card-title">Industrial</h1>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-4 margin_bott">
-                                <div class="services_box">
-                                    <figure><img src="images/adapto_02.png" alt="#"/></figure>
-                                    <h3>Adaptive Processes</h3>
-                                    <p>Easily add vision systems, feeders, and robots as needed.</p>
+                            <div class="card-back">
+                                <div class="card-body sec2a">
+                                    <h3 class="card-title">Industrial</h3>
+                                    <p class="card-text">Description for this section</p>
+                                    <button class="btn btn-dark">Know More</button>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-4">
-                                <div class="services_box">
-                                    <figure><img src="images/adapto_03.png" alt="#"/></figure>
-                                    <h3>Swift Modifications</h3>
-                                    <p>Quickly adapt to changes, ensuring faster time-to-market.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="box sec2b-front"></div>
+                                <div class="card-body sec2b">
+                                    <h1 class="card-title">Agriculture</h1>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-body sec2b">
+                                    <h3 class="card-title">Agriculture</h3>
+                                    <p class="card-text">Description for this section</p>
+                                    <button class="btn btn-light">Know More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="box sec2c-front"></div>
+                                <div class="card-body sec2c">
+                                    <h1 class="card-title">Hydrogen<br>Fuel Cells</h1>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-body sec2c">
+                                    <h3 class="card-title">Hydrogen Fuel Cells</h3>
+                                    <p class="card-text">Description for this section</p>
+                                    <button class="btn btn-dark">Know More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <div class="card">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <div class="box sec2d-front"></div>
+                                <div class="card-body sec2d">
+                                    <h1 class="card-title">Other<br>Industries</h1>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <div class="card-body sec2d">
+                                    <h3 class="card-title">Other Industries</h3>
+                                    <p class="card-text">Description for this section</p>
+                                    <button class="btn btn-light">Know More</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-4 footer-section">
-                    <div class="footer-logo">
-                        <img src="Images/konnexio-logo-white.png" alt="Konnexio Logo" class="rounded img-fluid">
+        <!--Third Section (Image Containers)-->
+        <section class="container-fluid sec3 p-5 bg-light text-dark">
+            <hr>
+            <p><i>Discover adaptable automation solutions with KONNEXIO's innovative adapto™ technology, offering customizable, modular Smart Cells for seamless integration and rapid adaptation to streamline your production and testing processes.</i></p>
+            <hr>
+        </section>
+        <section class="container-fluid" style="padding: 0;">
+            <div class="row no-gutters">
+                <div class="image-container stretch">
+                    <img src="Images/Image3a.gif" alt="Image3a">
+                    <div class="transparent-overlay">
+                        <div class="sec3a">
+                            <h1>adapto™ Technology</h1>
+                            <p>A unique and innovative assembly automation and testing machine system comprised of modular Smart Cells.</p>
+                            <button class="btn btn-danger btn-lg" onclick="location.href='adapto.php';">Learn More</button>
+                        </div>
                     </div>
-                    <p><i class="bi bi-envelope-fill"></i> info@konnexio.com</p>
-                    <p><i class="bi bi-telephone-fill"></i> +1 (519) 457-8836</p>
-                    <p><i class="bi bi-geo-alt-fill"></i> 70 Pacific Court, Unit 14<br>London, ON N5V 3R5</p>
-                    <div class="d-flex">
-                        <a class="f-icon" href="https://www.facebook.com/konnexioinc"><i class="bi bi-facebook"></i></a>
-                        <a class="f-icon" href="https://www.youtube.com/@konnexio5801/videos"><i class="bi bi-youtube"></i></a>
-                        <a class="f-icon" href="https://twitter.com/konnexio"><i class="bi bi-twitter-x"></i></a>
-                        <a class="f-icon" href="https://www.linkedin.com/company/konnexio-inc-/"><i class="bi bi-linkedin"></i></a>
-                    </div>                
                 </div>
-                <div class="col-lg-2 col-md-4 footer-section">
-                    <h5 class="footer-heading"><a href="">About</a></h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Company Story</a></li>
-                        <li><a href="#">Our People</a></li>
-                        <li><a href="#">Associations</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                    <h5 class="footer-heading"><a href="#">News and Events</a></h5>
-                    <h5 class="footer-heading"><a href="#">Contact Us</a></h5>
+                <div class="col-sm-6">
+                    <div class="sec3b bg-light">
+                        <img src="Images/Image3b.jpg" alt="Image3b">
+                    </div>
                 </div>
-                <div class="col-lg-2 col-md-4 footer-section">
-                    <h5 class="footer-heading"><a href="">Solutions</a></h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">adapto™</a></li>
-                        <li><a href="#">Custom Machines</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 col-md-4 footer-section">
-                    <h5 class="footer-heading"><a href="">Services</a></h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Design</a></li>
-                        <li><a href="#">Build</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-4 footer-section">
-                    <h5 class="footer-heading"><a href="#">Industries</a></h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Industrial</a></li>
-                        <li><a href="#">Agriculture</a></li>
-                        <li><a href="#">Hydrogen Fuel Cells</a></li>
-                        <li><a href="#">Other Industries</a></li>
-                    </ul>
+                <div class="col-sm-6">
+                    <div class="sec3b bg-light">
+                        <h1>Custom Machines</h1>
+                        <p>Explore KONNEXIO's custom automation solutions, where our team of experts transforms your project vision into reality with tailored machine designs, efficient project management and seamless integration for optimal production efficiency.</p>
+                        <button class="btn btn-danger btn-lg">Learn More</button>
+                    </div>
                 </div>
             </div>
-            <div class="text-center mt-2">
-                <p>© 2024 Konnexio Inc. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+        </section>
 
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="scripts.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!--Fourth Section-->
+        <section class="container-fluid p-3 bg-light text-dark">
+            <hr>
+            <h1>Solutions and Services</h1>
+        </section>
+        <section class="container-fluid p-3 bg-light">
+            <div class="row no-gutters">
+                <div class="col-sm-4">
+                    <a href="#">
+                        <div class="sec4">
+                            <img src="Images/Image4a.jpg" class="img-fluid" alt="Image4a">
+                            <div class="sec4-body">
+                                <h1>Design</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#">
+                        <div class="sec4">
+                            <img src="Images/Image4b.jpg" class="img-fluid" alt="Image4b">
+                            <div class="sec4-body">
+                                <h1>Build</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="#">
+                        <div class="sec4">
+                            <img src="Images/Image4c.jpg" class="img-fluid" alt="Image4c">
+                            <div class="sec4-body">
+                                <h1>Support</h1>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid p-3 bg-light text-dark">
+            <hr>
+        </section>
+
+        <!--Fifth Section (Partners)-->
+        <section class="container-fluid partners-section">
+            <div class="row no-gutters align-items-center justify-content-center partners-row">
+                <div class="col-12 d-flex justify-content-center align-items-center text-center">
+                    <h1 class="partners-title">Partners</h1>
+                    <div class="d-flex justify-content-center align-items-center mx-4">
+                        <img src="Partners/konnerth2.png" class="img-fluid partners-logo" alt="Konnerth Gruppe">
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center mx-4">
+                        <img src="Partners/oku.png" class="img-fluid partners-logo" alt="OKU">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Sixth Section (Testimonials)-->
+        <section class="container-fluid p-3 bg-light text-dark">
+            <hr>
+            <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
+                <div id="testi-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item testi-carousel-item active text-center p-4">
+                            <blockquote class="blockquote text-center">
+                                <p class="mb-0"><i class="fa fa-quote-left"></i> Konnexio's custom automation solutions have transformed our production line. Their innovative approach and attention to detail allowed us to streamline our processes and significantly reduce our time-to-market. The team was incredibly professional and delivered exactly what we needed.</p>
+                                <br>Emily Harris<br>Operations Manager at AutoTech Corp
+                            </blockquote>
+                        </div>
+                        <div class="carousel-item testi-carousel-item text-center p-4">
+                            <blockquote class="blockquote text-center">
+                                <p class="mb-0"><i class="fa fa-quote-left"></i> Working with Konnexio has been a game-changer for our business. Their expertise in automation has not only improved our efficiency but also increased our production capacity. The team's commitment to excellence and customer satisfaction is unparalleled.</p>
+                                <br>John Smith<br>CEO at Tech Innovations Ltd
+                            </blockquote>
+                        </div>
+                        <div class="carousel-item testi-carousel-item text-center p-4">
+                            <blockquote class="blockquote text-center">
+                                <p class="mb-0"><i class="fa fa-quote-left"></i> Konnexio's automation solutions have revolutionized our manufacturing process. Their tailored approach and cutting-edge technology have significantly boosted our productivity and reduced operational costs. The team's professionalism and dedication were evident throughout the project.</p>
+                                <br>Sarah Johnson<br>Production Manager at Industrial Solutions Inc
+                            </blockquote>
+                        </div>
+                        <!-- Add more testimonials here -->
+                    </div>
+                    <a class="carousel-control-prev" href="#testi-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
+                            <i class="fa fa-chevron-left"></i>
+                        </span>
+                        <span class="sr-only"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#testi-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
+                            <i class="fa fa-chevron-right"></i>
+                        </span>
+                        <span class="sr-only"></span>
+                    </a>
+                    <ol class="carousel-indicators testi-carousel-indicators">
+                        <li data-target="#testi-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#testi-carousel" data-slide-to="1"></li>
+                        <li data-target="#testi-carousel" data-slide-to="2"></li>
+                        <!-- Add more indicators here -->
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+    <br>
+    <br>
+    <!-- Footer Section -->
+    <?php include 'footer.php'; ?>
 
 </body>
-
 </html>
