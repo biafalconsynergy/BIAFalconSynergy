@@ -32,7 +32,7 @@
 
     <!-- Main Custom Machines -->
     <section class="cm_container-fluid" style="padding: 0;">
-        <div id="cm_main_content" class="cm_full_width text-center cm_tab_image-container">
+        <div id="cm_main_content" class="cm_full_width text-center cm_image-container">
             <img src="Images/cm_main.jpg" alt="Custom Machines" class="img-fluid">
             <div class="cm_transparent-overlay d-block w-100">
                 <div class="cm_caption">
@@ -64,7 +64,7 @@
                         <div class="cm_tab_content tab-content active" data-tab-content="1">
                             <div class="row justify-content-center">
                                 <div class="col-md-6">
-                                    <img src="Images/cm_consulting1.jpg" loading="lazy" alt="Automation Consulting" class="cm_tab_image img-fluid">
+                                    <img src="Images/cm_consulting1.jpg" alt="Automation Consulting" class="cm_tab_image img-fluid">
                                 </div>
                                 <div class="col-md-6">
                                     <h2>Automation Consulting</h2>
@@ -80,7 +80,7 @@
                         <div class="cm_tab_content tab-content" data-tab-content="2">
                             <div class="row justify-content-center">
                                 <div class="col-md-6">
-                                    <img src="Images/cm_projmgmt.jpg" loading="lazy" alt="Project Management" class="cm_tab_image img-fluid">
+                                    <img src="Images/cm_projmgmt.jpg" alt="Project Management" class="cm_tab_image img-fluid">
                                 </div>
                                 <div class="col-md-6">
                                     <h2>Project Management</h2>
@@ -97,7 +97,7 @@
                         <div class="cm_tab_content tab-content" data-tab-content="3">
                             <div class="row justify-content-center">
                                 <div class="col-md-6">
-                                    <img src="Images/cm_controls.jpg" loading="lazy" alt="Controls" class="cm_tab_image img-fluid">
+                                    <img src="Images/cm_controls.jpg" alt="Controls" class="cm_tab_image img-fluid">
                                 </div>
                                 <div class="col-md-6">
                                     <h2>Controls</h2>
@@ -114,7 +114,7 @@
                         <div class="cm_tab_content tab-content" data-tab-content="4">
                             <div class="row justify-content-center">
                                 <div class="col-md-6">
-                                    <img src="Images/cm_machineconstruction.jpg" loading="lazy" alt="Engineering & Construction" class="cm_tab_image img-fluid">
+                                    <img src="Images/cm_machineconstruction.jpg" alt="Engineering & Construction" class="cm_tab_image img-fluid">
                                 </div>
                                 <div class="col-md-6">
                                     <h2>Engineering & Construction</h2>
@@ -131,7 +131,7 @@
                         <div class="cm_tab_content tab-content" data-tab-content="5">
                             <div class="row justify-content-center">
                                 <div class="col-md-6">
-                                    <img src="Images/cm_machineshop.jpg" loading="lazy" alt="Machine Shop" class="cm_tab_image img-fluid">
+                                    <img src="Images/cm_machineshop.jpg" alt="Machine Shop" class="cm_tab_image img-fluid">
                                 </div>
                                 <div class="col-md-6">
                                     <h2>Machine Shop</h2>
@@ -171,4 +171,5 @@
 
     
 </body>
+
 </html>
