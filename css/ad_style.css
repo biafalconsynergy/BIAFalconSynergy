@@ -99,14 +99,12 @@
 }
 
 .heroText h1 {
-    /*font-size: 4rem;*/
     margin-top: 50px;
     margin-bottom: 40px;
     font-weight: bold;
 }
 
 .heroText p {
-    /*font-size: 1.5rem;*/
     color: #f8f9fa;
 }
 
@@ -161,14 +159,12 @@
 }
 
 .services_box h3 {
-    /*font-size: 1.5rem;*/
     margin-top: 20px;
     margin-bottom: 15px;
     color: #343a40;
 }
 
 .services_box p {
-    /*font-size: 1rem;*/
     color: #6c757d;
 }
 
@@ -180,7 +176,6 @@
     display: inline-block;
     margin-top: 20px;
     padding: 10px 30px;
-    /*font-size: 1rem;*/
     color: #ffffff;
     background-color: #007bff;
     border-radius: 5px;
@@ -192,7 +187,6 @@
     text-decoration: none;
 }
 
-
 /* Adapto Text Section */
 .adapto_text {
     padding-top: 5rem;
@@ -201,12 +195,10 @@
 }
 
 .adapto_text h2 {
-   /* font-size: 3rem;*/
     margin-bottom: 1.5rem;
 }
 
 .adapto_text p {
-    /* font-size: 1.5rem; */
     line-height: 1.8;
     margin-bottom: 2rem;
 }
