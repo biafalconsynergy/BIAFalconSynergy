@@ -171,7 +171,8 @@ body {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .cm_tab_image-container img {
-        height: 350px; /* Set a fixed height for smaller screens */
+        height: 400px; /* Set a fixed height for smaller screens */
+        width: auto;
     }
     .cm_transparent-overlay {
         width: 70%;
@@ -220,7 +221,8 @@ body {
 @media (max-width: 576px) {
     @media (max-width: 576px) {
         .cm_tab_image-container img {
-            height: 300px; /* Set a smaller fixed height for very small screens */
+            height: 350px; /* Set a smaller fixed height for very small screens */
+            width: auto;
         }
     }
     .cm_transparent-overlay {
