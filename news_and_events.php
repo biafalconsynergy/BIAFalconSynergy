@@ -1,97 +1,148 @@
+<?php
+include 'db_connection.php';
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM news_events WHERE isactive = 1 order by posted_date desc";
+$result = $conn->query($sql);
+
+$sql_1 = "SELECT * FROM news_events WHERE isactive = 1 order by posted_date desc LIMIT 3";
+$result_1 = $conn->query($sql_1);
+
+$sql_2 = "SELECT * FROM news_events WHERE isactive = 1 AND content_type = 'Event' ORDER BY posted_date DESC";
+$result_2 = $conn->query($sql_2);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>News and Events | KONNEXIO</title>
+    <title>KONNEXIO | News & Events</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Konnexio is a custom machine builder located in London Ontario. Our specialty is adapto™ which is a modular assembly line construction technology.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
 
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/ne_styles.css">
-
     <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+    
+       
 </head>
 
 <body>
-  <!-- Header Section -->
-  <?php include 'header.php'; ?>
+    <!-- Header -->
+    <?php include 'header.php'; ?>
 
-  <!-- News and Events Section -->
+     <!-- News and Events Section -->
   <section class="news-events-section">
     <div class="container my-5">
       <h1>News and Events</h1>
-      <p class="news-events-para">Stay updated with the latest news and events happening in our industry.</p>
+      <p class="news-events-para"><i>Stay updated with the latest news and events happening in our industry.</i></p>
     </div>
   </section>
 
-  <!-- Carousel Section -->
-  <div class="carousel-container">
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-          aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="Images/Image2c.jpg" class="d-block w-100" alt="Hydrogen Fuel Cells">
-          <div class="carousel-caption d-none d-md-block">
-            <h3 class="card-title">Advancements in Hydrogen Fuel Cells</h3>
-            <p class="card-text">Stay updated with the latest developments in the hydrogen fuel cells industry.
-              Discover new technologies and breakthroughs.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="Images/Image2b.jpg" class="d-block w-100" alt="Agriculture UVC">
-          <div class="carousel-caption d-none d-md-block">
-            <h3 class="card-title">UVC Technology in Agriculture</h3>
-            <p class="card-text">Explore the benefits and applications of UVC technology in agriculture, enhancing
-              crop yields and pest control.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="Images/Image2a.jpg" class="d-block w-100" alt="Mechanical Automation vs Software">
-          <div class="carousel-caption d-none d-md-block">
-            <h3 class="card-title">Mechanical Automation vs Software</h3>
-            <p class="card-text">Understand the benefits and differences between mechanical automation and software
-              solutions in industrial applications.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
+  
 
-  <!-- Funding Partners Section -->
+ <!-- Carousel Section -->
+<div class="carousel-container">
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <h1 class="carousel-heading">News Highlights</h1>
+
+      <?php
+      if ($result_1->num_rows > 0) {
+          $first = true;
+          while ($row = $result_1->fetch_assoc()) {
+      ?>
+        <div class="carousel-item <?php echo $first ? 'active' : ''; ?>">
+          <img src="Upload/<?php echo $row['image']; ?>" alt="News Highlights">
+          <div class="carousel-caption d-none d-md-block">
+              <h3 ><?php echo $row["title"]; ?></h3>
+              <p class="carousel-text"><?php echo $row["content"]; ?></p>
+              <a href="#" class="btn btn-primary">Read More</a> 
+            </div>
+        </div>
+      <?php
+          $first = false;
+          }
+      } else {
+          echo "<p>No active news found.</p>";
+      }
+      ?>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+ <!-- Third Section (Image Containers) -->
+        
+ <div class="container mt-4">
+            <!-- Search bar -->
+            <div class="input-group mb-4">
+                <input type="text" class="form-control" id="searchInput" onkeyup="filterCards()" placeholder="Search by title or content...">
+                <div class="input-group-append">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                </div>
+            </div>
+
+            <div id="newsContainer" class="news-grid">
+                <?php
+                // Check if there are any rows in the result set
+                if ($result->num_rows > 0) {
+                    // Output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                        <div class="news-card">
+                            <img src="Upload/<?php echo $row['image']; ?>" alt="News and Events">
+                            <div class="news-content">
+                                <h3 class="news-title"><?php echo $row["title"]; ?></h3>
+                                <p class="news-content-text"><?php echo $row["content"]; ?></p>
+                                <p class="content-type"><?php echo strtoupper($row["content_type"]); ?></p>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    // Ensure the number of cards in a row is always 4
+                    $remainingCards = $result->num_rows % 4;
+                    if ($remainingCards > 0) {
+                        for ($i = $remainingCards; $i < 4; $i++) {
+                            echo '<div class="news-card placeholder-card"></div>';
+                        }
+                    }
+                } else {
+                    echo "<p>No active case studies found.</p>";
+                }
+                ?>
+            </div>
+        </div>
+
+         <!-- Funding Partners Section -->
   <section class="funding-partners-section">
     <div class="container my-5 text-center">
       <h2>Funding Partners for Automation</h2>
@@ -128,81 +179,40 @@
   </section>
 
   <!-- Upcoming Industry Events Section -->
-  <section class="upcoming-events-section">
+  <section class="upcoming-events-section bg-light">
     <div class="container my-5">
-      <h2>Upcoming Industry Events</h2>
-      <div class="event-container mb-4">
-        <div class="event-item d-flex align-items-center my-3 p-3 bg-light-blue">
-          <div class="event-img">
-            <img src="Images/Image2c.jpg" alt="Event 1" class="rounded-circle img-thumbnail">
-          </div>
-          <div class="event-content ms-4">
-            
-            <h3>Automation in Manufacturing</h3>
-            <div class="event-date"><p><i class="bi bi-calendar"></i> March 15, 2024</p></div>
-            <p class="event-details"><i class="bi bi-clock"></i> 09:00 am - 11:00 am</p>
-            <p class="event-details"><i class="bi bi-geo-alt"></i> 123 Innovation Dr, Toronto, ON</p>
-            
-          </div>
-        </div>
+      <h2 class="events-heading">Upcoming Industry Events</h2>
+      
+        <?php
+            if ($result_2->num_rows > 0) {
+                while ($row = $result_2->fetch_assoc()) {
+                    ?>
+                    <div class="event-container mb-4">
+                        <div class="event-item d-flex align-items-center my-3 p-3">
+                            <div class="event-img">
+                                <img src="Upload/<?php echo $row['image']; ?>" alt="Industry Event" class="rounded-circle img-thumbnail">
+                            </div>
+                            <div class="event-content ms-4">
+                                <h3><?php echo $row["title"]; ?></h3>
+                                <div class="event-date"><i class="bi bi-calendar"></i> <?php echo $row['posted_date']; ?></div>
+                            </div>
+                        </div>
+                    </div>    
+                    <?php
+                }
+            } else {
+                echo "<p>No active events found.</p>";
+            }
+            ?>
+     
       </div>
-      <div class="event-container mb-4">
-        <div class="event-item d-flex align-items-center my-3 p-3 bg-light-green">
-          <div class="event-img">
-            <img src="Images/Image4b.jpg" alt="Event 2" class="rounded-circle img-thumbnail">
-          </div>
-          <div class="event-content ms-4">
-            <h3>AI and Robotics Symposium</h3>
-            <div class="event-date"><p><i class="bi bi-calendar"></i> March 20, 2024</p></div>
-            <p class="event-details"><i class="bi bi-clock"></i> 10:00 am - 12:00 pm</p>
-            <p class="event-details"><i class="bi bi-geo-alt"></i> 456 Tech Park, Vancouver, BC</p>
-            
-          </div>
-        </div>
-      </div>
-      <div class="event-container mb-4">
-        <div class="event-item d-flex align-items-center my-3 p-3 bg-light-yellow">
-          <div class="event-img">
-            <img src="Images/Image6d.jpg" alt="Event 3" class="rounded-circle img-thumbnail">
-          </div>
-          <div class="event-content ms-4">
-            
-            <h3>Innovations in Smart Factories</h3>
-            <div class="event-date"><p><i class="bi bi-calendar"></i> March 25, 2024</p></div>
-            <p class="event-details"><i class="bi bi-clock"></i> 01:00 pm - 03:00 pm</p>
-            <p class="event-details"><i class="bi bi-geo-alt"></i> 789 Industrial Blvd, Montreal, QC</p>
-            
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
+  
+        <!-- Footer Data -->
+        <?php include 'footer.php'; ?>
 
-  <!-- Pagination Section -->
-  <section class="pagination-section">
-    <div class="pagination-container">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </section>
-
-  <!-- Footer Section -->
-  <?php include 'footer.php'; ?>
+    </main>
+    <script src="js/ne_scripts.js" defer></script>
 </body>
 
 </html>
