@@ -1,0 +1,192 @@
+/*  testing the carousel slider section  */
+
+.about-section {
+    background-color: #1e3e5e;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .about-section h1{
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .about-section-para
+  {
+    font-size: 20px;
+  }
+
+
+  /* Funding Partners Section */
+
+.funding-partners-section {
+    padding: 40px;
+    background-color: #e0e0e0;
+  }
+  
+  .funding-partners-section h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+  
+  .funding-partners-section .img-fluid {
+    max-width: 200px;
+  }
+  
+  .funding-partners-section p {
+    font-size: 18px;
+  }
+  
+
+/* upcoming events */
+
+ 
+  .upcoming-events-section {
+    background-color: #1e3e5e;
+    color: #ffffff;
+    padding: 30px 0;
+  }
+  
+  .upcoming-events-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+  
+  .event-item {
+    background-color: #1e3e5e;
+    color: #ffffff;
+    border-radius: 8px;
+  }
+  
+  .event-item .event-img img {
+    border: 2px
+  }
+ 
+  .event-content {
+    color: #1e3e5e;
+  }
+  
+  .event-container {
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  
+  .bg-light-blue {
+    background-color: #e0f7fa; 
+  }
+  
+  .bg-light-green {
+    background-color: #e0f4e9;
+  }
+  
+  .bg-light-yellow {
+    background-color: #fff9e0; 
+  }
+  
+  .event-item {
+    background-color: inherit; 
+  }
+  
+  .event-img {
+    width: 250px; 
+    margin-right: 50px; 
+  }
+  
+  .event-date {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .pagination-section {
+    margin-top: 20px; 
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+  }
+
+/* Associations section */
+.associations-section {
+  padding: 3rem 0; /* Add vertical padding */
+}
+
+.associations-section h2 {
+  font-size: 2rem; /* Adjust as needed */
+  margin-bottom: 2rem; /* Space below the heading */
+}
+
+.association-item {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  text-align: left; /* Ensure text inside items is left-aligned */
+}
+
+.association-logo img {
+  max-width: 100px; /* Adjust as needed */
+}
+
+.association-content {
+  margin-left: 1rem; /* Space between logo and content */
+}
+
+.association-content h4 {
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+.association-content p {
+  color: #6c757d; /* Grey text */
+}
+
+/* Responsive styles */
+@media (max-width: 767.98px) {
+  .association-item img {
+      max-width: 80px; /* Adjust logo size on smaller screens */
+  }
+}
+
+/*Testimonials */
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.carousel-img img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.carousel-content h4 {
+  margin: 0.5rem 0;
+}
+@media (max-width: 768px) {
+  .carousel-item {
+    flex-direction: column;
+  }
+  .carousel-img {
+    margin-bottom: 1rem;
+  }
+}

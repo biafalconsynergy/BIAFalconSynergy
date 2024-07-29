@@ -40,7 +40,7 @@
                         <a class="nav-link" href="news_and_events.php">News & Events</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="About.php" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                        <a class="nav-link" href="about.php" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="about.php#company_story">Company Story</a></li>
                             <li><a class="dropdown-item" href="about.php#our_people">Our People</a></li>
