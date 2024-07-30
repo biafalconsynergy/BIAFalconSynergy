@@ -76,7 +76,7 @@
         <!-- Conditional Signup Button -->
         <?php if ($_SESSION['roleid'] == 1): ?>
             <li class="nav-item">
-                <a class="nav-link" href="UsersNew.php">
+                <a class="nav-link" href="signup.php">
                     <i class="fas fa-fw fa-user-plus"></i>
                     <span>New User</span>
                 </a>

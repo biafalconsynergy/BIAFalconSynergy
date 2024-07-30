@@ -21,7 +21,7 @@
 
     <?php
         //DB Connection
-        include 'Connection.php';
+        include 'connection.php';
 
         //Variables particular to this page
         $tableTitles = ['Career id', 'Author', 'Title', 'Content', 'Date Posted', 'Status'];

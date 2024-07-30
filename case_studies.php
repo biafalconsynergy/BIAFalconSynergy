@@ -17,6 +17,7 @@
     <title>Case Studies | KONNEXIO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Konnexio is a custom machine builder located in London Ontario. Our specialty is adapto™ which is a modular assembly line construction technology.">
     <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
 
     <!-- CSS Libraries -->
@@ -26,13 +27,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/cs_styles.css">
+    <link rel="stylesheet" href="css/id_styles.css">
 
     <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     
     <script>
@@ -79,16 +80,27 @@
 	<!--Header Data-->
     <?php include 'header.php'; ?>
 
-    <main id="main-content">
-
     <div class="page-sec-main">
-        <h1>Case Studies</h1>
+        <h1>Industries</h1>
         <br>
         <div class="page-sec-main-text">
-            <h5>Explore how Konnexio has transformed businesses through innovative solutions and cutting-edge technology in our comprehensive case studies.</h5>
-        </div>
-    </div>
-
+	        <h5>Explore how Konnexio has transformed businesses through innovative solutions and cutting-edge technology in our comprehensive case studies</h5>
+		</div>
+    </div>	
+		<!-- Text Section 
+		<section class="section-padding pb-0 adapto_text" id="about">
+			<div class="container mb-5 pb-lg-5">
+				<div class="row justify-content-center text-center">
+					<div class="col-lg-8 col-12">
+						<h2 class="mb-4 mt-5" data-aos="fade-up">Case Studies</h2>
+						<p class="text-center" data-aos="fade-up" data-aos-delay="300">
+							Explore how Konnexio has transformed businesses through innovative solutions and cutting-edge technology in our comprehensive case studies
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>  -->
+			
         <section class="container section-separator">
             <?php
             // Check if there are any rows in the result set
@@ -99,7 +111,7 @@
                     <div class="row mb-4">
                         <div class="col-md-6">
                             <div class="sec3b bg-light">
-                                <img src="upload/<?php echo $row['image']; ?>" alt="Case Study Image" class="img-fluid">
+                                <img src="./admin_page_final_changes/admin_page/upload/<?php echo $row['image']; ?>" alt="Case Study Image" class="img-fluid">
                             </div>
                         </div>
                         <div class="col-md-6">

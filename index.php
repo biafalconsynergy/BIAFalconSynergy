@@ -47,7 +47,7 @@
                         <div class="carousel-caption">
                             <h1>Welcome</h1>
                             <p>This is the welcome page!</p>
-                            <button class="btn btn-danger btn-lg">Contact Us</button>
+                            <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Contact Us</button>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -55,7 +55,7 @@
                         <div class="carousel-caption">
                             <h1>adapto™</h1>
                             <p>This is the adapto page!</p>
-                            <button class="btn btn-danger btn-lg">Contact Us</button>
+                            <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Contact Us</button>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -63,7 +63,7 @@
                         <div class="carousel-caption">
                             <h1>Mission</h1>
                             <p>This is the mission page!</p>
-                            <button class="btn btn-danger btn-lg">Contact Us</button>
+                            <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Contact Us</button>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                                 <div class="card-body sec2a">
                                     <h3 class="card-title">Industrial</h3>
                                     <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-dark">Know More</button>
+                                    <button class="btn btn-dark" onclick="location.href='industries.php#industrial';">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                                 <div class="card-body sec2b">
                                     <h3 class="card-title">Agriculture</h3>
                                     <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-light">Know More</button>
+                                    <button class="btn btn-light" onclick="location.href='industries.php#agriculture';">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                                 <div class="card-body sec2c">
                                     <h3 class="card-title">Hydrogen Fuel Cells</h3>
                                     <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-dark">Know More</button>
+                                    <button class="btn btn-dark" onclick="location.href='industries.php#hydrogen_fuel_cells';">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                                 <div class="card-body sec2d">
                                     <h3 class="card-title">Other Industries</h3>
                                     <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-light">Know More</button>
+                                    <button class="btn btn-light" onclick="location.href='industries.php#other_industries';">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -187,7 +187,7 @@
                     <div class="sec3b bg-light">
                         <h1>Custom Machines</h1>
                         <p>Explore KONNEXIO's custom automation solutions, where our team of experts transforms your project vision into reality with tailored machine designs, efficient project management and seamless integration for optimal production efficiency.</p>
-                        <button class="btn btn-danger btn-lg">Learn More</button>
+                        <button class="btn btn-danger btn-lg" onclick="location.href='custom_machines.php';">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -201,7 +201,7 @@
         <section class="container-fluid p-3 bg-light">
             <div class="row no-gutters">
                 <div class="col-sm-4">
-                    <a href="#">
+                    <a href="services.php#design">
                         <div class="sec4">
                             <img src="Images/Image4a.jpg" class="img-fluid" alt="Image4a">
                             <div class="sec4-body">
@@ -211,7 +211,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="#">
+                    <a href="services.php#build">
                         <div class="sec4">
                             <img src="Images/Image4b.jpg" class="img-fluid" alt="Image4b">
                             <div class="sec4-body">
@@ -221,7 +221,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="#">
+                    <a href="services.php#support">
                         <div class="sec4">
                             <img src="Images/Image4c.jpg" class="img-fluid" alt="Image4c">
                             <div class="sec4-body">

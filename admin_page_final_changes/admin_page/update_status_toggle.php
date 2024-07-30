@@ -16,11 +16,11 @@ if (isset($_POST['id']) && isset($_POST['status']) && isset($_POST['tableDbName'
 
     // Update the status in the database
     if ($tableDbName === 'support_ticket') {
-        $sql = "UPDATE $tableDbName SET isactive = ?, userid = ? WHERE $tablePrimaryKey = ?";
+        $sql = "UPDATE $tableDbName SET isactive = ?, userid = ?, last_updated_date = NOW() WHERE $tablePrimaryKey = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param('iii', $status, $loggedInUserId, $id);
     } else {
-        $sql = "UPDATE $tableDbName SET isactive = ? WHERE $tablePrimaryKey = ?";
+        $sql = "UPDATE $tableDbName SET isactive = ?, last_updated_date = NOW() WHERE $tablePrimaryKey = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param('ii', $status, $id);
     }

@@ -24,6 +24,9 @@ $pageName = basename($_SERVER['PHP_SELF']);
 $hideImageButton = ($pageName === 'CareersNew.php'); 
 $showContentTypeButton = ($pageName === 'NewsEventsNew.php'); 
 
+// Get the referer URL
+$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'admin.php';  
+
 // Process form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'];
@@ -152,12 +155,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <!-- Image Input -->
                                 <?php if (!$hideImageButton): ?>
                                 <div class="form-group">
-                                    <label for="uploadfile">Image</label>
-                                    <input class="form-control" type="file" name="uploadfile" id="uploadfile" required>
-                                </div>
+									<label for="uploadfile">Image</label>
+									<input class="form-control" type="file" name="uploadfile" id="uploadfile" onchange="previewImage(event)" required>
+									<img id="imagePreview" src="#" alt="Image Preview" style="display: none; margin-top: 10px; max-height: 200px;">
+								</div>
+
                                 <?php endif; ?>
 
                                 <button type="submit" class="btn btn-primary">Save</button>
+								<a href="<?php echo $referer; ?>" class="btn btn-secondary">Cancel</a>
                             </div>
                         </div>
                     </form>
@@ -212,6 +218,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             return true;
         }
+		function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function(){
+                const output = document.getElementById('imagePreview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+		}
     </script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>
