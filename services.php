@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="ss_styles.css">
+    <link rel="stylesheet" href="css/ss_styles.css">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="services_script.js" defer></script>
+    <script src="js/ss_scripts.js" defer></script>
 </head>
 
 <body>
@@ -80,7 +80,7 @@
                         <button class="learn-more-btn">Learn More</button>
                     </div>
                     <div class="design-img">
-                        <img src="Images/Image7c.jpg" class="design-img-item" alt="Electrical Design">
+                        <img src="Images/cm_controls.jpg" class="design-img-item" alt="Electrical Design">
                     </div>
                 </div>
             </div>
@@ -133,7 +133,7 @@
 
                 <div class="col-md-4 mb-4">
                     <div class="box">
-                        <img src="Images/Image7b.jpg" class="build-img-item" alt="Custom Machine Building">
+                        <img src="Images/cm_consulting1.jpg" class="build-img-item" alt="Custom Machine Building">
                         <h1 class="section-title-heading">Custom Machine Building</h1>
                         <p class="section-title-text" data-full-text="Custom Machine Building involves designing, constructing, and integrating specialized machinery tailored to meet the specific needs of a particular application or industry. This process requires a deep understanding of the client's requirements, including the operational environment, production goals, and technical specifications. Custom machines are designed to perform specific tasks that standard machinery cannot efficiently accomplish. This customization can range from simple modifications to complex systems that integrate multiple functions. The process begins with detailed consultation and analysis to identify the exact needs and challenges of the client. Engineers then design the machine using advanced computer-aided design (CAD) software, ensuring that the proposed solution is both innovative and feasible.">Custom Machine Building involves designing, constructing, and integrating specialized machinery tailored to meet the specific needs of a particular application or industry. This process requires a deep understanding of...</p>
                         <button class="learn-more-btn">Learn More</button>
