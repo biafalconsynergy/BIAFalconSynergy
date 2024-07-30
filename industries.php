@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="css/id_styles.css">
 
     <!-- JS Libraries -->
-    <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
@@ -41,14 +40,14 @@
         </div>
     </div>
     
-    <section class="container-fluid" style="padding: 0;">
+    <section class="container-fluid slide-up" style="padding: 0;">
         <div class="row no-gutters" id="industrial">
-            <div class="col-sm-6">
+            <div class="col-sm-6 order-sm-first order-md-last">
                 <div class="sec3b bg-light">
-                    <img src="Images/Image3b.jpg" alt="Image3b">
+                    <img src="Images/Image3b.jpg" alt="Industrial Sector">
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 order-sm-last order-md-first">
                 <div class="sec3b bg-light">
                     <h2>Industrial</h2>
                     <p>The industrial sector forms the backbone of our work at Konnexio. We offer a range of services tailored to meet the unique needs of manufacturing and production companies. Our solutions include automation technologies, predictive maintenance systems, and efficiency optimization tools, all designed to enhance productivity and reduce operational costs. Whether you're looking to upgrade your machinery or integrate new technologies, our team is equipped to support your industrial needs.</p>
@@ -59,32 +58,32 @@
     </section>
 
     <hr>
-    <section class="container-fluid" style="padding: 0;">
+    <section class="container-fluid slide-up" style="padding: 0;">
         <div class="row no-gutters" id="agriculture">
-            <div class="col-sm-6">
+            <div class="col-sm-6 order-sm-first order-md-first">
+                <div class="sec3b bg-light">
+                    <img src="Images/Image2b.jpg" alt="Agriculture Sector">
+                </div>
+            </div>
+            <div class="col-sm-6 order-sm-last order-md-last">
                 <div class="sec3b bg-light">
                     <h2>Agriculture</h2>
                     <p>Agriculture is evolving rapidly, and Konnexio is at the forefront of this transformation. We provide advanced solutions to optimize agricultural processes, from precision farming techniques to smart irrigation systems. Our technologies help farmers increase yield, reduce waste, and manage resources more efficiently. By integrating data analytics and IoT devices, we enable farmers to make informed decisions and improve crop quality and sustainability.</p>
                     <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Schedule a Demo</button>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="sec3b bg-light">
-                    <img src="Images/Image2b.jpg" alt="Image3b">
-                </div>
-            </div>
         </div>
     </section>
 
     <hr>
-    <section class="container-fluid" style="padding: 0;">
+    <section class="container-fluid slide-up" style="padding: 0;">
         <div class="row no-gutters" id="hydrogen_fuel_cells">
-            <div class="col-sm-6">
+            <div class="col-sm-6 order-sm-first order-md-last">
                 <div class="sec3b bg-light">
-                    <img src="Images/Image2c.jpg" alt="Image3b">
+                    <img src="Images/Image2c.jpg" alt="Hydrogen Fuel Cells Sector">
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 order-sm-last order-md-first">
                 <div class="sec3b bg-light">
                     <h2>Hydrogen Fuel Cells</h2>
                     <p>As the world shifts towards sustainable energy, Konnexio is proud to support the hydrogen fuel cell industry. We specialize in the development and implementation of hydrogen production, storage, and distribution systems. Our expertise includes designing efficient fuel cell systems for various applications, including transportation, industrial power, and residential energy solutions. We are committed to advancing the hydrogen economy by providing innovative and reliable technology solutions.</p>
@@ -95,18 +94,18 @@
     </section>
 
     <hr>
-    <section class="container-fluid" style="padding: 0;">
+    <section class="container-fluid slide-up" style="padding: 0;">
         <div class="row no-gutters" id="other_industries">
-            <div class="col-sm-6">
+            <div class="col-sm-6 order-sm-first order-md-first">
+                <div class="sec3b bg-light">
+                    <img src="Images/Image2d.jpg" alt="Other Industries Sector">
+                </div>
+            </div>
+            <div class="col-sm-6 order-sm-last order-md-last">
                 <div class="sec3b bg-light">
                     <h2>Other Industries</h2>
                     <p>In addition to our core sectors, Konnexio also serves a variety of other industries. We provide customized solutions for sectors such as healthcare, finance, and telecommunications. Our offerings include cybersecurity measures, data management systems, and customer engagement platforms. No matter your industry, Konnexio has the experience and expertise to help you navigate the challenges and opportunities of the digital age.</p>
                     <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Customize Your Solution</button>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="sec3b bg-light">
-                    <img src="Images/Image2d.jpg" alt="Image3b">
                 </div>
             </div>
         </div>
@@ -115,5 +114,8 @@
     <!-- Footer Section -->
     <?php include 'footer.php'; ?>
 
+    <!-- JS -->
+    <script src="js/script.js"></script>
+    <script src="js/id_script.js"></script>
 </body>
 </html>
