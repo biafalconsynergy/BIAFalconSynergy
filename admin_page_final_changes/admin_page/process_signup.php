@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = password_hash($passwordf, PASSWORD_DEFAULT);
 	
     // Database connection details
-    include 'db_connection.php';
+    include 'connection.php';
 
     try {
         // Create connection

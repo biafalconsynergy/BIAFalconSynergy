@@ -3,10 +3,12 @@
     if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-?>
-<?php
+
+
 // Retrieve form data from session if available
 $form_data = isset($_SESSION['form_data']) ? $_SESSION['form_data'] : [];
+
+$tableName = 'user';
 
 // Clear session data
 unset($_SESSION['form_data']);
@@ -16,7 +18,7 @@ unset($_SESSION['form_data']);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Create New User</title>
     <style>
         /* Add your CSS styles here */
@@ -91,83 +93,143 @@ unset($_SESSION['form_data']);
 
 <body>
 
-<div class="container-fluid">
-<!--    <h2>Create New User</h2> -->
-	<form action="process_signup.php" method="POST">
-		<div class="form-group">
-			<label for="firstname">First Name <span style="color: red;">*</span></label>
-			<input type="text" id="firstname" name="firstname" value="<?php echo isset($form_data['firstname']) ? htmlspecialchars($form_data['firstname']) : ''; ?>" required>
-		</div>
-		<div class="form-group">
-			<label for="lastname">Last Name <span style="color: red;">*</span></label>
-			<input type="text" id="lastname" name="lastname" value="<?php echo isset($form_data['lastname']) ? htmlspecialchars($form_data['lastname']) : ''; ?>" required>
-		</div>
-		<div class="form-group">
-			<label for="contactno">Contact Number <span style="color: red;">*</span></label>
-			<input type="text" id="contactno" name="contactno" value="<?php echo isset($form_data['contactno']) ? htmlspecialchars($form_data['contactno']) : ''; ?>" required>
-		</div>
-		<div class="form-group">
-			<label for="email">Email <span style="color: red;">*</span></label>
-			<input type="email" id="email" name="email" value="<?php echo isset($form_data['email']) ? htmlspecialchars($form_data['email']) : ''; ?>" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-		</div>
-		<div class="form-group">
-			<label for="gender">Gender <span style="color: red;">*</span></label>
-			<select id="gender" name="gender" required>
-				<option value="male">Male</option>
-				<option value="female">Female</option>
-				<option value="other">Other</option>
-			</select>
-		</div>
-		<div class="form-group">
-			<label for="address">Address <span style="color: red;">*</span></label>
-			<input type="text" id="address" name="address" value="<?php echo isset($form_data['address']) ? htmlspecialchars($form_data['address']) : ''; ?>" required>
-		</div>
-		<div class="form-group">
-			<label for="username">Username <span style="color: red;">*</span></label>
-			<input type="text" id="username" name="username" required>
-		</div>
-		
-		<div class="form-group">
-        <label for="password">Password <span style="color: red;">*</span></label>
-        <input type="password" id="password" name="password" required>
-        <div class="password-hint">Hints: Use at least 8 characters with a mix of letters, numbers, and symbols.</div>
-        <div class="password-requirements">Requirements: <span id="lengthReq">Minimum 8 characters</span>, <span id="numberReq">At least one number</span>, <span id="upperReq">At least one uppercase letter</span>, <span id="specialReq">At least one special character</span>.</div>
-        <div class="strength-meter">
-            <div class="strength-bar" id="strengthBar"></div>
-        </div>
-		</div>
-		
-        <div class="form-group">
-            <label for="rolename">Role Name:</label>
-		<select id="rolename" name="rolename" required>
-			<?php
-			// Database connection details
-			include 'db_connection.php';
 
-			try {
-				// Create connection
-				$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-				// Set the PDO error mode to exception
-				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-				// Fetch roles from database
-				$stmt = $conn->query("SELECT roleid, role_name FROM user_role");
-				while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-					echo "<option value='" . $row['roleid'] . "'>" . $row['role_name'] . "</option>";
-				}
-			} catch(PDOException $e) {
-				echo "Error: " . $e->getMessage();
-			}
-			$conn = null;
-			?>
-		</select>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <?php include 'Sidebar.php'; ?>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <div class="container-fluid">   
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <form class="form-inline">
+                            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                        </form>
+                        <!-- Sidebar Toggle (Topbar) End -->
+                        <h3 class="m-0 font-weight-bold text-dark"><?php echo $tableName; ?></h3>
+                        <div class="top-right justify-content-right">
+                            <span>Logged in as: <?php echo $_SESSION['first_name']; ?></span>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End of Topbar -->
+          
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+					<div class="card shadow mb-4">
+						<div class="card-body">
+							<form action="process_signup.php" method="POST">
+								<div class="form-group">
+									<label for="firstname">First Name <span style="color: red;">*</span></label>
+									<input type="text" id="firstname" name="firstname" value="<?php echo isset($form_data['firstname']) ? htmlspecialchars($form_data['firstname']) : ''; ?>" required>
+								</div>
+								<div class="form-group">
+									<label for="lastname">Last Name <span style="color: red;">*</span></label>
+									<input type="text" id="lastname" name="lastname" value="<?php echo isset($form_data['lastname']) ? htmlspecialchars($form_data['lastname']) : ''; ?>" required>
+								</div>
+								<div class="form-group">
+									<label for="contactno">Contact Number <span style="color: red;">*</span></label>
+									<input type="text" id="contactno" name="contactno" value="<?php echo isset($form_data['contactno']) ? htmlspecialchars($form_data['contactno']) : ''; ?>" required>
+								</div>
+								<div class="form-group">
+									<label for="email">Email <span style="color: red;">*</span></label>
+									<input type="email" id="email" name="email" value="<?php echo isset($form_data['email']) ? htmlspecialchars($form_data['email']) : ''; ?>" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+								</div>
+								<div class="form-group">
+									<label for="gender">Gender <span style="color: red;">*</span></label>
+									<select id="gender" name="gender" required>
+										<option value="male">Male</option>
+										<option value="female">Female</option>
+										<option value="other">Other</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="address">Address <span style="color: red;">*</span></label>
+									<input type="text" id="address" name="address" value="<?php echo isset($form_data['address']) ? htmlspecialchars($form_data['address']) : ''; ?>" required>
+								</div>
+								<div class="form-group">
+									<label for="username">Username <span style="color: red;">*</span></label>
+									<input type="text" id="username" name="username" required>
+								</div>
+								
+								<div class="form-group">
+								<label for="password">Password <span style="color: red;">*</span></label>
+								<input type="password" id="password" name="password" required>
+								<div class="password-hint">Hints: Use at least 8 characters with a mix of letters, numbers, and symbols.</div>
+								<div class="password-requirements">Requirements: <span id="lengthReq">Minimum 8 characters</span>, <span id="numberReq">At least one number</span>, <span id="upperReq">At least one uppercase letter</span>, <span id="specialReq">At least one special character</span>.</div>
+								<div class="strength-meter">
+									<div class="strength-bar" id="strengthBar"></div>
+								</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="rolename">Role Name:</label>
+								<select id="rolename" name="rolename" required>
+									<?php
+									// Database connection details
+									include 'connection.php';
+
+									try {
+										// Create connection
+										$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+										// Set the PDO error mode to exception
+										$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+										// Fetch roles from database
+										$stmt = $conn->query("SELECT roleid, role_name FROM user_role");
+										while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+											echo "<option value='" . $row['roleid'] . "'>" . $row['role_name'] . "</option>";
+										}
+									} catch(PDOException $e) {
+										echo "Error: " . $e->getMessage();
+									}
+									$conn = null;
+									?>
+								</select>
+
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn">Save</button>
+									<a href="UserManagement.php" class="btn btn-secondary">Cancel</a>
+								</div>
+							</form>
+					</div>	
+
+                <!-- /.container-fluid -->
+				</div>
+                </div>
+				
+				</div>
+                <!-- End of Main Content -->
+                
+            
+       <!-- Footer -->
+        <footer class="sticky-footer">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Konnexio 2024</span>
+                </div>
+        </footer>
+        <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
 
         </div>
-        <div class="form-group">
-            <button type="submit" class="btn">Save</button>
-        </div>
-    </form>
-</div>
+        <!-- End of Page Wrapper -->
+
+    <?php include 'ReferencesBottom.php'; ?>
 
 <script>
     const passwordField = document.getElementById('password');
@@ -231,6 +293,8 @@ unset($_SESSION['form_data']);
         return Math.min(strength, 100);
     }
 </script>
-
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+	
 </body>
 </html>

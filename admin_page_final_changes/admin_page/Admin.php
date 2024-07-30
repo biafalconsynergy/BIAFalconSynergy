@@ -91,7 +91,7 @@ $role = $_SESSION['roleid'];
                             </a>
 
                             <!-- Create Users -->
-                            <a class="col-xl-3 col-md-6 mb-4" href="UsersNew.php">
+                            <a class="col-xl-3 col-md-6 mb-4" href="signup.php">
                                 <div class="card border-left-primary shadow h-100 py-2">
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
@@ -119,7 +119,7 @@ $role = $_SESSION['roleid'];
                                                 <div class="h5 mb-0 font-weight-bold text-gray-800">View</div>
                                             </div>
                                             <div class="col-auto">
-                                                <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                                                <i class="fas fa-exclamation-triangle fa-2x text-gray-300" ></i>
                                             </div>
                                         </div>
                                     </div>
