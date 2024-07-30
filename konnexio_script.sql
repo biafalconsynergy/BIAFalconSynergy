@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 26, 2024 at 11:54 PM
+-- Generation Time: Jul 30, 2024 at 06:30 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -34,7 +34,7 @@ CREATE TABLE `careers` (
   `content` text DEFAULT NULL,
   `posted_date` date DEFAULT current_timestamp(),
   `isactive` tinyint(1) NOT NULL DEFAULT 1,
-  `last_updated_date` date DEFAULT NULL
+  `last_updated_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -42,9 +42,9 @@ CREATE TABLE `careers` (
 --
 
 INSERT INTO `careers` (`careerid`, `userid`, `title`, `content`, `posted_date`, `isactive`, `last_updated_date`) VALUES
-(1, 1, 'Systems Engineer', 'Systems Engineer | Full Time', '2024-07-12', 0, NULL),
+(1, 1, 'Systems Engineer', 'Systems Engineer | Full Time', '2024-07-12', 1, '2024-07-29 19:39:11'),
 (2, 1, 'QA Engineer', 'QA Engineer | Internship ', '2024-07-12', 1, NULL),
-(3, 1, 'Automation Worker', 'Please apply within the company | This is a 6 Months Contract vacancy', '2024-07-15', 0, NULL);
+(3, 1, 'Automation Worker', 'Please apply within the company | This is a 6 Months Contract vacancy', '2024-07-15', 1, '2024-07-29 19:27:49');
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,7 @@ CREATE TABLE `case_study` (
   `posted_date` date DEFAULT current_timestamp(),
   `image` varchar(255) DEFAULT NULL,
   `isactive` tinyint(1) NOT NULL DEFAULT 1,
-  `last_updated_date` date DEFAULT NULL
+  `last_updated_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -68,19 +68,23 @@ CREATE TABLE `case_study` (
 --
 
 INSERT INTO `case_study` (`caseid`, `userid`, `title`, `content`, `posted_date`, `image`, `isactive`, `last_updated_date`) VALUES
-(1, 1, 'Case Study 312A Minoli', 'Automotive Hinge Assembly', '2024-07-06', '390db044adafba173687b2ef317d5714.jpg', 0, '2024-07-26'),
+(1, 1, 'Case Study 312A Minoli', 'Automotive Hinge Assembly', '2024-07-06', 'c833a17c4253912bd9b2a56d852afa35.jpg', 1, '2024-07-29 20:02:53'),
 (6, 1, 'Case Study 312A', 'Explore KONNEXIO\'s custom automation solutions, where our team of experts transforms your project vision into reality with tailored machine designs, efficient project management and seamless integration for optimal production efficiency.', '2024-07-05', 'Image3b.jpg', 1, NULL),
-(7, 1, 'Case Study 12301/302', 'Automotive Door Checker Assembly', NULL, 'Image3b.jpg', 1, NULL),
-(10, 1, 'Case Study 314D', 'Automotive Fuel Line Assembly & Testing', NULL, 'Image1a.jpg', 1, NULL),
-(11, 1, 'Case Study 308006', 'Automotive Plug Seal Assembly & Testing', NULL, 'Image1a.jpg', 1, NULL),
-(12, 1, 'Case Study 313P', 'Automotive Fuel Line Assembly', NULL, 'Image1a.jpg', 0, NULL),
-(13, 1, 'Case Study 313D', 'Automotive Transmission Line Assembly', NULL, 'Image4b.jpg', 1, NULL),
-(14, 1, 'Case Study 311003', 'Locomotive Brake Handle Tester', NULL, 'Image2d.jpg', 1, NULL),
+(7, 1, 'Case Study 12301/302', 'Automotive Door Checker Assembly', '2024-07-05', 'Image3b.jpg', 0, '2024-07-29 23:16:13'),
+(10, 1, 'Case Study 314D', 'Automotive Fuel Line Assembly & Testing', '2024-07-05', 'Image1a.jpg', 1, NULL),
+(11, 1, 'Case Study 308006', 'Automotive Plug Seal Assembly & Testing', '2024-07-05', 'Image1a.jpg', 1, NULL),
+(12, 1, 'Case Study 313P', 'Automotive Fuel Line Assembly', '2024-07-05', 'Image1a.jpg', 0, NULL),
+(13, 1, 'Case Study 313D', 'Automotive Transmission Line Assembly', '2024-07-05', 'Image4b.jpg', 1, NULL),
+(14, 1, 'Case Study 311003', 'Locomotive Brake Handle Tester', '2024-07-05', 'Image2d.jpg', 1, NULL),
 (23, 1, 'Case Study Test 01', 'Case Study Test 01', '2024-07-25', 'Image2d.jpg', 1, NULL),
-(24, 1, '', '', '2024-07-25', '', 1, NULL),
+(24, 1, 'Test', 'Test', '2024-07-25', 'Image2d.jpg', 0, NULL),
 (25, 1, 'r', 'ac', '2024-07-25', 'Image4c.jpg', 1, NULL),
 (26, 1, 'wf', 'wfe', '2024-07-25', 'Image2c.jpg', 1, NULL),
-(27, 1, 'sce', 'eev', '2024-07-25', 'Image3a.jpg', 1, NULL);
+(27, 1, 'sce', 'eev', '2024-07-25', 'Image3a.jpg', 0, NULL),
+(28, 16, 'Test 01', 'Test 01', '2024-07-29', 'c0f5d84ba9e398c8613fb9740ac16620.jpg', 1, '2024-07-29 19:53:35'),
+(29, 1, 'Test 02', 'Test 02', '2024-07-29', 'Image3a.jpg', 1, NULL),
+(30, 1, 'Test 02', 'Test 02', '2024-07-29', 'Image3a.jpg', 1, NULL),
+(31, 1, 'Test 02', 'Test 02', '2024-07-29', 'd7f3c4e68bf795cd37cda7601b7384c7.jpg', 1, '2024-07-29 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -97,7 +101,7 @@ CREATE TABLE `news_events` (
   `posted_date` date DEFAULT current_timestamp(),
   `image` varchar(255) DEFAULT NULL,
   `isactive` tinyint(1) NOT NULL DEFAULT 1,
-  `last_updated_date` date DEFAULT NULL
+  `last_updated_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -152,8 +156,17 @@ CREATE TABLE `support_ticket` (
   `title` varchar(255) DEFAULT NULL,
   `description` text DEFAULT NULL,
   `sent_date` date DEFAULT current_timestamp(),
-  `isactive` bit(1) NOT NULL DEFAULT b'1'
+  `isactive` bit(1) NOT NULL DEFAULT b'1',
+  `last_updated_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `support_ticket`
+--
+
+INSERT INTO `support_ticket` (`ticketid`, `userid`, `title`, `description`, `sent_date`, `isactive`, `last_updated_date`) VALUES
+(1, 1, 'Test', 'Test', '2024-07-26', b'1', NULL),
+(2, 1, 'Test 02', 'Test 02', '2024-07-26', b'0', NULL);
 
 -- --------------------------------------------------------
 
@@ -169,7 +182,7 @@ CREATE TABLE `testimonial` (
   `posted_date` date DEFAULT current_timestamp(),
   `image` varchar(255) DEFAULT NULL,
   `isactive` tinyint(1) NOT NULL DEFAULT 1,
-  `last_updated_date` date DEFAULT NULL
+  `last_updated_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -177,7 +190,7 @@ CREATE TABLE `testimonial` (
 --
 
 INSERT INTO `testimonial` (`testimonial_id`, `userid`, `title`, `content`, `posted_date`, `image`, `isactive`, `last_updated_date`) VALUES
-(1, 1, 'wfewv', 'fvwevrw', '2024-07-12', 'Image5a.jpg', 1, NULL),
+(1, 1, 'wfewv', 'fvwevrw', '2024-07-12', 'Image5a.jpg', 1, '2024-07-29 19:24:14'),
 (2, 1, 'we', 'dvd', '2024-07-12', 'Image5b.jpg', 1, NULL);
 
 -- --------------------------------------------------------
@@ -196,7 +209,7 @@ CREATE TABLE `user` (
   `Gender` varchar(255) DEFAULT NULL,
   `Address` varchar(255) DEFAULT NULL,
   `isactive` tinyint(1) NOT NULL DEFAULT 1,
-  `last_updated_date` date DEFAULT NULL
+  `last_updated_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -205,9 +218,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`userid`, `first_name`, `last_name`, `roleid`, `contact_no`, `email`, `Gender`, `Address`, `isactive`, `last_updated_date`) VALUES
 (1, 'Geethma', 'Manikkuwahandi', 1, 4375534698, 'minoligeethma@gmail.com', 'Male', 'London, ON', 1, NULL),
-(3, 'Gaby', 'Manikkuwahandi', 2, 4375534698, 'gaby@gmail.com', 'female', '186, King Street', 1, NULL),
-(4, 'Laine', 'Manikkuwahandi', 2, 4375534698, 'laine@gmail.com', 'Male', '186, King Street', 1, NULL),
-(5, 'Amber', 'Sharmila', 1, 771959329, 'amber@gmail.com', 'female', '37/A, Modara Dewala Road', 1, NULL),
+(3, 'Gaby', 'Manikkuwahandi', 2, 4375534698, 'gaby@gmail.com', 'Female', '186, King Street', 0, '2024-07-29 00:00:00'),
+(4, 'Laine', 'Manikkuwahandi', 2, 4375534698, 'laine@gmail.com', 'Female', '186, King Street', 1, '2024-07-29 00:00:00'),
+(5, 'Amber', 'Sharmila', 1, 771959329, 'amber@gmail.com', 'Male', '37/A, Modara Dewala Road', 1, '2024-07-29 00:00:00'),
 (6, 'Amber', 'Sharmila', 1, 771959329, 'ambr@gmail.com', 'female', '37/A, Modara Dewala Road', 1, NULL),
 (7, 'Minoli', 'Manikkuwahandi', 1, 4375534698, 'geethma@gmail.com', 'male', '186, King Street', 1, NULL),
 (8, 'Minoli', 'Manikkuwahandi', 1, 4375534698, 'miligeethma@gmail.com', 'male', '186, King Street', 1, NULL),
@@ -216,7 +229,8 @@ INSERT INTO `user` (`userid`, `first_name`, `last_name`, `roleid`, `contact_no`,
 (11, 'Shiv', 'Silva', 1, 4375534698, 'shiv@gmail.com', 'male', '186, King Street', 1, NULL),
 (12, 'Saikat', 'Datta', 1, 771959329, 'saikat@gmail.com', 'male', '37/A, Modara Dewala Road', 1, NULL),
 (13, 'Minoli', 'Manikkuwahandi', 1, 4375534698, 'minolia@gmail.com', 'male', '186, King Street', 1, NULL),
-(14, 'Minoli', 'Manikkuwahandi', 1, 4375534698, 'ma@gmail.com', 'male', '186, King Street', 1, NULL);
+(14, 'Minoli', 'Manikkuwahandi', 1, 4375534698, 'ma@gmail.com', 'male', '186, King Street', 1, NULL),
+(16, 'Xingby', 'Xingby', 1, 4375534698, 'zhaixingbi@gmail.com', 'Male', '186, King Street', 1, '2024-07-29 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -230,7 +244,7 @@ CREATE TABLE `user_credentials` (
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `created_date` date NOT NULL DEFAULT current_timestamp(),
-  `last_updated_date` date DEFAULT NULL,
+  `last_updated_date` datetime DEFAULT NULL,
   `expiry_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -239,9 +253,9 @@ CREATE TABLE `user_credentials` (
 --
 
 INSERT INTO `user_credentials` (`credential_id`, `userid`, `username`, `password`, `created_date`, `last_updated_date`, `expiry_date`) VALUES
-(1, 1, 'minolisharmila', '$2y$10$SiBBePpbeVED6mzBwr6MLO6lcxACPm/lr2eR/alv4Cw.7i2S/4Mii', '2024-07-10', '2024-07-10', NULL),
+(1, 1, 'minolisharmila', '$2y$10$VPu4rd65SVJLMklC3rpJJemLbTETXFUGSo8sjo/LY/GRswEDJ9Lw.', '2024-07-10', '2024-07-10 00:00:00', NULL),
 (2, 3, 'konnexio', '$2y$10$LIwsy0fwllb3WLkBSqOJVuFbENLdWIEWmf3TVsVSjw3QUWYtINh/m', '2024-07-10', NULL, NULL),
-(3, 4, 'laine', '$2y$10$c9RcVEhvHuZxpdT9Bb57EOqZ3J9KqwtuaTP7qZ28lfmSqYhZS5XTC', '2024-07-10', '2024-07-10', NULL),
+(3, 4, 'laine', '$2y$10$c9RcVEhvHuZxpdT9Bb57EOqZ3J9KqwtuaTP7qZ28lfmSqYhZS5XTC', '2024-07-10', '2024-07-10 00:00:00', NULL),
 (4, 5, 'amber', '$2y$10$dy1.LYqig.VamX2OZun6ZemKVvCax5BpaoipJR80WRPuRB6fGTZwm', '2024-07-10', NULL, NULL),
 (5, 6, 'amber', '$2y$10$ATyMGdzpQV5BpnDHJC2HH.4x/4u8lRcOEDVqw7Glc/pnrH0H2HqDe', '2024-07-10', NULL, NULL),
 (6, 7, 'minolisharmila', '$2y$10$yan/Ct.MzMbErid6lpkLdOVKpipzROYdCIq8EIBnCdRdfgEaSKRqK', '2024-07-10', NULL, NULL),
@@ -251,7 +265,8 @@ INSERT INTO `user_credentials` (`credential_id`, `userid`, `username`, `password
 (10, 11, 'shiv', '$2y$10$r0MWjZ8ib/h7gqFE4kXEIOPl/oC54JYHPv.aSvr7l3hFafqZ1JxBq', '2024-07-10', NULL, NULL),
 (11, 12, 'saikat', '$2y$10$RATzw5prr7sRnTMR.4uJZOE3VUuApVZDDx0SMgEmvAVVt2fp53C2C', '2024-07-10', NULL, NULL),
 (12, 13, 'minoli', '$2y$10$35lnXmsL6VuQJLnoOozgIOkoghWK10WvSEqNQ3bWsaZcZSKFXQxHO', '2024-07-10', NULL, NULL),
-(13, 14, 'se', '$2y$10$yMB1ajCNbMbbOi9Pwd3OQuaFYO1VBzNIsMRUL4.UlZCXtV6UdsfWW', '2024-07-10', NULL, '2024-07-13');
+(13, 14, 'se', '$2y$10$yMB1ajCNbMbbOi9Pwd3OQuaFYO1VBzNIsMRUL4.UlZCXtV6UdsfWW', '2024-07-10', NULL, '2024-07-13'),
+(15, 16, 'xingby', '$2y$10$5DzLhNv1HkiYUvZeA84LYuTKubKSDMrCuKvK8mSBzVEID3LJL2AZq', '2024-07-29', NULL, '2024-08-01');
 
 -- --------------------------------------------------------
 
@@ -345,7 +360,7 @@ ALTER TABLE `careers`
 -- AUTO_INCREMENT for table `case_study`
 --
 ALTER TABLE `case_study`
-  MODIFY `caseid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `caseid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `news_events`
@@ -357,7 +372,7 @@ ALTER TABLE `news_events`
 -- AUTO_INCREMENT for table `support_ticket`
 --
 ALTER TABLE `support_ticket`
-  MODIFY `ticketid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ticketid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `testimonial`
@@ -369,13 +384,13 @@ ALTER TABLE `testimonial`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `userid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `user_credentials`
 --
 ALTER TABLE `user_credentials`
-  MODIFY `credential_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `credential_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user_role`
