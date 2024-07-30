@@ -73,7 +73,7 @@ $result_2 = $conn->query($sql_2);
           while ($row = $result_1->fetch_assoc()) {
       ?>
         <div class="carousel-item <?php echo $first ? 'active' : ''; ?>">
-          <img src="Upload/<?php echo $row['image']; ?>" alt="News Highlights">
+          <img src="Images/<?php echo $row['image']; ?>" alt="News Highlights">
           <div class="carousel-caption d-none d-md-block">
               <h3 ><?php echo $row["title"]; ?></h3>
               <p class="carousel-text"><?php echo $row["content"]; ?></p>
@@ -119,7 +119,7 @@ $result_2 = $conn->query($sql_2);
                     while ($row = $result->fetch_assoc()) {
                         ?>
                         <div class="news-card">
-                            <img src="Upload/<?php echo $row['image']; ?>" alt="News and Events">
+                            <img src="Images/<?php echo $row['image']; ?>" alt="News and Events">
                             <div class="news-content">
                                 <h3 class="news-title"><?php echo $row["title"]; ?></h3>
                                 <p class="news-content-text"><?php echo $row["content"]; ?></p>
@@ -190,7 +190,7 @@ $result_2 = $conn->query($sql_2);
                     <div class="event-container mb-4">
                         <div class="event-item d-flex align-items-center my-3 p-3">
                             <div class="event-img">
-                                <img src="Upload/<?php echo $row['image']; ?>" alt="Industry Event" class="rounded-circle img-thumbnail">
+                                <img src="Images/<?php echo $row['image']; ?>" alt="Industry Event" class="rounded-circle img-thumbnail">
                             </div>
                             <div class="event-content ms-4">
                                 <h3><?php echo $row["title"]; ?></h3>
