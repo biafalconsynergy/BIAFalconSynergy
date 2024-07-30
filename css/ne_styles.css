@@ -21,10 +21,10 @@ body {
 }
 
 .carousel-heading {
-  font-size: 3.0rem;
   text-align: center;
   margin-bottom: 30px;
   color: #1e3e5e;
+  font-size: 40px;
 }
 
 .carousel-inner {
@@ -128,8 +128,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Center the content horizontally */
-  text-align: center; /* Center the text */
+  align-items: center; 
+  text-align: center;
 }
 
 .event-content h3 {

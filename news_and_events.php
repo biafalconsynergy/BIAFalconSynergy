@@ -212,7 +212,7 @@ $result_2 = $conn->query($sql_2);
         <?php include 'footer.php'; ?>
 
     </main>
-    <script src="js/ne_scripts.js" defer></script>
+    <script src="ne_scripts.js" defer></script>
 </body>
 
 </html>
