@@ -123,45 +123,65 @@
 
     <!-- Testimonials Carousel Section -->
     <section class="my-5">
-        <div class="container" id="testimonials">
-            <h2 class="text-center mb-4">What Our Clients Say</h2>
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="Images/Image7a.jpg" alt="Client 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <p class="mb-0">“This is the best service we’ve ever used. Highly recommend it to anyone!”</p>
-                            <h5>Jane Doe</h5>
-                            <p>CEO, Example Corp</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://via.placeholder.com/100x100?text=Client+2" alt="Client 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <p class="mb-0">“Amazing experience. The team went above and beyond to deliver results.”</p>
-                            <h5>John Smith</h5>
-                            <p>Marketing Manager, Sample Ltd</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://via.placeholder.com/100x100?text=Client+3" alt="Client 3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <p class="mb-0">“The quality of work is outstanding. We couldn’t be happier!”</p>
-                            <h5>Emily Johnson</h5>
-                            <p>Product Lead, Demo Inc</p>
-                        </div>
-                    </div>
+      <div class="container" id="testimonials">
+        <h2 class="text-center mb-4">What Our Clients Say</h2>
+        <?php
+        if ($result_testimonials->num_rows > 0) {
+          ?>
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner text-center">
+              <?php
+              $activeClass = "active";
+              while ($row = $result_testimonials->fetch_assoc()) {
+                // Construct the full path to the image
+                $imagePath = 'upload/' . $row['image'];
+                ?>
+                <div class="carousel-item <?php echo $activeClass; ?>">
+                  <img src="<?php echo htmlspecialchars($imagePath); ?>" alt="Client Image" class="rounded-circle mx-auto d-block" style="width: 100px; height: 100px; object-fit: cover;">
+                  <div class="carousel-caption d-md-block mt-4">
+                    <p class="mb-0">“<?php echo htmlspecialchars($row['content']); ?>”</p>
+                    <h5><?php echo htmlspecialchars($row['title']); ?></h5>
+                  </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <?php
+                $activeClass = ""; // Only the first item should be active
+              }
+              ?>
             </div>
-        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <?php
+        } else {
+          ?>
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://via.placeholder.com/150" alt="Client Image" class="rounded-circle mx-auto d-block" style="width: 100px; height: 100px; object-fit: cover;">
+                <div class="carousel-caption d-md-block mt-4">
+                  <p class="mb-0">“No active Testimonials found.”</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <?php
+        }
+        ?>
+      </div>
     </section>
 
     <!-- Careers Section -->
@@ -169,7 +189,7 @@
     <div class="container" id="careers">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="section-title">Careers</h1>
+                <h2 class="section-title">Careers</h2>
                 <p class="section-subtitle">Join our team and be a part of our success story</p>
             </div>
         </div>
@@ -208,9 +228,10 @@
     </div>
 </section>
 
-
     <!--footer data -->
     <?php include 'footer.php'; ?>
+
+    <script src="js/ab_script.js"></script>
 
 </body>
 

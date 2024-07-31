@@ -5,7 +5,6 @@
     color: #fff;
     padding: 30px;
     text-align: center;
-    font-size: 30px;
   }
 
   .about-section h1{
@@ -13,14 +12,7 @@
     color: #fff;
     padding: 30px;
     text-align: center;
-    font-size: 40px;
   }
-
-  .about-section-para
-  {
-    font-size: 20px;
-  }
-
 
   /* Funding Partners Section */
 
@@ -31,18 +23,12 @@
   
   .funding-partners-section h2 {
     margin-bottom: 40px;
-    font-size: 30px;
   }
   
   .funding-partners-section .img-fluid {
     max-width: 200px;
   }
   
-  .funding-partners-section p {
-    font-size: 18px;
-  }
-  
-
 /* upcoming events */
 
  
@@ -103,7 +89,6 @@
   }
   
   .event-date {
-    font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
   }
@@ -123,7 +108,6 @@
 }
 
 .associations-section h2 {
-  font-size: 2rem; /* Adjust as needed */
   margin-bottom: 2rem; /* Space below the heading */
 }
 
@@ -161,36 +145,8 @@
   }
 }
 
-/*Testimonials */
-/* .carousel-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.carousel-img img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-}
-.carousel-content h4 {
-  margin: 0.5rem 0;
-}
-@media (max-width: 768px) {
-  .carousel-item {
-    flex-direction: column;
-  }
-  .carousel-img {
-    margin-bottom: 1rem;
-  }
-} */
 
+/* Testimonials Carousel Section Styles */
 .carousel-item {
   position: relative;
   text-align: center;
@@ -203,13 +159,13 @@
   width: 100px;
   height: 100px;
   object-fit: cover;
-  margin: 0 auto 1rem; 
+  margin: 0 auto 1rem;
   display: block;
 }
 
 .carousel-caption {
   position: absolute;
-  bottom: 20px; /* Adjust as needed */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.5);
@@ -217,10 +173,11 @@
   border-radius: 5px;
   color: #fff;
   width: 80%;
-  max-width: 700px; /* Limit width for better appearance */
+  max-width: 700px;
   text-align: center;
 }
 
 .carousel-control-prev, .carousel-control-next {
   filter: invert(1); /* Ensure visibility on different backgrounds */
 }
+
