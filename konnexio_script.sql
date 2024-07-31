@@ -109,11 +109,16 @@ CREATE TABLE `news_events` (
 --
 
 INSERT INTO `news_events` (`newsid`, `userid`, `title`, `content`, `content_type`, `posted_date`, `image`, `isactive`, `last_updated_date`) VALUES
-(1, 1, 'Event 1 | London Ontario', 'Event 1 at London Ontario Canada', 'Events', '2024-07-08', 'Image1b.jpg', 0, NULL),
-(2, 1, 'Blue Innovation Symposium in Middletown, Rhode Island', 'Blue Innovation Symposium in Middletown, Rhode Island', 'Events', '2024-07-15', 'Image2c.jpg', 1, NULL),
-(3, 1, 'How our humble Halifax Engineering firm became an important defense player', 'How our humble Halifax Engineering firm became an important defense player', 'News', '2024-07-15', 'Image2d.jpg', 1, NULL),
-(4, 1, 'The International Workboat Show in New Orleans, Louisiana', 'The International Workboat Show in New Orleans, Louisiana', 'Events', '2024-07-15', 'Image2c.jpg', 1, NULL),
-(5, 1, 'Halifax engineering firm adds Atlantic Canada’s first PCB milling machine to their electronics lab', 'Halifax engineering firm adds Atlantic Canada’s first PCB milling machine to their electronics lab', 'Events', '2024-07-15', 'Image1b.jpg', 1, NULL);
+(1, 1, 'Konnexio Launches adapto™ Technology', 'Konnexio is excited to announce the launch of adapto™.', 'Announcement', '2024-07-08', 'adapto_02.png', 1, NULL),
+(2, 1, 'New Case Studies on Custom Machines', 'Explore our latest case studies demonstrating the success and innovation of our custom machine solutions across various industries.', 'Blog', '2024-07-15', 'cm_machineshop.jpg', 1, NULL),
+(3, 1, 'Konnexio Expands into Hydrogen Fuel Cells', 'Konnexio is proud to enter the hydrogen fuel cells industry, providing cutting-edge solutions for a sustainable future.', 'News', '2024-07-15', 'Image6c.jpg', 1, NULL),
+(4, 1, 'Meet the Konnexio Team', 'We are hiring! Explore career opportunities at Konnexio and be part of a team that is shaping the future of industrial automation.', 'Event', '2024-07-15', 'cm_consulting1.jpg', 1, NULL),
+(5, 1, 'Join Konnexio - Careers Opportunities', 'We are hiring! Explore career opportunities at Konnexio and be part of a team that is shaping the future of industrial automation.', 'Event', '2024-07-15', 'cm_machineconstruction.jpg', 1, NULL),
+(6, 1, 'Konnexio Partners with Tech Alliance', 'Konnexio is excited to announce a strategic partnership with Tech Alliance to advance industrial automation solutions.', 'Announcement', '2024-07-20', 'cm_controls.jpg', 1, NULL),
+(7, 1, 'Innovations in Industrial Design', 'Our latest blog post dives into recent innovations in industrial design and how Konnexio is at the forefront of these advancements.', 'Blog', '2024-07-21', 'Image1c.jpg', 1, NULL),
+(8, 1, 'Safety Engineering Services Now Available', 'Konnexio is now offering comprehensive safety engineering services to ensure the highest standards of safety in your projects.', 'Event', '2024-07-22', 'Image2d.jpg', 1, NULL),
+(9, 1, 'Client Success Stories: Konnerth Gruppe', 'Read about our successful collaboration with Konnerth Gruppe and how we helped them achieve their automation goals.', 'Blog', '2024-07-23', 'Image5a.jpg', 1, NULL),
+(10, 1, 'Upcoming Webinar: Future of Robotics', 'Join us for an insightful webinar on the Future of Robotics, where industry experts will discuss the latest advancements shaping the robotics landscape. ', 'Event', '2024-07-24', 'cm_projmgmt.jpg', 1, NULL);
 
 -- --------------------------------------------------------
 
