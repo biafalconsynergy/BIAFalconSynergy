@@ -1,18 +1,23 @@
 <?php
+//starts session if it is not active
 if (session_status() === PHP_SESSION_NONE) {
-        session_start();
-    }
-    
+         session_start();
+}
+	
 if (!isset($_SESSION['first_name'])) {
     header('Location: Login.php');
     exit();
-    }
+}
 
 // Define the page name or identifier
 $pageName = basename($_SERVER['PHP_SELF']);
 
-// Check if it's the Users page to hide the Create button
-$hideCreateButton = ($pageName === 'UserManagement.php'); // Adjust the page name as per your actual page filename
+// List of pages where the Create button should be hidden
+$pagesToHideCreateButton = ['UserManagement.php', 'SupportTicket.php'];
+
+// Check if the current page is in the list of pages to hide the Create button
+$hideCreateButton = in_array($pageName, $pagesToHideCreateButton);
+
 
 ?>
 
@@ -29,6 +34,51 @@ $hideCreateButton = ($pageName === 'UserManagement.php'); // Adjust the page nam
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
     
     <style>
+		.switch {
+			position: relative;
+			display: inline-block;
+			width: 40px;
+			height: 20px;
+		}
+
+		.switch input {
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.slider {
+			position: absolute;
+			cursor: pointer;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #FF0000;
+			transition: .4s;
+			border-radius: 20px;
+		}
+
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 14px;
+			width: 14px;
+			left: 3px;
+			bottom: 3px;
+			background-color: white;
+			transition: .4s;
+			border-radius: 50%;
+		}
+
+		input:checked + .slider {
+			background-color: #4CAF50; /* Green color for active state */
+		}
+
+		input:checked + .slider:before {
+			transform: translateX(20px);
+		}
+		
         .card {
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             transition: 0.3s;
@@ -122,7 +172,7 @@ $hideCreateButton = ($pageName === 'UserManagement.php'); // Adjust the page nam
 			color: #ffffff;
 			text-align: left;
 		}
-
+		
     </style>
     
 </head>
@@ -198,7 +248,7 @@ $hideCreateButton = ($pageName === 'UserManagement.php'); // Adjust the page nam
                                                 foreach ($tableTitles as $title) {
                                                     echo '<th scope="col">'.$title.'</th>';
                                                 }
-                                                if ($tableDbName != 'Support_Ticket') {
+                                                if ($tableDbName != 'support_ticket') {
                                                     echo '<th scope="col">Action</th>';
                                                 }
                                             echo'</tr>
@@ -209,29 +259,31 @@ $hideCreateButton = ($pageName === 'UserManagement.php'); // Adjust the page nam
                                 while ($row = $result->fetch_assoc()) {
                                     echo '<tr>';
                                     foreach ($tableColumnNames as $columnName) {
+										$columnNameWithoutAlias = str_replace('cs.', '', $columnName);
                                         echo '<td class="left-align">';
-                                        if ($columnName === 'image') {
+                                        if ($columnNameWithoutAlias === 'image') {
                                             // Display original image with link to modal
-                                            $imagePath = 'upload/'.$row[$columnName];
+                                            $imagePath = 'upload/'.$row[$columnNameWithoutAlias];
                                             echo '<a href="#" class="thumbnail-link" data-toggle="modal" data-target="#imageModal" data-image="'.$imagePath.'">';
                                             echo '<img src="'.$imagePath.'" alt="image" class="img-thumbnail">';
                                             echo '</a>';
-                                        } elseif ($columnName === 'isactive') {
-                                            // Display Active/Inactive with appropriate color
-                                            if ($row[$columnName] == 1) {
-                                                echo '<span style="color: green;">Active</span>';
-                                            } else {
-                                                echo '<span style="color: red;">Inactive</span>';
-                                            }
-                                        } else {
-                                            echo $row[$columnName];
+                                        } elseif ($columnNameWithoutAlias === 'isactive') {
+											$checked = $row[$columnNameWithoutAlias] == 1 ? 'checked' : '';
+											echo '<label class="switch">';
+											echo '<input type="checkbox" class="toggle-status" data-id="' . $row[$tablePrimaryKey] . '" data-status="' . $row[$columnNameWithoutAlias] . '" ' . $checked . '>';
+											echo '<span class="slider round"></span>';
+											echo '</label>';
+										}  else {
+                                            echo $row[$columnNameWithoutAlias];
                                         }
                                         echo '</td>';
                                     }
-                                    // Adding the "Edit" action link
-                                    echo '<td><a href="CaseStudyEdit.php?id='.$row['userid'].'">Edit</a></td>';
-                                    echo '</tr>';
-                                }
+                                    // Adding the "Edit" action link only if it's not the Support_Ticket table
+									if ($tableDbName != 'support_ticket') {
+										echo '<td><a href="' . $editButtonUrl . '?id='.$row[$tablePrimaryKey].'">Edit</a></td>';
+									}
+									echo '</tr>';
+								}
 
                                 echo '</tbody>
                                     </table>';
@@ -288,10 +340,11 @@ $hideCreateButton = ($pageName === 'UserManagement.php'); // Adjust the page nam
   </div>
 </div>
 
-<!-- Bootstrap JS and other custom scripts -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <!-- DataTables JS -->
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
@@ -300,17 +353,61 @@ $hideCreateButton = ($pageName === 'UserManagement.php'); // Adjust the page nam
 <script src="js/sb-admin-2.min.js"></script>
 
 <script>
-    $(document).ready(function(){
-        // Initialize DataTables
-        $('#dataTable').DataTable();
+$(document).ready(function() {
+    // Initialize DataTables
+    $('#dataTable').DataTable();
 
-        // When a thumbnail is clicked, update the modal image src
-        $('.thumbnail-link').on('click', function(){
-            var imageSrc = $(this).data('image');
-            $('#modalImage').attr('src', imageSrc);
+    // When a thumbnail is clicked, update the modal image src
+    $('.thumbnail-link').on('click', function() {
+        var imageSrc = $(this).data('image');
+        $('#modalImage').attr('src', imageSrc);
+    });
+
+    // Handle switch change event
+        $('.toggle-status').on('change', function() {
+            var checkbox = $(this);
+            var id = checkbox.data('id');
+            var status = checkbox.data('status');
+            var newStatus = status == 1 ? 0 : 1;
+            var tableDbName = '<?php echo $tableDbName; ?>';
+            var tablePrimaryKey = '<?php echo $tablePrimaryKey; ?>';
+
+            // Show confirmation dialog
+            var confirmChange = confirm('Are you sure you want to change the status?');
+            if (confirmChange) {
+                // Proceed with AJAX request if confirmed
+                $.ajax({
+                    url: 'update_status_toggle.php',
+                    type: 'POST',
+                    data: {
+                        id: id,
+                        status: newStatus,
+                        tableDbName: tableDbName,
+                        tablePrimaryKey: tablePrimaryKey
+                    },
+                    success: function(response) {
+                        var result = JSON.parse(response);
+                        if (result.success) {
+                            checkbox.data('status', newStatus);
+							window.location.reload();
+                        } else {
+                            alert('Failed to update status');
+                        }
+                    },
+                    error: function() {
+                        alert('Error in AJAX request');
+                    }
+                }); 
+				window.location.reload();
+            } else {
+                // Revert the checkbox to the previous state if canceled
+                checkbox.prop('checked', status == 1);
+            }
         });
     });
 </script>
+
+
 
 </body>
 </html>

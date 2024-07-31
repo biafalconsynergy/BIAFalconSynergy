@@ -1,8 +1,9 @@
 <?php 
-    //starts session if it is not active
-    if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
+//starts session if it is not active
+if (session_status() === PHP_SESSION_NONE) {
+         session_start();
+}
+	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +30,8 @@ $columns = implode(',', $tableColumnNames);
 $placeholders = implode(',', array_fill(0, count($tableColumnNames), '?'));
 
 
-		
+// Define the primary key column name
+$tablePrimaryKey = 'userid'; 		
 		
 // Database details
 $tableDbName = "user";
@@ -44,7 +46,7 @@ $tableName = 'Users';
 
 <?php
     //Page standard body
-session_start();
+//session_start();
 if (!isset($_SESSION['first_name'])) {
     header('Location: Login.php');
     exit();

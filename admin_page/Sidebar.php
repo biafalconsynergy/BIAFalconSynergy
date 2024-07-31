@@ -9,123 +9,138 @@
     <?php include 'ReferencesTop.php'; ?>
     <!-- End of References -->
 
+    <!-- Prevent caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 
-
+    <script>
+        function logout() {
+            // Call the PHP logout script
+            window.location.href = 'logout.php'; 
+        }
+    </script>
 </head>
 <body>
 
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Admin.php">
+            <div class="sidebar-brand-icon rotate-n-0">
+                <img src="smallLogo2.png" class="img-fluid" alt="Company Logo" width="30" height="auto">
+            </div>
+            <div class="sidebar-brand-text mx-3">Menu</div>
+        </a>
 
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- Divider -->
+        <hr class="sidebar-divider">  
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="Admin.php">
-                <div class="sidebar-brand-icon rotate-n-0">
-                    <img src="smallLogo2.png" class="img-fluid" alt="Company Logo" width="30" height="auto">                </div>
-                <div class="sidebar-brand-text mx-3">Menu</div>
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Session
+        </div>
+
+        <!-- Nav Item - Admin Panel -->
+        <li class="nav-item">
+            <a class="nav-link" href="Admin.php">
+                <i class="fas fa-fw fa-home"></i>
+                <span>Home</span>
             </a>
+        </li>
 
+        <!-- Nav Item - Log Out -->
+        <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0);" onclick="logout();">
+                <i class="fas fa-fw fa-sign-out-alt"></i>
+                <span>Log Out</span>
+            </a>
+        </li>
+
+        <!-- Conditional Admin role validation -->
+        <?php if ($_SESSION['roleid'] == 1): ?>
+        
             <!-- Divider -->
             <hr class="sidebar-divider">  
-            
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Session
-            </div>
-
-            <!-- Nav Item - Admin Panel -->
-            <li class="nav-item">
-                <a class="nav-link" href="Admin.php">
-                    <i class="fas fa-fw fa-home"></i>
-                <span>Home</span></a>
-            </li>
-
-            <!-- Nav Item - Log Out -->
-            <li class="nav-item">
-                <a class="nav-link" href="LoginPage.php">
-                    <i class="fas fa-fw fa-sign-out-alt"></i>
-                <span>Log Out</span></a>
-            </li>
-
-            <?php if ($_SESSION['roleid'] == 1): ?>
-                <!-- Divider -->
-                <hr class="sidebar-divider">  
-                
-                <!-- Heading -->
-                <div class="sidebar-heading">
-                    Admin
-                </div>
-                
-                <!-- Nav Item - User Management -->
-                <li class="nav-item">
-                    <a class="nav-link" href="UserManagement.php">
-                        <i class="fas fa-fw fa-user"></i>
-                        <span>Users</span></a>
-                </li>
-                
-                <!-- Signup Button -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="UsersNew.php">
-                            <i class="fas fa-fw fa-user-plus"></i>
-                            <span>New User</span>
-                        </a>
-                    </li>
-
-                <!-- Nav Item - Support Tickets -->
-                <li class="nav-item">
-                    <a class="nav-link" href="SupportTicket.php">
-                        <i class="fas fa-fw fa-exclamation-triangle"></i>
-                    <span>Support Tickets</span></a>
-                </li>
-
-            <?php endif; ?>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Website Content
+                Admin
             </div>
 
-            <!-- Nav Item - Case Studies -->
+            <!-- Nav Item - User Management -->
             <li class="nav-item">
-                <a class="nav-link" href="CaseStudy.php">
-                    <i class="fas fa-fw fa-star"></i>
-                <span>Case Studies</span></a>
+                <a class="nav-link" href="UserManagement.php">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Users</span>
+                </a>
             </li>
 
-            <!-- Nav Item - Careers -->
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.php">
+                        <i class="fas fa-fw fa-user-plus"></i>
+                        <span>New User</span>
+                    </a>
+                </li>
+    
+            <!-- Nav Item - Support Tickets -->
             <li class="nav-item">
-                <a class="nav-link" href="Careers.php">
-                    <i class="fas fa-fw fa-smile"></i>
-                <span>Careers</span></a>
+                <a class="nav-link" href="SupportTicket.php">
+                    <i class="fas fa-fw fa-exclamation-triangle"></i>
+                    <span>Support Tickets</span>
+                </a>
             </li>
+        <?php endif; ?>
 
-            <!-- Nav Item - Testimonials -->
-            <li class="nav-item">
-                <a class="nav-link" href="Testimonials.php">
-                    <i class="fas fa-fw fa-bullhorn"></i>
-                <span>Testimonials</span></a>
-            </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
 
-            <!-- Nav Item - News and events -->
-            <li class="nav-item">
-                <a class="nav-link" href="NewsEvents.php">
-                    <i class="fas fa-fw fa-rss"></i>
-                <span>News & Events</span></a>
-            </li>
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Website Content
+        </div>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-			
+        <!-- Nav Item - Case Studies -->
+        <li class="nav-item">
+            <a class="nav-link" href="CaseStudy.php">
+                <i class="fas fa-fw fa-star"></i>
+                <span>Case Studies</span>
+            </a>
+        </li>
 
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-            
-        </ul>
+        <!-- Nav Item - Careers -->
+        <li class="nav-item">
+            <a class="nav-link" href="Careers.php">
+                <i class="fas fa-fw fa-smile"></i>
+                <span>Careers</span>
+            </a>
+        </li>
+
+        <!-- Nav Item - Testimonials -->
+        <li class="nav-item">
+            <a class="nav-link" href="Testimonials.php">
+                <i class="fas fa-fw fa-bullhorn"></i>
+                <span>Testimonials</span>
+            </a>
+        </li>
+
+        <!-- Nav Item - News and events -->
+        <li class="nav-item">
+            <a class="nav-link" href="NewsEvents.php">
+                <i class="fas fa-fw fa-rss"></i>
+                <span>News & Events</span>
+            </a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+    </ul>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -133,8 +148,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -146,7 +160,7 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="javascript:void(0);" onclick="logout();">Logout</a>
                 </div>
             </div>
         </div>
@@ -158,4 +172,3 @@
 
 </body>
 </html>
-

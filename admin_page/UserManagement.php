@@ -31,6 +31,10 @@
         $tableColumnNames = ['userid', 'first_name', 'last_name', 'roleid', 'contact_no', 'email','Gender','Address', 'isactive'];
         $tableName = 'Users';
         $tableDbName = 'user';
+		$editButtonUrl = 'UserEdit.php';		
+		
+		// Define the primary key column name
+		$tablePrimaryKey = 'userid'; 		
 
         //Creates and assigns the query 
         $query = 'SELECT ' . implode(',', $tableColumnNames) . ' FROM ' . $tableDbName;

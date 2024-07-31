@@ -3,6 +3,7 @@
     if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
+		
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,15 +22,22 @@
 
     <?php
         //DB Connection
-        include 'Connection.php';
-
+        include 'connection.php';
+		
+		
+		
         //Variables particular to this page
-        $tableTitles = ['Case id', 'User id', 'Title', 'Content', 'Date Posted', 'Image', 'Is active'];
-        $tableColumnNames = ['caseid', 'userid', 'title', 'content', 'posted_date', 'image', 'isactive'];
+        $tableTitles = ['Case id', 'User id', 'Title', 'Content', 'Date Posted', 'Image', 'Is active', 'Last Updated Date'];
+        $tableColumnNames = ['caseid', 'userid', 'title', 'content', 'posted_date', 'image', 'isactive','last_updated_date'];
         $tableName = 'Case Studies';
         $tableDbName = 'case_study';
-        $id ='6';
+        $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+		$mainpage = 'CaseStudy.php';
         
+
+		$disabletableColumnNames = ['caseid', 'userid', 'posted_date'];
+		
+		
         //Page body
         include 'AdminPagesBodyEdit.php';
     ?>

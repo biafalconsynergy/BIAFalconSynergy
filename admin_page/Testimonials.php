@@ -24,14 +24,20 @@
         include 'Connection.php';
 
         //Variables particular to this page
-        $tableTitles = ['Testimonial id', 'User id', 'Title', 'Content', 'Date Posted','Image', 'Status'];
-        $tableColumnNames = ['testimonial_id', 'userid', 'title', 'content', 'posted_date','image','isactive'];
+        $tableTitles = ['Testimonial id', 'Author', 'Title', 'Content', 'Date Posted','Image', 'Status'];
+        $tableColumnNames = ['testimonial_id', 'first_name', 'title', 'content', 'posted_date','image','cs.isactive'];
         $tableName = 'Testimonials';
         $tableDbName = 'testimonial';
-		$createButtonUrl = 'TestimonialNew.php';		
+		$createButtonUrl = 'TestimonialNew.php';	
+		$editButtonUrl = 'TestimonialEdit.php';
+		
+		// Define the primary key column name
+		$tablePrimaryKey = 'testimonial_id';		
 
         //Creates and assigns the query 
-        $query = 'SELECT ' . implode(',', $tableColumnNames) . ' FROM ' . $tableDbName;
+        $query = 'SELECT ' . implode(',', $tableColumnNames) . ' 
+                  FROM ' . $tableDbName . ' cs 
+                  JOIN user u ON cs.userid = u.userid';
         $result = $conn->query($query);
 
 		// Count active and inactive cases

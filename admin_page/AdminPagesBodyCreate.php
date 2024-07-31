@@ -1,11 +1,21 @@
 <?php
-session_start();
+
+// Prevent caching
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
+//starts session if it is not active
+if (session_status() === PHP_SESSION_NONE) {
+         session_start();
+}
+		
 if (!isset($_SESSION['first_name'])) {
     header('Location: Login.php');
     exit();
 }
 
-include 'connection.php'; // Include your database connection file
+include 'connection.php'; 
 
 // Define the page name or identifier
 $pageName = basename($_SERVER['PHP_SELF']);
@@ -13,6 +23,9 @@ $pageName = basename($_SERVER['PHP_SELF']);
 // Check if it's the Users page to hide the Create button
 $hideImageButton = ($pageName === 'CareersNew.php'); 
 $showContentTypeButton = ($pageName === 'NewsEventsNew.php'); 
+
+// Get the referer URL
+$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'admin.php';  
 
 // Process form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -42,9 +55,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$stmt->bind_param("issss", $userid, $title, $content, $contentType, $uploadfile);		
 	}
     if ($stmt->execute()) {
-        echo "Record inserted successfully";
+        echo "<script>
+                alert('Record inserted successfully');
+                window.location.href = '$pageName';
+              </script>";
     } else {
-        echo "Error inserting record: " . $conn->error;
+        echo "<script>
+                alert('Error inserting record: " . $conn->error . "');
+                window.location.href = '$pageName';
+              </script>";
     }
     
     $stmt->close();
@@ -64,6 +83,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
+	
+	
 </head>
 <body>
 
@@ -102,7 +123,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
+					<div class="card shadow mb-4">
+					<div class="card-body">
                     <!-- Page Content -->
                     <form method="POST" action="" enctype="multipart/form-data">
                         <div class="row">
@@ -110,14 +132,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <!-- Title Input -->
                                 <div class="form-group">
                                     <label for="title">Title</label>
-                                    <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" value="<?php echo isset($row['title']) ? $row['title'] : ''; ?>">
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="Enter title" value="<?php echo isset($row['title']) ? $row['title'] : ''; ?>" required>
                                 </div>
                                 
                                 <!-- Content Type Dropdown -->
                                 <?php if ($showContentTypeButton): ?>
                                 <div class="form-group">
                                     <label for="contentType">Content Type</label>
-                                    <select class="form-control" id="contentType" name="contentType">
+                                    <select class="form-control" id="contentType" name="contentType" required>
                                         <option value="News" <?php echo (isset($row['contentType']) && $row['contentType'] == 'News') ? 'selected' : ''; ?>>News</option>
                                         <option value="Events" <?php echo (isset($row['contentType']) && $row['contentType'] == 'Events') ? 'selected' : ''; ?>>Events</option>
                                     </select>
@@ -127,25 +149,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <!-- Content Input -->
                                 <div class="form-group">
                                     <label for="content">Content</label>
-                                    <textarea class="form-control" id="content" name="content" rows="4" placeholder="Enter content"><?php echo isset($row['content']) ? $row['content'] : ''; ?></textarea>
+                                    <textarea class="form-control" id="content" name="content" rows="4" placeholder="Enter content" required><?php echo isset($row['content']) ? $row['content'] : ''; ?></textarea>
                                 </div>
 
                                 <!-- Image Input -->
                                 <?php if (!$hideImageButton): ?>
                                 <div class="form-group">
-                                    <label for="uploadfile">Image</label>
-                                    <input class="form-control" type="file" name="uploadfile" id="uploadfile">
-                                </div>
+									<label for="uploadfile">Image</label>
+									<input class="form-control" type="file" name="uploadfile" id="uploadfile" onchange="previewImage(event)" required>
+									<img id="imagePreview" src="#" alt="Image Preview" style="display: none; margin-top: 10px; max-height: 200px;">
+								</div>
+
                                 <?php endif; ?>
 
                                 <button type="submit" class="btn btn-primary">Save</button>
+								<a href="<?php echo $referer; ?>" class="btn btn-secondary">Cancel</a>
                             </div>
                         </div>
                     </form>
+					
+				</div>	
 
                     <!-- /.container-fluid -->
-
+				</div>
                 </div>
+				
+				</div>
                 <!-- End of Main Content -->
 
         <!-- Footer -->
@@ -164,7 +193,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <!-- End of Page Wrapper -->
 
-    </div>
+
 
     <?php include 'ReferencesBottom.php'; ?>
     
@@ -176,6 +205,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 todayHighlight: true
             });
         });
+		
+		function validateForm() {
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            const contentType = document.getElementById('contentType');
+            const uploadfile = document.getElementById('uploadfile').value;
+
+            if (!title || !content || (contentType && !contentType.value) || (uploadfile && !uploadfile)) {
+                alert("All fields are mandatory.");
+                return false;
+            }
+            return true;
+        }
+		function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function(){
+                const output = document.getElementById('imagePreview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+		}
     </script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>

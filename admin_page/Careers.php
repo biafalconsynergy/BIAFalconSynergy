@@ -21,17 +21,23 @@
 
     <?php
         //DB Connection
-        include 'Connection.php';
+        include 'connection.php';
 
         //Variables particular to this page
-        $tableTitles = ['Career id', 'User id', 'Title', 'Content', 'Date Posted', 'Status'];
-        $tableColumnNames = ['careerid', 'userid', 'title', 'content', 'posted_date','isactive'];
-        $tableName = 'Carreers';
+        $tableTitles = ['Career id', 'Author', 'Title', 'Content', 'Date Posted', 'Status'];
+        $tableColumnNames = ['careerid', 'first_name', 'title', 'content', 'posted_date','cs.isactive'];
+        $tableName = 'Careers';
         $tableDbName = 'careers';
 		$createButtonUrl = 'CareersNew.php';		
-        
+		$editButtonUrl = 'CareersEdit.php';
+		
+		// Define the primary key column name
+		$tablePrimaryKey = 'careerid'; 
+ 
         //Creates and assigns the query 
-        $query = 'SELECT ' . implode(',', $tableColumnNames) . ' FROM ' . $tableDbName;
+        $query = 'SELECT ' . implode(',', $tableColumnNames) . ' 
+                  FROM ' . $tableDbName . ' cs 
+                  JOIN user u ON cs.userid = u.userid';
         $result = $conn->query($query);
 
 		// Count active and inactive cases

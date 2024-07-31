@@ -26,14 +26,20 @@
 		
 
         //Variables particular to this page
-        $tableTitles = [ 'User id', 'Title', 'Content', 'Date Posted', 'Image', 'Status'];
-        $tableColumnNames = [ 'userid', 'title', 'content', 'posted_date', 'image', 'isactive'];
+        $tableTitles = [ 'CaseStudy id', 'Author', 'Title', 'Content', 'Date Posted', 'Image', 'Status'];
+        $tableColumnNames = [ 'caseid', 'first_name', 'title', 'content', 'posted_date', 'image', 'cs.isactive'];
         $tableName = 'Case Studies';
         $tableDbName = 'case_study';
 		$createButtonUrl = 'CaseStudyNew.php';
+		$editButtonUrl = 'CaseStudyEdit.php';		
+		
+		// Define the primary key column name
+		$tablePrimaryKey = 'caseid';
       
         //Creates and assigns the query 
-        $query = 'SELECT ' . implode(',', $tableColumnNames) . ' FROM ' . $tableDbName;
+        $query = 'SELECT ' . implode(',', $tableColumnNames) . ' 
+                  FROM ' . $tableDbName . ' cs 
+                  JOIN user u ON cs.userid = u.userid';
         $result = $conn->query($query);
 		
         
