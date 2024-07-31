@@ -57,39 +57,40 @@
             </a>
         </li>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider">  
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            Admin
-        </div>
-
-        <!-- Nav Item - User Management -->
-        <li class="nav-item">
-            <a class="nav-link" href="UserManagement.php">
-                <i class="fas fa-fw fa-user"></i>
-                <span>Users</span>
-            </a>
-        </li>
-
-        <!-- Conditional Signup Button -->
+        <!-- Conditional Admin role validation -->
         <?php if ($_SESSION['roleid'] == 1): ?>
+        
+            <!-- Divider -->
+            <hr class="sidebar-divider">  
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Admin
+            </div>
+
+            <!-- Nav Item - User Management -->
             <li class="nav-item">
-                <a class="nav-link" href="signup.php">
-                    <i class="fas fa-fw fa-user-plus"></i>
-                    <span>New User</span>
+                <a class="nav-link" href="UserManagement.php">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="signup.php">
+                        <i class="fas fa-fw fa-user-plus"></i>
+                        <span>New User</span>
+                    </a>
+                </li>
+    
+            <!-- Nav Item - Support Tickets -->
+            <li class="nav-item">
+                <a class="nav-link" href="SupportTicket.php">
+                    <i class="fas fa-fw fa-exclamation-triangle"></i>
+                    <span>Support Tickets</span>
                 </a>
             </li>
         <?php endif; ?>
-
-        <!-- Nav Item - Support Tickets -->
-        <li class="nav-item">
-            <a class="nav-link" href="SupportTicket.php">
-                <i class="fas fa-fw fa-exclamation-triangle"></i>
-                <span>Support Tickets</span>
-            </a>
-        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
