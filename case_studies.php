@@ -111,7 +111,7 @@
                     <div class="row mb-4">
                         <div class="col-md-6">
                             <div class="sec3b bg-light">
-                                <img src="./admin_page_final_changes/admin_page/upload/<?php echo $row['image']; ?>" alt="Case Study Image" class="img-fluid">
+                                <img src="./admin_page/upload/<?php echo $row['image']; ?>" alt="Case Study Image" class="img-fluid">
                             </div>
                         </div>
                         <div class="col-md-6">
