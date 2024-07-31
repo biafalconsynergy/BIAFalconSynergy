@@ -1,6 +1,5 @@
 /* Header Styles */
 .navbar {
-    padding-right: 15px;
     display: flex;
     justify-content: space-between; /* Ensure brand and nav items are spaced out */
 }
@@ -14,8 +13,8 @@
 /* Navbar Links */
 .navbar-nav .nav-link {
     color: #000;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 8px;
+    margin-left: 8px;
     text-decoration: none;
 }
 
@@ -40,6 +39,18 @@
 .dropdown-menu .dropdown-item:hover {
     background-color: #2f2f2f;
     color: #ffffff;
+}
+
+.btn-contact {
+    background-color: #212529;
+    color: white !important;
+    border-radius: 0.5rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.btn-contact:hover {
+    background-color: #343a40;
 }
 
 /* Footer Styles */

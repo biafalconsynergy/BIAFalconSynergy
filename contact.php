@@ -145,8 +145,8 @@
                     </div>
                     <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
                       <div class="info-wrap bg-custom w-100 p-md-5 p-4">
-                        <img src="Logo/konnexio-logo-white.png" alt="Konnexio Logo" class="rounded img-fluid mb-5">
-                        <div class="dbox w-100 d-flex align-items-start">
+                        <img src="Images/konnexio-office.jpg" alt="Konnexio Office" class="rounded img-fluid mb-5">
+                        <div class="dbox w-100 d-flex align-items-center">
                           <div class="icon d-flex align-items-center justify-content-center">
                             <span class="fa fa-map-marker"></span>
                           </div>
