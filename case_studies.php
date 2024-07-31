@@ -135,18 +135,18 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="emailModalLabel">Enter Your Email Address</h5>
+                        <h5 class="modal-title" id="emailModalLabel">Please fill this form to receive the case study</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="emailForm">
-                            <div class="mb-3">
-                                <label for="emailInput" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="emailInput" name="email" required>
-                            </div>
-                            <input type="hidden" id="caseStudyTitle" name="case_study_title">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                        hbspt.forms.create({
+                            region: "na1",
+                            portalId: "46894280",
+                            formId: "a1580df7-b785-454f-9de7-02aba0300988"
+                        });
+                        </script>
                     </div>
                 </div>
             </div>
