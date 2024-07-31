@@ -81,7 +81,7 @@
     <?php include 'header.php'; ?>
 
     <div class="page-sec-main">
-        <h1>Industries</h1>
+        <h1>Case Studies</h1>
         <br>
         <div class="page-sec-main-text">
 	        <h5>Explore how Konnexio has transformed businesses through innovative solutions and cutting-edge technology in our comprehensive case studies</h5>
