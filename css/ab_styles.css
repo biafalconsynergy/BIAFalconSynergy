@@ -162,7 +162,7 @@
 }
 
 /*Testimonials */
-.carousel-item {
+/* .carousel-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,4 +189,38 @@
   .carousel-img {
     margin-bottom: 1rem;
   }
+} */
+
+.carousel-item {
+  position: relative;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+.carousel-item img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 0 auto 1rem; 
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  color: #fff;
+  width: 80%;
+  max-width: 700px; /* Limit width for better appearance */
+  text-align: center;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  filter: invert(1); /* Ensure visibility on different backgrounds */
 }
