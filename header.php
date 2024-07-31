@@ -46,7 +46,7 @@
                             <li><a class="dropdown-item" href="about.php#our_people">Our People</a></li>
                             <li><a class="dropdown-item" href="about.php#associations">Associations</a></li>
                             <li><a class="dropdown-item" href="about.php#testimonials">Testimonials</a></li>
-                            <li><a class="dropdown-item" href="about.ph#careers">Careers</a></li>
+                            <li><a class="dropdown-item" href="about.php#careers">Careers</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

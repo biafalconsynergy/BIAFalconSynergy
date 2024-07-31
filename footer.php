@@ -24,7 +24,7 @@
                     <li><a href="about.php#our_people">Our People</a></li>
                     <li><a href="about.php#associations">Associations</a></li>
                     <li><a href="about.php#testimonials">Testimonials</a></li>
-                    <li><a href="about.ph#careers">Careers</a></li>
+                    <li><a href="about.php#careers">Careers</a></li>
                 </ul>
                 <h5 class="footer-heading"><a href="news_and_events.php">News and Events</a></h5>
                 <h5 class="footer-heading"><a href="contact.php">Contact Us</a></h5>
