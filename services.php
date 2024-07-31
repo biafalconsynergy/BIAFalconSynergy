@@ -26,12 +26,14 @@
     <!-- Header Section -->
     <?php include 'header.php'; ?>
 
-        <!-- Services -->
-        <section class="services-section">
-        <div class="container my-5">
-            <h1>Services</h1>
+    <!-- Main -->
+    <div class="page-sec-main">
+        <h1>Services</h1>
+        <br>
+        <div class="page-sec-main-text">
+            <h5>At Konnexio, we are dedicated to offering a diverse range of services tailored to meet the unique needs of our clients. Utilizing advanced technology and expert knowledge, we deliver customized solutions that drive efficiency and growth. Discover the services we provide and learn how we can support your business in achieving its goals.</h5>
         </div>
-    </section>
+    </div>
 
     <!-- Design Subheading -->
     <section class="subheading" id="design">
