@@ -1,3 +1,15 @@
+<?php
+	include 'db_connection.php';
+
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
+
+	$sql = "SELECT * FROM testimonial WHERE isactive = 1";
+	$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -252,51 +264,91 @@
         </section>
 
         <!--Sixth Section (Testimonials)-->
-        <section class="container-fluid p-3 bg-light text-dark">
-            <hr>
-            <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
-                <div id="testi-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item testi-carousel-item active text-center p-4">
-                            <blockquote class="blockquote text-center">
-                                <p class="mb-0"><i class="fa fa-quote-left"></i> Konnexio's custom automation solutions have transformed our production line. Their innovative approach and attention to detail allowed us to streamline our processes and significantly reduce our time-to-market. The team was incredibly professional and delivered exactly what we needed.</p>
-                                <br>Emily Harris<br>Operations Manager at AutoTech Corp
-                            </blockquote>
-                        </div>
-                        <div class="carousel-item testi-carousel-item text-center p-4">
-                            <blockquote class="blockquote text-center">
-                                <p class="mb-0"><i class="fa fa-quote-left"></i> Working with Konnexio has been a game-changer for our business. Their expertise in automation has not only improved our efficiency but also increased our production capacity. The team's commitment to excellence and customer satisfaction is unparalleled.</p>
-                                <br>John Smith<br>CEO at Tech Innovations Ltd
-                            </blockquote>
-                        </div>
-                        <div class="carousel-item testi-carousel-item text-center p-4">
-                            <blockquote class="blockquote text-center">
-                                <p class="mb-0"><i class="fa fa-quote-left"></i> Konnexio's automation solutions have revolutionized our manufacturing process. Their tailored approach and cutting-edge technology have significantly boosted our productivity and reduced operational costs. The team's professionalism and dedication were evident throughout the project.</p>
-                                <br>Sarah Johnson<br>Production Manager at Industrial Solutions Inc
-                            </blockquote>
-                        </div>
-                        <!-- Add more testimonials here -->
+        <section class="container-fluid p-3 bg-light text-dark" id="testimonials">
+        <?php
+            // Check if there are any rows in the result set
+            if ($result->num_rows > 0) {
+            ?>    
+        <hr>
+        <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
+        <h2 class="text-center mb-4">What Our Clients Say</h2>
+            <div id="testi-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <div class="carousel-inner" role="listbox">
+                <?php
+                            $activeClass = "active";
+                            $indicatorIndex = 0;
+                            while ($row = $result->fetch_assoc()) {
+                                ?>
+                    <div class="carousel-item testi-carousel-item <?php echo $activeClass; ?> text-center p-4">
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0"><i class="fa fa-quote-left"></i><?php echo $row["content"]; ?></p>
+                            <br><?php echo $row["title"]; ?>
+                        </blockquote>
                     </div>
-                    <a class="carousel-control-prev" href="#testi-carousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
-                            <i class="fa fa-chevron-left"></i>
-                        </span>
-                        <span class="sr-only"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#testi-carousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
-                            <i class="fa fa-chevron-right"></i>
-                        </span>
-                        <span class="sr-only"></span>
-                    </a>
-                    <ol class="carousel-indicators testi-carousel-indicators">
-                        <li data-target="#testi-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#testi-carousel" data-slide-to="1"></li>
-                        <li data-target="#testi-carousel" data-slide-to="2"></li>
-                        <!-- Add more indicators here -->
-                    </ol>
+                    <?php
+                                $activeClass = ""; // Only the first item should be active
+                                $indicatorIndex++;
+                            }
+                            ?>
+                    <!-- Add more testimonials here -->
                 </div>
+                <a class="carousel-control-prev" href="#testi-carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
+                        <i class="fa fa-chevron-left"></i>
+                    </span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#testi-carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
+                        <i class="fa fa-chevron-right"></i>
+                    </span>
+                    <span class="sr-only"></span>
+                </a>
+                <ol class="carousel-indicators testi-carousel-indicators">
+                <?php
+                            for ($i = 0; $i < $indicatorIndex; $i++) {
+                                ?>
+                    <li data-target="#testi-carousel" data-slide-to="<?php echo $i; ?>" class="<?php echo ($i === 0) ? 'active' : '$i'; ?>"></li>
+                    <?php
+                            }
+                            ?>
+                </ol>
             </div>
+        </div>
+        <?php
+            } else {
+                ?>
+                <hr>
+                <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
+                    <h2 class="text-center mb-4">What Our Clients Say</h2>
+                    <div id="testi-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item testi-carousel-item active text-center p-4">
+                                <blockquote class="blockquote text-center">
+                                    <p class="mb-0"><i class="fa fa-quote-left"></i> No active Testimonials found.</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#testi-carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
+                                <i class="fa fa-chevron-left"></i>
+                            </span>
+                            <span class="sr-only"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#testi-carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
+                                <i class="fa fa-chevron-right"></i>
+                            </span>
+                            <span class="sr-only"></span>
+                        </a>
+                        <ol class="carousel-indicators testi-carousel-indicators">
+                            <li data-target="#testi-carousel" data-slide-to="0" class="active"></li>
+                        </ol>
+                    </div>
+                </div>
+                <?php
+            }
+        ?>
         </section>
     </main>
     <br>
