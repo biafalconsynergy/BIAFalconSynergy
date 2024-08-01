@@ -24,7 +24,7 @@
 include 'connection.php';
 
 
-$tableColumnNames = ['userid','title', 'content', 'content_type' , 'image'];
+$tableColumnNames = ['userid','title', 'location', 'content', 'content_type' , 'image'];
 $columns = implode(',', $tableColumnNames);
 $placeholders = implode(',', array_fill(0, count($tableColumnNames), '?'));
 

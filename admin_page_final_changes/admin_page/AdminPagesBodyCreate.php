@@ -23,6 +23,11 @@ $pageName = basename($_SERVER['PHP_SELF']);
 // Check if it's the Users page to hide the Create button
 $hideImageButton = ($pageName === 'CareersNew.php'); 
 $showContentTypeButton = ($pageName === 'NewsEventsNew.php'); 
+$showHubSpotForm = ($pageName === 'CaseStudyNew.php'); 
+$showNewsLocationField = ($pageName === 'NewsEventsNew.php'); 
+
+// Get the referer URL
+$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'admin.php';  
 
 // Process form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -31,7 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $content = $_POST['content'];
 	$contentType = isset($_POST['contentType']) ? $_POST['contentType'] : null;
 	$uploadfile = isset($_FILES['uploadfile']['name']) ? $_FILES['uploadfile']['name'] : null;
-
+	$form = $_POST['form'] ?? null;
+	$location = $_POST['location'] ?? null;
     
     // File upload handling
     if ($uploadfile) {
@@ -41,15 +47,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Prepare SQL insert statement
-	if ($hideImageButton && !$showContentTypeButton) {
+	if ($hideImageButton && !$showContentTypeButton && !$showHubSpotForm && !$showNewsLocationField) {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?)");
 		$stmt->bind_param("iss", $userid, $title, $content);
-	} else if (!$hideImageButton && !$showContentTypeButton) {
+	} else if (!$hideImageButton && !$showContentTypeButton && !$showHubSpotForm && !$showNewsLocationField) {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?)");
 		$stmt->bind_param("isss", $userid, $title, $content, $uploadfile);
-	} else if (!$hideImageButton && $showContentTypeButton) {
+	} else if (!$hideImageButton && !$showContentTypeButton && $showHubSpotForm && !$showNewsLocationField) {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?, ?)");
-		$stmt->bind_param("issss", $userid, $title, $content, $contentType, $uploadfile);		
+		$stmt->bind_param("issss", $userid, $title, $content, $uploadfile, $form);
+	} else if (!$hideImageButton && $showContentTypeButton && !$showHubSpotForm && $showNewsLocationField) {
+		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("isssss", $userid, $title, $location, $content, $contentType, $uploadfile);		
 	}
     if ($stmt->execute()) {
         echo "<script>
@@ -142,22 +151,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     </select>
                                 </div>
                                 <?php endif; ?>
-                                
+								
+                             
                                 <!-- Content Input -->
                                 <div class="form-group">
                                     <label for="content">Content</label>
                                     <textarea class="form-control" id="content" name="content" rows="4" placeholder="Enter content" required><?php echo isset($row['content']) ? $row['content'] : ''; ?></textarea>
                                 </div>
+								
+								<!-- Location Input -->
+								<?php if ($showNewsLocationField): ?>
+                                <div class="form-group">
+                                    <label for="location">Location</label>
+                                    <input type="text" class="form-control" id="location" name="location" placeholder="Enter location" value="<?php echo isset($row['location']) ? $row['location'] : ''; ?>" required>
+                                </div>
+								<?php endif; ?>
+								
+								<!-- HubSpot Form -->
+								<?php if ($showHubSpotForm): ?>
+									<div class="form-group">
+										<label for="form">HubSpot Form</label>
+										<textarea id="form" name="form" class="form-control" rows="5" required ><?php echo isset($row['form']) ? $row['form'] : ''; ?></textarea>
+									</div>
+								<?php endif; ?>								
 
                                 <!-- Image Input -->
                                 <?php if (!$hideImageButton): ?>
                                 <div class="form-group">
-                                    <label for="uploadfile">Image</label>
-                                    <input class="form-control" type="file" name="uploadfile" id="uploadfile" required>
-                                </div>
+									<label for="uploadfile">Image</label>
+									<input class="form-control" type="file" name="uploadfile" id="uploadfile" onchange="previewImage(event)" required>
+									<img id="imagePreview" src="#" alt="Image Preview" style="display: none; margin-top: 10px; max-height: 200px;">
+								</div>
+
                                 <?php endif; ?>
 
                                 <button type="submit" class="btn btn-primary">Save</button>
+								<a href="<?php echo $referer; ?>" class="btn btn-secondary">Cancel</a>
                             </div>
                         </div>
                     </form>
@@ -204,14 +233,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             const title = document.getElementById('title').value;
             const content = document.getElementById('content').value;
             const contentType = document.getElementById('contentType');
+			const form = document.getElementById('form').value;
+			const location = document.getElementById('location').value;			
             const uploadfile = document.getElementById('uploadfile').value;
 
-            if (!title || !content || (contentType && !contentType.value) || (uploadfile && !uploadfile)) {
+		if (!title || !content || !form || !location || (contentType && !contentType.value) || (uploadfile && !uploadfile)) {
                 alert("All fields are mandatory.");
                 return false;
             }
             return true;
         }
+		function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function(){
+                const output = document.getElementById('imagePreview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            };
+            reader.readAsDataURL(event.target.files[0]);
+		}
     </script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/sb-admin-2.min.js"></script>

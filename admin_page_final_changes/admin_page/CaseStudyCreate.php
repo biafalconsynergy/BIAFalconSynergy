@@ -25,8 +25,8 @@
 
         //Variables particular to this page
         $Date = date('Y-m-d H:i:s');
-        $tableTitles = ['Case id', 'User id', 'Title', 'Content', 'Date Posted', 'Image', 'Is active'];
-        $tableColumnNames = ['caseid', 'userid', 'title', 'content', 'posted_date', 'image', 'isactive'];
+        $tableTitles = ['Case id', 'User id', 'Title', 'Content', 'Date Posted', 'Image', 'HubSpot Form', 'Is active'];
+        $tableColumnNames = ['caseid', 'userid', 'title', 'content', 'posted_date', 'image', 'form', 'isactive'];
         $tableDefaultValues = ['','userid', '', '', $Date, '', '0'];
         $tableName = 'Case Studies';
         $tableDbName = 'case_study';

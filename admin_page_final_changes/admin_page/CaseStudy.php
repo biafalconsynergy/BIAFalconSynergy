@@ -23,11 +23,9 @@
         //DB Connection
         include 'connection.php';
 		
-		
-
         //Variables particular to this page
-        $tableTitles = [ 'CaseStudy id', 'Author', 'Title', 'Content', 'Date Posted', 'Image', 'Status'];
-        $tableColumnNames = [ 'caseid', 'first_name', 'title', 'content', 'posted_date', 'image', 'cs.isactive'];
+        $tableTitles = [ 'CaseStudy id', 'Author', 'Title', 'Content', 'Date Posted', 'Image', 'HubSpot Form', 'Status'];
+        $tableColumnNames = [ 'caseid', 'first_name', 'title', 'content', 'posted_date', 'image', 'form', 'cs.isactive'];
         $tableName = 'Case Studies';
         $tableDbName = 'case_study';
 		$createButtonUrl = 'CaseStudyNew.php';

@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = password_hash($passwordf, PASSWORD_DEFAULT);
 	
     // Database connection details
-    include 'db_connection.php';
+    include 'connection.php';
 
     try {
         // Create connection
@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<script>";
             echo "alert('User registered successfully!');";
             echo "setTimeout(function() {";
-            echo "window.location.href = 'LoginPage.php';";
+            echo "window.location.href = 'UserManagement.php';";
             echo "}, 100);"; // Delay to ensure the alert completes
             echo "</script>";
             exit; // Stop further execution

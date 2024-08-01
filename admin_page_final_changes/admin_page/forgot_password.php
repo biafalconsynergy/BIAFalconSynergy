@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 
     // Create a recovery link
-    $recoveryLink = "http://localhost/admin_page_final_changes/admin_page/reset_password.php?token=$token";
+    $recoveryLink = "http://localhost/BIAFalconSynergy-main/admin_page_final_changes/admin_page/reset_password.php?token=$token";
 
     // Send the recovery email using PHPMailer
     $mail = new PHPMailer(true);

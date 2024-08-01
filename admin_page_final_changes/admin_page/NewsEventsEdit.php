@@ -24,8 +24,8 @@
         include 'connection.php';
 
         //Variables particular to this page
-        $tableTitles = ['News and Events Id',  'userid', 'Title', 'Content', 'Content Type', 'Date Posted','Image', 'Status','last_updated_date'];
-        $tableColumnNames = ['newsid', 'userid', 'title', 'content', 'content_type', 'posted_date','image','isactive' , 'last_updated_date'];
+        $tableTitles = ['News and Events Id',  'userid', 'Title', 'Location', 'Content', 'Content Type', 'Date Posted','Image', 'Status','last_updated_date'];
+        $tableColumnNames = ['newsid', 'userid', 'title', 'location', 'content', 'content_type', 'posted_date','image','isactive' , 'last_updated_date'];
         $tableName = 'News and Events';
         $tableDbName = 'news_events';
         $id = intval($_GET['id']); // Sanitize input

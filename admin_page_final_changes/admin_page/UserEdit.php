@@ -24,14 +24,14 @@
         include 'connection.php';
 
         //Variables particular to this page
-        $tableTitles = ['User id', 'First Name', 'Last Name', 'Role ID', 'Contact Number','Email', 'Gender', 'Address', 'Status', 'Last Updated Date'];
+        $tableTitles = ['User id', 'First Name', 'Last Name', 'Role', 'Contact Number','Email', 'Gender', 'Address', 'Status', 'Last Updated Date'];
         $tableColumnNames = ['userid', 'first_name', 'last_name', 'roleid', 'contact_no', 'email','Gender','Address', 'isactive','last_updated_date'];
         $tableName = 'Users';
         $tableDbName = 'user';
         $id = intval($_GET['id']); // Sanitize input
 		$mainpage = 'UserManagement.php';	        
 
-		$disabletableColumnNames = ['userid', 'first_name', 'last_name', 'roleid', 'posted_date'];
+		$disabletableColumnNames = ['userid', 'first_name', 'last_name', 'posted_date'];
 		
 		
         //Page body

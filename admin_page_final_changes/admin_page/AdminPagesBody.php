@@ -273,7 +273,11 @@ $hideCreateButton = in_array($pageName, $pagesToHideCreateButton);
 											echo '<input type="checkbox" class="toggle-status" data-id="' . $row[$tablePrimaryKey] . '" data-status="' . $row[$columnNameWithoutAlias] . '" ' . $checked . '>';
 											echo '<span class="slider round"></span>';
 											echo '</label>';
-										}  else {
+										} elseif ($columnNameWithoutAlias === 'form') {
+											// displaying the script as plain text
+											$scriptData = $row['form']; 
+											echo htmlspecialchars($scriptData);
+									    } else {
                                             echo $row[$columnNameWithoutAlias];
                                         }
                                         echo '</td>';

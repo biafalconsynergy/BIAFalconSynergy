@@ -27,8 +27,8 @@
 		
 		
         //Variables particular to this page
-        $tableTitles = ['Case id', 'User id', 'Title', 'Content', 'Date Posted', 'Image', 'Is active', 'Last Updated Date'];
-        $tableColumnNames = ['caseid', 'userid', 'title', 'content', 'posted_date', 'image', 'isactive','last_updated_date'];
+        $tableTitles = ['Case id', 'User id', 'Title', 'Content', 'Date Posted', 'Image', 'HubSpot Form', 'Is active', 'Last Updated Date'];
+        $tableColumnNames = ['caseid', 'userid', 'title', 'content', 'posted_date', 'image', 'form', 'isactive','last_updated_date'];
         $tableName = 'Case Studies';
         $tableDbName = 'case_study';
         $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
