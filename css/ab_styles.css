@@ -159,7 +159,7 @@
   width: 100px;
   height: 100px;
   object-fit: cover;
-  margin: 0 auto 1rem;
+  margin-bottom: 20px; /* Adjust this value for more or less space */
   display: block;
 }
 
@@ -167,6 +167,7 @@
   position: absolute;
   bottom: 20px;
   left: 50%;
+  margin-top: 10px; /* Adjust this value if more space is needed between caption and text */
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem;
@@ -180,4 +181,3 @@
 .carousel-control-prev, .carousel-control-next {
   filter: invert(1); /* Ensure visibility on different backgrounds */
 }
-
