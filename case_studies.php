@@ -1,18 +1,20 @@
 <?php
-	include 'db_connection.php';
+include 'db_connection.php';
 
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	}
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-	$sql = "SELECT * FROM case_study WHERE isactive = 1";
-	$result = $conn->query($sql);
+// Prepare the SQL statement to retrieve all case studies with their forms
+$sql = "SELECT caseid, title, content, image, form FROM case_study WHERE isactive = 1";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$result1 = $stmt->get_result();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Case Studies | KONNEXIO</title>
     <meta charset="utf-8">
@@ -30,132 +32,114 @@
     <link rel="stylesheet" href="css/id_styles.css">
 
     <!-- JS Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    
-    <script>
-    $(document).ready(function() {
-        $('.learn-more-btn').click(function() {
-            var title = $(this).data('title');
-            $('#caseStudyTitle').val(title);
-            $('#emailModal').modal('show');
-        });
-
-        $('#emailForm').submit(function(event) {
-            event.preventDefault();
-            var formData = $(this).serialize(); // Serialize form data
-
-            $.ajax({
-                type: 'POST',
-                url: 'handle_email.php', // PHP script to handle email
-                data: formData, // Send serialized form data
-                success: function(response) {
-                    alert(response); // Display response from PHP script
-                    $('#emailModal').modal('hide');
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr.responseText); // Log the detailed error
-                    alert('Error submitting email. Please try again.');
-                }
-            });
-        });
-    });
-    </script>
 
     <style>
         #main-content {
             margin-top: 20px; 
         }
         .section-separator {
-            margin-top: 40px; /* Added margin to separate sections */
+            margin-top: 40px; 
         }
-    </style>
-	
-</head>
+		.modal-dialog.custom-margin {
+        max-width: 50%; 
+        margin: 30px auto; 
+        padding-right: 20px; 
+		}
 
+		.modal-content {
+			padding: 20px; 
+		}
+    </style>
+</head>
 <body>
-	<!--Header Data-->
+    <!--Header Data-->
     <?php include 'header.php'; ?>
 
     <div class="page-sec-main">
-        <h1>Case Studies</h1>
+        <h1>Industries</h1>
         <br>
         <div class="page-sec-main-text">
-	        <h5>Explore how Konnexio has transformed businesses through innovative solutions and cutting-edge technology in our comprehensive case studies</h5>
-		</div>
-    </div>	
-		<!-- Text Section 
-		<section class="section-padding pb-0 adapto_text" id="about">
-			<div class="container mb-5 pb-lg-5">
-				<div class="row justify-content-center text-center">
-					<div class="col-lg-8 col-12">
-						<h2 class="mb-4 mt-5" data-aos="fade-up">Case Studies</h2>
-						<p class="text-center" data-aos="fade-up" data-aos-delay="300">
-							Explore how Konnexio has transformed businesses through innovative solutions and cutting-edge technology in our comprehensive case studies
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>  -->
-			
-        <section class="container section-separator">
-            <?php
-            // Check if there are any rows in the result set
-            if ($result->num_rows > 0) {
-                // Output data of each row
-                while ($row = $result->fetch_assoc()) {
-                    ?>
-                    <div class="row mb-4">
-                        <div class="col-md-6">
-                            <div class="sec3b bg-light">
-                                <img src="./admin_page/upload/<?php echo $row['image']; ?>" alt="Case Study Image" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="sec3b bg-light p-3">
-                                <h2><?php echo $row["title"]; ?></h2>
-                                <p><?php echo $row["content"]; ?></p>
-                                <button class="btn btn-danger btn-lg learn-more-btn" data-title="<?php echo $row['title']; ?>">Learn More</button>
-                            </div>
+            <h5>Explore how Konnexio has transformed businesses through innovative solutions and cutting-edge technology in our comprehensive case studies</h5>
+        </div>
+    </div>
+        
+    <section class="container section-separator">
+        <?php
+        // Check if there are any rows in the result set
+        if ($result1->num_rows > 0) {
+            // Output data of each row
+            while ($row = $result1->fetch_assoc()) {
+                ?>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="sec3b bg-light">
+                            <img src="./admin_page_final_changes/admin_page/upload/<?php echo htmlspecialchars($row['image']); ?>" alt="Case Study Image" class="img-fluid">
                         </div>
                     </div>
-                    <?php
-                }
-            } else {
-                echo "<div class='row'><div class='col'><p>No active case studies found.</p></div></div>";
-            }
-            ?>
-        </section>
-
-        <!-- Modal for Email -->
-        <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="emailModalLabel">Please fill this form to receive the case study</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-                        <script>
-                        hbspt.forms.create({
-                            region: "na1",
-                            portalId: "46894280",
-                            formId: "a1580df7-b785-454f-9de7-02aba0300988"
-                        });
-                        </script>
+                    <div class="col-md-6">
+                        <div class="sec3b bg-light p-3">
+                            <h2><?php echo htmlspecialchars($row["title"]); ?></h2>
+                            <p><?php echo htmlspecialchars($row["content"]); ?></p>
+                            <button class="btn btn-danger btn-lg learn-more-btn" data-caseid="<?php echo htmlspecialchars($row['caseid']); ?>" data-bs-toggle="modal" data-bs-target="#infoModal<?php echo htmlspecialchars($row['caseid']); ?>">Receive More Info</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </main>
 
-    <!--footer data -->
+                <!-- Modal for each case study -->
+				<div class="modal fade" id="infoModal<?php echo htmlspecialchars($row['caseid']); ?>" tabindex="-1" aria-labelledby="infoModalLabel<?php echo htmlspecialchars($row['caseid']); ?>" aria-hidden="true">
+					<div class="modal-dialog custom-margin modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title text-center" id="infoModalLabel<?php echo htmlspecialchars($row['caseid']); ?>">Enter Your Details Below</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<?php
+								if (!empty($row['form'])) {
+									echo $row['form'];
+								} else {
+									echo "<p class='text-danger'>Error! Form Script not Found</p>";
+								}
+								?>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <?php
+            }
+        } else {
+            echo "<div class='row'><div class='col'><p>No active case studies found</p></div></div>";
+        }
+        ?>
+    </section>
+
+    <!-- Footer Data -->
     <?php include 'footer.php'; ?>  
 
-</body>
+    <!-- JavaScript to handle the state and modal behavior -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var modals = document.querySelectorAll('.modal');
 
+            modals.forEach(function(modal) {
+                modal.addEventListener('show.bs.modal', function () {
+                    // Save the current state
+                    history.pushState(null, null, location.href);
+                });
+
+                modal.addEventListener('hidden.bs.modal', function () {
+                    // Go back to the saved state
+                    history.back();
+                });
+            });
+        });
+    </script>
+
+</body>
 </html>
