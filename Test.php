@@ -167,7 +167,7 @@
 										</blockquote>
 									</div>
 									<?php
-									$activeClass = ""; // Only the first item should be active
+									$activeClass = ""; // the first item should be active
 									$indicatorIndex++;
 								}
 								?>
