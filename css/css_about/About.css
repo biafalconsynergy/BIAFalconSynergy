@@ -1,0 +1,159 @@
+/*  testing the carousel slider section  */
+
+.about-section {
+    background-color: #1e3e5e;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .about-section h1{
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .about-section-para
+  {
+    font-size: 20px;
+  }
+
+/* Associations section */
+.associations-section {
+  padding: 3rem 0; /* Add vertical padding */
+}
+
+.associations-section h2 {
+  font-size: 2rem; /* Adjust as needed */
+  margin-bottom: 2rem; /* Space below the heading */
+}
+
+.association-item {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  text-align: left; /* Ensure text inside items is left-aligned */
+}
+
+.association-logo img {
+  max-width: 100px; /* Adjust as needed */
+}
+
+.association-content {
+  margin-left: 1rem; /* Space between logo and content */
+}
+
+.association-content h4 {
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+.association-content p {
+  color: #6c757d; /* Grey text */
+}
+
+/* Responsive styles */
+@media (max-width: 767.98px) {
+  .association-item img {
+      max-width: 80px; /* Adjust logo size on smaller screens */
+  }
+}
+
+
+/* Career Section */
+.ab-careers-section {
+  background-color: #c61b1b; /* Light grey background */
+  padding: 3rem 1rem;
+  border-radius: 8px;
+}
+
+.accordion-button {
+  font-size: 1.25rem; /* Increase this value to make the text larger */
+  padding: 2rem; /* Increase padding for a more spacious look */
+}
+
+.accordion-button:not(.collapsed) {
+  font-size: 2.5rem;
+  background-color: #007bff; /* Customize background color if needed */
+  color: #fff; /* Customize text color if needed */
+}
+
+.accordion-button::after {
+  font-size: 2.5rem; /* Adjust the size of the icon if you are using one */
+}
+
+.accordion-body {
+  background-color: #f8f9fa;
+  font-size: 1rem; /* Default font size */
+  transition: font-size 0.1s ease; /* Smooth transition for font size change */
+}
+
+.accordion-collapse.show .accordion-body {
+  font-size: 3.0rem; /* Larger font size when accordion is open */
+}
+
+.section-title {
+  font-size: 3.0rem;
+  margin-bottom: 10px;
+  margin-top: 5rem; /* Adds space above the heading */
+}
+
+.section-subtitle {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #6c757d;
+}
+
+/* General Styles */
+#main-content {
+  margin-top: 20px; 
+}
+
+.section-separator {
+  margin-top: 40px; 
+}
+
+.fixed-size-img {
+  width: 200px; 
+  height: 200px; 
+  object-fit: cover; 
+}
+
+.careers-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  padding: 10px; 
+  margin: 0 auto; 
+}
+
+.careers-title {
+  font-size: 1rem; 
+  font-weight: bold;
+  margin-bottom: 0.5rem; 
+}
+
+.careers-content-text {
+  font-size: 0.875rem; 	
+  margin-bottom: 0; 
+}
+
+.card-body {
+  padding: 0.75rem; 
+  background-color: #3d5a78;
+}
+
+
+
+
+
+

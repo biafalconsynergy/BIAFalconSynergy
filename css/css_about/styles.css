@@ -1,0 +1,607 @@
+/* General font styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Header Font Sizes */
+.carousel-caption h1 {
+    font-size: 1.5rem; /* Default size */
+    margin: 0;
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 576px) {
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-caption h1 {
+        font-size: 4rem;
+    }
+}
+
+.carousel-caption p {
+    font-size: 1rem; /* Default size */
+    padding-block: 2rem;
+}
+
+@media (min-width: 576px) {
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-caption p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-caption p {
+        font-size: 1.8rem;
+    }
+}
+
+/* Additional styles for the page */
+.navbar-brand img {
+    max-width: 300px;
+    height: auto;
+    padding: 1%;
+}
+
+.navbar-nav .nav-link {
+    color: #000000;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+@media (min-width: 576px) {
+    .navbar-nav .nav-link {
+        font-size: medium;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: large;
+    }
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff2727;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #000000;
+    font-size: medium;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #2f2f2f;
+    color: #ffffff;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding-top: 20%;
+}
+
+.carousel-inner img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.row.no-gutters > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    perspective: 1000px;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc; /* Default box color */
+}
+
+.sec2b-front {
+    background-color: #2D557D; /* Customize for each box */
+}
+
+.sec2d-front {
+    background-color: #2D557D; /* Customize for each box */
+}
+.card-body, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sec2a, .sec2c {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+}
+
+.sec2b, .sec2d {
+    /*background-color: rgba(55, 55, 55, 0.8);*/
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgb(0, 0, 0);
+}
+
+.sec3 p {
+    display: block;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    font-size: 2em;
+}
+
+.container-fluid hr {
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+    border-style: inset;
+    border-width: 2px;
+}
+
+.stretch {
+    padding-top: 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.transparent-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+.sec3a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 50%;
+    padding: 5%;
+}
+
+.sec3a h1 {
+    font-size: 2em; /* Default size */
+    color: rgb(255, 255, 255);
+}
+
+@media (min-width: 576px) {
+    .sec3a h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (min-width: 768px) {
+    .sec3a h1 {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 992px) {
+    .sec3a h1 {
+        font-size: 3.5em;
+    }
+}
+
+.sec3a p {
+    font-size: 1em; /* Default size */
+    color: rgb(255, 255, 255);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+@media (min-width: 576px) {
+    .sec3a p {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .sec3a p {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 992px) {
+    .sec3a p {
+        font-size: 1.8em;
+    }
+}
+
+.container-fluid h1, h3 {
+    text-align: center;
+}
+
+.sec3b {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 4/3;
+    padding: 10%;
+}
+
+.sec3b h1 {
+    font-size: 2rem; /* Default size */
+    color: rgb(0, 0, 0);
+}
+
+@media (min-width: 576px) {
+    .sec3b h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .sec3b h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .sec3b h1 {
+        font-size: 3.5rem;
+    }
+}
+
+.sec3b p {
+    font-size: 1rem; /* Default size */
+    color: rgb(0, 0, 0);
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+@media (min-width: 576px) {
+    .sec3b p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .sec3b p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .sec3b p {
+        font-size: 1.8rem;
+    }
+}
+
+.sec3b img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec4 {
+    position: relative;
+    aspect-ratio: 1/1;
+    padding: 5%;
+}
+
+.sec4 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec4-body {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sec4-body h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.partners-section {
+    padding: 0;
+}
+
+.partners-row {
+    background-color: #2a577e;
+    color: white;
+    padding: 30px 0; /* Increased padding for a bigger block */
+}
+
+.partners-title {
+    font-size: 3em; /* Made the title larger */
+    margin-right: 40px; /* Added margin to the right of the title */
+}
+
+.partners-logo {
+    max-height: 200px; /* Increased the logo size */
+    margin: 0 20px; /* Added margin for spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .partners-title {
+        font-size: 24px; /* Adjust the title size for small screens */
+        margin-right: 20px; /* Adjust the margin for smaller screens */
+    }
+
+    .partners-logo {
+        max-height: 100px; /* Keep the logo size smaller for mobile */
+        margin: 0 10px; /* Adjusted margin for smaller screens */
+    }
+}
+
+.testi-carousel-item {
+    align-items: center;
+    justify-content: center;
+    background-color: #2a577e;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testi-carousel-item blockquote {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    white-space: normal;
+    text-align: justify;
+}
+
+.testi-carousel-item blockquote p {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testi-carousel-item footer {
+    color: #d1e0e5;
+}
+
+.testi-carousel-control-prev-icon,
+.testi-carousel-control-next-icon {
+    background-color: #2a577e;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testi-carousel-control-prev,
+.testi-carousel-control-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testi-carousel-control-prev:hover,
+.testi-carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.testi-carousel-indicators {
+    bottom: -50px;
+}
+
+.testi-carousel-indicators li {
+    background-color: #d1e0e5;
+}
+
+.testi-carousel-indicators .active {
+    background-color: #2a577e;
+}
+
+.footer {
+    background-color: #1e3e5e;
+    color: white;
+    padding: 40px 0;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    margin-left: -10px;
+}
+
+.footer-logo img {
+    max-width: 230px;
+    height: auto;
+}
+
+.footer a {
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #bdadad;
+}
+
+.footer .footer-heading {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer .footer-section {
+    margin-bottom: 30px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.f-icon {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+.f-icon:hover {
+    color: #bdadad;
+}
+
+
+
+.carousel-item {
+    position: relative;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 2rem;
+  }
+  .carousel-item img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 auto 1rem; /* Center image and space below it */
+    display: block; /* Ensure image is centered */
+  }
+  .carousel-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    padding: 1rem;
+    border-radius: 5px;
+    color: #fff;
+    width: 80%;
+    text-align: center;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    filter: invert(1); /* Lightens the control icons for better visibility */
+  }
