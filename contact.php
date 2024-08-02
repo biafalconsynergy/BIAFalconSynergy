@@ -7,7 +7,7 @@
         <title>Contact Us | KONNEXIO</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Konnexio is a custom machine builder located in London Ontario. Our specialty is adapto™ which is a modular assembly line construction technology.">
+        <meta name="description" content="Konnexio is a custom machine builder located in London Ontario. Our specialty is adaptoï¿½ which is a modular assembly line construction technology.">
         <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
     
         <!-- CSS Libraries -->
@@ -26,6 +26,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
         <script src="js/ct_scripts.js"></script>
     </head>
 
@@ -69,7 +70,15 @@
                         </ul>
                         <div class="tab-content pt-3" id="myTabContent">
                           <div class="tab-pane fade show active" id="formSales" role="tabpanel" aria-labelledby="formSales-tab">
-                            <form method="POST" id="salesForm" name="salesForm" class="contactForm">
+                            <script>
+                              hbspt.forms.create({
+                                region: "na1",
+                                portalId: "46894280",
+                                formId: "d80fe2aa-a395-4dda-9872-ad53bfe89a54"
+                              });
+                            </script>
+
+                            <!-- <form method="POST" id="salesForm" name="salesForm" class="contactForm">
                               <div class="row">
                                 <div class="col-md-6">
                                   <div class="form-group">
@@ -102,21 +111,28 @@
                                   </div>
                                 </div>
                               </div>
-                            </form>
+                            </form> -->
+
                           </div>
-                          <div class="tab-pane fade" id="form_support" role="tabpanel" aria-labelledby="formSupport-tab">
+                          <div class="tab-pane fade" id="formSupport" role="tabpanel" aria-labelledby="formSupport-tab">
                             <form method="POST" id="supportForm" name="supportForm" class="contactForm">
                               <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                   <div class="form-group">
-                                    <label class="label" for="nameSupport">Full Name</label>
-                                    <input type="text" class="form-control" name="nameSupport" id="nameSupport" placeholder="Name">
+                                    <label class="label" for="emailSupport">Email</label>
+                                    <input type="email" class="form-control" name="emailSupport" id="emailSupport" placeholder="email@email.com">
                                   </div>
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group">
-                                    <label class="label" for="emailSupport">Email Address</label>
-                                    <input type="email" class="form-control" name="emailSupport" id="emailSupport" placeholder="Email">
+                                    <label class="label" for="firstNameSupport">First Name</label>
+                                    <input type="text" class="form-control" name="firstNameSupport" id="firstNameSupport" placeholder="First Name">
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label class="label" for="lastNameSupport">Last Name</label>
+                                    <input type="text" class="form-control" name="lastNameSupport" id="lastNameSupport" placeholder="Last Name">
                                   </div>
                                 </div>
                                 <div class="col-md-12">
@@ -125,10 +141,28 @@
                                     <input type="text" class="form-control" name="subjectSupport" id="subjectSupport" placeholder="Subject">
                                   </div>
                                 </div>
+                                <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label class="label" for="projectNumberSupport">Project Number</label>
+                                    <input type="text" class="form-control" name="projectNumberSupport" id="projectNumberSupport" placeholder="00XX">
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label class="label" for="machineNumberSupport">Machine Number</label>
+                                    <input type="text" class="form-control" name="machineNumberSupport" id="machineNumberSupport" placeholder="00XX">
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-group">
+                                    <label class="label" for="companyNameSupport">Company Name</label>
+                                    <input type="text" class="form-control" name="companyNameSupport" id="companyNameSupport" placeholder="Company Name">
+                                  </div>
+                                </div>
                                 <div class="col-md-12">
                                   <div class="form-group">
                                     <label class="label" for="#">Message</label>
-                                    <textarea name="messageSupport" class="form-control" id="messageSupport" cols="30" rows="4" placeholder="Message"></textarea>
+                                    <textarea name="messageSupport" class="form-control message-box" id="messageSupport" cols="30" rows="4" placeholder="What can we do to support your business?"></textarea>
                                   </div>
                                 </div>
                                 <div class="col-md-12">

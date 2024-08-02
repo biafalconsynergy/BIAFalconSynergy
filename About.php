@@ -195,36 +195,44 @@
         </div>
     
         <section id="careers-list" class="container-fluid p-3 bg-light text-dark">
-            <div class="accordion" id="accordionCareers">
-                <?php 
-                // Check if there are any rows in the careers result set
-                if ($result_careers->num_rows > 0) {
-                    // Iterate over each row in the result set and create accordion items
-                    while ($career = $result_careers->fetch_assoc()) {
-                        // Check if 'id' field is set before using it
-                        $career_id = isset($career['id']) ? $career['id'] : 'default-id';
-                        $career_title = isset($career['title']) ? $career['title'] : 'Untitled Position';
-                        $career_content = isset($career['content']) ? $career['content'] : 'No description available.';
-                        
-                        echo '<div class="accordion-item">
-                        <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' . $career_id . '" aria-expanded="true" aria-controls="collapse' . $career_id . '">'
-                        . htmlspecialchars($career_title) .
-                        '</button>
-                        </h2>
-                        <div id="collapse' . $career_id . '" class="accordion-collapse collapse" data-bs-parent="#accordionCareers">
-                        <div class="accordion-body">'
-                        . htmlspecialchars($career_content) .
-                        '</div>
-                        </div>
-                    </div>';
-                    }
-                } else {
-                    echo '<p class="text-center">No career opportunities available at the moment.</p>';
-                }
-                ?>    
-            </div>
-        </section>
+    <div class="accordion" id="accordionCareers">
+        <?php 
+        // Check if there are any rows in the careers result set
+        if ($result_careers->num_rows > 0) {
+            // Iterate over each row in the result set and create accordion items
+            while ($career = $result_careers->fetch_assoc()) {
+                // Check if 'id', 'title' and 'content' fields are set before using them
+                $career_id = isset($career['id']) ? $career['id'] : 'default-id';
+                $career_title = isset($career['title']) ? $career['title'] : 'Untitled Position';
+                $career_content = isset($career['content']) ? $career['content'] : 'No description available.';
+
+                // Sanitize the title and content
+                $career_title = htmlspecialchars($career_title, ENT_QUOTES, 'UTF-8');
+                $career_content = htmlspecialchars($career_content, ENT_QUOTES, 'UTF-8');
+
+                // Convert line breaks to paragraph tags
+                $career_content = nl2br($career_content);
+                
+                echo '<div class="accordion-item">';
+                echo '<p class="accordion-header">';
+                echo '<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse' . $career_id . '" aria-expanded="true" aria-controls="collapse' . $career_id . '">';
+                echo '<h4>' . $career_title . '</h4>';
+                echo '</button>';
+                echo '</p>';
+                echo '<div id="collapse' . $career_id . '" class="accordion-collapse collapse" data-bs-parent="#accordionCareers">';
+                echo '<div class="accordion-body">';
+                echo '<p>' . $career_content . '</p>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
+        } else {
+            echo '<p class="text-center">No career opportunities available at the moment.</p>';
+        }
+        ?>    
+    </div>
+</section>
+
     </div>
 </section>
 

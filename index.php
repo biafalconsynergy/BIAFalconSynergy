@@ -91,13 +91,12 @@
         </section>
 
         <!--Second Section (Cards)-->
-        <section id="cardsSection" class="container-fluid" style="padding: 0;">
+        <section id="cardsSection" class="container-fluid bg-light" style="padding: 0;">
             <div class="row no-gutters">
                 <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card">
+                    <div class="card card-industries bg-light">
                         <div class="card-inner">
                             <div class="card-front">
-                                <div class="box sec2a-front"></div>
                                 <div class="card-body sec2a">
                                     <h1 class="card-title">Industrial</h1>
                                 </div>
@@ -113,10 +112,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card">
+                    <div class="card card-industries bg-light">
                         <div class="card-inner">
                             <div class="card-front">
-                                <div class="box sec2b-front"></div>
                                 <div class="card-body sec2b">
                                     <h1 class="card-title">Agriculture</h1>
                                 </div>
@@ -125,17 +123,16 @@
                                 <div class="card-body sec2b">
                                     <h3 class="card-title">Agriculture</h3>
                                     <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-light" onclick="location.href='industries.php#agriculture';">Know More</button>
+                                    <button class="btn btn-dark" onclick="location.href='industries.php#agriculture';">Know More</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card">
+                    <div class="card card-industries bg-light">
                         <div class="card-inner">
                             <div class="card-front">
-                                <div class="box sec2c-front"></div>
                                 <div class="card-body sec2c">
                                     <h1 class="card-title">Hydrogen<br>Fuel Cells</h1>
                                 </div>
@@ -151,10 +148,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card">
+                    <div class="card card-industries bg-light">
                         <div class="card-inner">
                             <div class="card-front">
-                                <div class="box sec2d-front"></div>
                                 <div class="card-body sec2d">
                                     <h1 class="card-title">Other<br>Industries</h1>
                                 </div>
@@ -163,7 +159,7 @@
                                 <div class="card-body sec2d">
                                     <h3 class="card-title">Other Industries</h3>
                                     <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-light" onclick="location.href='industries.php#other_industries';">Know More</button>
+                                    <button class="btn btn-dark" onclick="location.href='industries.php#other_industries';">Know More</button>
                                 </div>
                             </div>
                         </div>

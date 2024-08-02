@@ -36,13 +36,15 @@
 }
 
 .contact-wrap .form-group {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .contact-wrap .form-group label {
-    font-weight: 600;
-    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    color: #33475b;
+    line-height: 20px;
 }
 
 .contact-wrap .form-control {
@@ -54,7 +56,7 @@
 }
 
 .contact-wrap .form-control:focus {
-    border-color: #333;
+    border-color: #1e3e5e;
     box-shadow: none;
 }
 
@@ -126,17 +128,21 @@
     background-color: #1e3e5e;
     border-color: #ddd #ddd #fff;
 }
-
-.contactForm .label {
-    color: #000;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 600; }
   
 .contactForm .form-control {
-border: none;
-border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-padding: 0; }
+    font-weight: normal;
+    color: #33475b;
+    border: 1px solid #cbd6e2;
+    border-radius: 3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: #f5f8fa;
+}
+
+.form-group .message-box {
+    height: 150px;
+    resize: vertical;
+  }
 
 #salesForm .error {
 color: red;
@@ -182,11 +188,11 @@ font-weight: bold; }
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
   
-  .map-responsive iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-  }
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
