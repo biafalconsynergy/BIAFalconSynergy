@@ -30,8 +30,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
 	
-    <!--<link rel="stylesheet" href="css/id_styles.css"> -->
-    <!--<link rel="stylesheet" href="css/style.css"> -->
+    
 	
 	
 
@@ -41,8 +40,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/css/About.css"> 
-	
+    <link rel="stylesheet" href="css/css/About.css">
+	<style>
+        /* Increase the size of the accordion items */
+        .accordion-button {
+            font-size: 2.5rem; /* Increase the default font size */
+            padding: 1.5rem; /* Increase padding for a larger look */
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #007bff; /* Customize background color if needed */
+            color: #fff; /* Customize text color if needed */
+        }
+
+        .accordion-body {
+            font-size: 3.25rem; /* Increase the font size for the accordion content */
+            padding: 1.5rem; /* Increase padding for the accordion content */
+        }
+    </style>
 	
 </head>
 
@@ -239,7 +254,9 @@
                     <p class="section-subtitle">Explore exciting career opportunities and be a part of our success story</p>
 					<p class="section-subtitle">Please feel free to send your resume to <a href="mailto:careers@konnexio.ca">careers@konnexio.ca</a></p>
                 </div>
-                <div class="accordion" id="accordionExample">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="accordion" id="accordionExample">
                     <?php 
                     // Check if there are any rows in the result set
                     if ($result->num_rows > 0) {
@@ -264,6 +281,8 @@
                     }
                     ?>
                 </div>
+			</div>
+		</div>	
             </section>
 
 			<!-- Careers Section End -->
