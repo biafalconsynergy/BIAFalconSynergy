@@ -21,6 +21,59 @@
     font-size: 20px;
   }
 
+/* Our People */
+
+.person .icon img {
+  max-width: 100%; /* Ensure the image takes up the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 300px; /* Set maximum height to ensure consistent size */
+  object-fit: cover; /* Ensure the image covers the entire container without distortion */
+  margin: 0 auto; /* Center the image */
+}
+
+/* Responsive Styles */
+@media (min-width: 576px) {
+  .person h3 {
+      font-size: 1.5rem; /* Adjust font size for small screens */
+  }
+
+  .person p {
+      font-size: 1rem; /* Adjust font size for small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .person h3 {
+      font-size: 1.75rem; /* Increase font size for medium screens */
+  }
+
+  .person p {
+      font-size: 1.25rem; /* Increase font size for medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .person h3 {
+      font-size: 2rem; /* Further increase font size for large screens */
+  }
+
+  .person p {
+      font-size: 1.5rem; /* Further increase font size for large screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .person h3 {
+      font-size: 2.25rem; /* Max font size for extra large screens */
+  }
+
+  .person p {
+      font-size: 1.75rem; /* Max font size for extra large screens */
+  }
+}
+
+
+
 /* Associations section */
 .associations-section {
   padding: 3rem 0; /* Add vertical padding */

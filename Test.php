@@ -28,38 +28,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/css/About.css">
+	<link rel="stylesheet" href="css/styles.css">
 	
-    
 	
-	
-
     <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/css/About.css">
-	<style>
-        /* Increase the size of the accordion items */
-        .accordion-button {
-            font-size: 2.5rem; /* Increase the default font size */
-            padding: 1.5rem; /* Increase padding for a larger look */
-        }
-
-        .accordion-button:not(.collapsed) {
-            background-color: #007bff; /* Customize background color if needed */
-            color: #fff; /* Customize text color if needed */
-        }
-
-        .accordion-body {
-            font-size: 3.25rem; /* Increase the font size for the accordion content */
-            padding: 1.5rem; /* Increase padding for the accordion content */
-        }
-    </style>
+ 
 	
 </head>
+
 
 <body>
 	<!--Header Data-->
@@ -85,35 +67,40 @@
 		</section>  
 		
 		<!-- Our People -->
-		<section class="container-fluid p-3 bg-light text-dark" id="our_people">
-		<hr>
-		  <div class="container my-5 text-center">
-			<h2>Our People</h2>
-			<div class="row">
-			  <div class="col-md-4 text-center">
-				<div class="icon mb-3">
-				  <img src="./Images/Image7a.jpg" alt="Partner Konnerth" class="img-fluid mb-3 fixed-size-img">
-				</div>
-				<h3>Founder</h3>
-				<p>Our commitment to precision and innovation has earned us the trust of industry leaders.</p>
-			  </div>
-			  <div class="col-md-4 text-center">
-				<div class="icon mb-3">
-				  <img src="./Images/Image7b.jpg" alt="Partner OKU" class="img-fluid mb-3 fixed-size-img">
-				</div>
-				<h3>HR Manager</h3>
-				<p>We believe in building a community that supports and grows together.</p>
-			  </div>
-			  <div class="col-md-4 text-center">
-				<div class="icon mb-3">
-				  <img src="./Images/Image7c.jpg" alt="Partner Konnerth" class="img-fluid mb-3 fixed-size-img">
-				</div>
-				<h3>Mechanical Engineer</h3>
-				<p>Our strategic decisions are guided by a commitment to excellence and ethical principles.</p>
-			  </div>
-			</div>
-		  </div>
-		</section>
+		<section class="funding-partners-section" id="our_people">
+    <div class="container my-5 text-center">
+        <h2>Our People</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="person">
+                    <div class="icon mb-3">
+                        <img src="Images/Image7a.jpg" alt="Founder" class="img-fluid mb-3">
+                    </div>
+                    <h3>Founder</h3>
+                    <p>Our commitment to precision and innovation has earned us the trust of industry leaders.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="person">
+                    <div class="icon mb-3">
+                        <img src="Images/Image7b.jpg" alt="Operations Manager" class="img-fluid mb-3">
+                    </div>
+                    <h3>Operations Manager</h3>
+                    <p>We believe in building a community that supports and grows together.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="person">
+                    <div class="icon mb-3">
+                        <img src="Images/image7c.jpg" alt="Mechanical Engineer" class="img-fluid mb-3">
+                    </div>
+                    <h3>Mechanical Engineer</h3>
+                    <p>Our strategic decisions are guided by a commitment to excellence and ethical principles.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 		<!-- Associations -->
 		  <section class="container-fluid p-3 bg-light text-dark" id="associations">
