@@ -163,8 +163,7 @@
 									?>
 									<div class="carousel-item testi-carousel-item <?php echo $activeClass; ?> text-center p-4">
 										<blockquote class="blockquote text-center">
-										<img src="<?php echo $row["image_url"]; ?>" alt="Client Image" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px;">
-											<p class="mb-0"><i class="fa fa-quote-left"></i><?php echo $row["content"]; ?></p>
+										<p class="mb-0"><i class="fa fa-quote-left"></i><?php echo $row["content"]; ?></p>
 											<br><?php echo $row["title"]; ?>
 										</blockquote>
 									</div>
