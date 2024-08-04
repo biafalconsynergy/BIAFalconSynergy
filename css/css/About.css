@@ -21,6 +21,75 @@
     font-size: 20px;
   }
 
+
+#founder-and-ceo {
+  background-color: #f8f9fa; /* Light background color for the section */
+  padding: 1rem 0; /* Add padding as needed */
+}
+
+#founder-and-ceo .sec3b {
+  padding: 1rem; /* Padding inside the content area */
+}
+
+#founder-and-ceo img {
+  max-width: 70%; /* Responsive image */
+  border: 2px solid #dee2e6; /* Optional border for the image */
+}
+
+#founder-and-ceo h2 {
+  margin-bottom: 1rem; /* Space below the title */
+}
+
+#founder-and-ceo p {
+  margin-bottom: 1rem; /* Space below the paragraph */
+}
+
+#founder-and-ceo .btn {
+  margin-top: 1rem; /* Space above the button */
+}
+
+/* Optional: Adjust margins for smaller screens */
+@media (max-width: 767px) {
+  #founder-and-ceo .sec3b {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
+
+/*Our Founder*/
+#founder-and-ceo {
+  background-color: #f8f9fa; /* Light background color for the section */
+  padding: 1rem 0; /* Add padding as needed */
+}
+
+#founder-and-ceo .sec3b {
+  padding: 1rem; /* Padding inside the content area */
+}
+
+#founder-and-ceo img {
+  max-width: 70%; /* Responsive image */
+  border: 2px solid #dee2e6; /* Optional border for the image */
+}
+
+#founder-and-ceo h2 {
+  margin-bottom: 1rem; /* Space below the title */
+}
+
+#founder-and-ceo p {
+  margin-bottom: 1rem; /* Space below the paragraph */
+}
+
+#founder-and-ceo .btn {
+  margin-top: 1rem; /* Space above the button */
+}
+
+/* Optional: Adjust margins for smaller screens */
+@media (max-width: 767px) {
+  #founder-and-ceo .sec3b {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
 /* Our People */
 
 .person .icon img {
@@ -139,6 +208,14 @@
   font-size: 2.5em; /* Adjust the size as needed */
 }
 
+#testimonials {
+  padding-top: 2rem; /* Adjust the value as needed */
+  margin-bottom: 2rem; /* Adjust the value as needed */
+}
+
+#careers {
+  padding-top: 2rem; /* Adjust the value as needed */
+}
 
 
 

@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
     <link rel="stylesheet" href="css/css/About.css">
-	<link rel="stylesheet" href="css/styles.css">
+	  <link rel="stylesheet" href="css/styles.css">
 	
 	
     <!-- JS Libraries -->
@@ -38,37 +38,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
- <style>
-    .carousel-item {
-      position: relative;
-      text-align: center;
-      background-color: #f8f9fa;
-      padding: 2rem;
-    }
-    .carousel-item img {
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      margin: 0 auto 1rem; 
-      display: block; /* Ensure image is centered */
-    }
-    .carousel-caption {
-      position: absolute;
-      bottom: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
-      padding: 1rem;
-      border-radius: 5px;
-      color: #fff;
-      width: 80%;
-      text-align: center;
-    }
-    .carousel-control-prev, .carousel-control-next {
-      filter: invert(1); /* edit1 Lightens the control icons for better visibility */
-    }
-  </style>
+
 	
 </head>
 
@@ -96,16 +66,35 @@
 			</div>
 		</section>  
 
+    <!-- Founder and CEO Section -->
+<hr>
+<section class="container-fluid slide-up" style="padding: 0;">
+  <div class="row no-gutters" id="founder-and-ceo">
+    <div class="col-sm-6 order-sm-first order-md-first">
+      <div class="sec3b bg-light">
+        <img src="Images/Image7a.jpeg" alt="Founder and CEO" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-sm-6 order-sm-last order-md-last">
+      <div class="sec3b bg-light p-4">
+        <h2>Our Founder and CEO</h2>
+        <p>Konrad Konnerth immigrated to Canada in 1994 from Germany, where he completed university degrees in Mechanical and Industrial Engineering, with a one-year university exchange in Lisbon, Portugal. Based on his work experiences with Siemens as a production strategist and with OKU Automatik (a manufacturer of high-speed assembly systems) as a design engineer in Germany and the Technical Director in Canada, Konrad started his own venture KONNEXIO to innovate the automation and robotics landscape. He also serves as the Chair of the Board at TechAlliance, he leads the strategic oversight of a vibrant technology sector, supporting the start-up, scaling and technology exchange of Tech Companies in Southwestern Ontario.</p>
+        <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Contact</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 		
 		<!-- Our People -->
-		<section class="funding-partners-section" id="our_people">
+		<section class="team-section" id="our_people">
     <div class="container my-5 text-center">
         <h2>Our People</h2>
         <div class="row">
             <div class="col-md-4 text-center">
                 <div class="person">
                     <div class="icon mb-3">
-                        <img src="Images/Image7a" alt="Founder" class="img-fluid mb-3">
+                        <img src="Images/Image7a.jpeg" alt="Founder" class="img-fluid mb-3">
                     </div>
                     <h3>Founder</h3>
                     <p>Our commitment to precision and innovation has earned us the trust of industry leaders.</p>
@@ -123,7 +112,7 @@
             <div class="col-md-4 text-center">
                 <div class="person">
                     <div class="icon mb-3">
-                        <img src="Images/Image7c.jpeg" alt="Mechanical Engineer" class="img-fluid mb-3">
+                        <img src="Images/image7c.jpeg" alt="Mechanical Engineer" class="img-fluid mb-3">
                     </div>
                     <h3>Mechanical Engineer</h3>
                     <p>Our strategic decisions are guided by a commitment to excellence and ethical principles.</p>
@@ -164,7 +153,7 @@
 				<div class="col-md-4 mb-4">
 				  <div class="association-item d-flex align-items-center p-3 bg-light">
 					<div class="association-logo">
-					  <img src="Images/Image5b.jpg" alt="Association 3" class="img-fluid rounded-circle">
+					  <img src="Images/Image5a.jpg" alt="Association 3" class="img-fluid rounded-circle">
 					</div>
 					<div class="association-content ms-3">
 					  <h4>Association Three</h4>
@@ -265,7 +254,7 @@
 
 	
         <!-- Careers Section -->
-            <section id="careers" class="container-fluid p-3 bg-light text-dark">
+            <section id="careers" class="container-fluid p-3 bg-light text-dark custom margin">
                 <div class="text-center mb-4">
                     <h1 class="section-title">Join Our Team</h1>
                     <p class="section-subtitle">Explore exciting career opportunities and be a part of our success story</p>
