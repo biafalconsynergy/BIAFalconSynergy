@@ -238,7 +238,8 @@
                 <div class="text-center mb-4">
                     <h1 class="section-title">Join Our Team</h1>
                     <p class="section-subtitle">Explore exciting career opportunities and be a part of our success story</p>
-					<p class="section-subtitle">Please feel free to send your resume to <a href="mailto:careers@konnexio.ca">careers@konnexio.ca</a></p>
+					<p class="section-subtitle highlight-text">Don’t see a relevant position?</p>
+					<p class="section-subtitle">We would love to hear from you and keep your profile in our records. Please submit your resume for future consideration to <a href="mailto:careers@konnexio.ca">careers@konnexio.ca</a></p>
                 </div>
 				<div class="row justify-content-center">
 					<div class="col-lg-8">
