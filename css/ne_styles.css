@@ -3,21 +3,18 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.news-events-section {
-  background-color: #1e3e5e;
-  color: #fff;
-  padding: 30px;
-  text-align: center;
-  font-size: 30px;
+/* carousel styles */
+
+.carousel-indicators {
+  z-index: 1000;
 }
 
-.news-events-section h1 {
-  font-size: 60px;
-  text-align: center;
+.carousel-indicators button {
+  background-color: #000; /* Color of the inactive indicators */
 }
 
-.news-events-para {
-  font-size: 20px;
+.carousel-indicators .active {
+  background-color: #fff; /* Color of the active indicator */
 }
 
 .carousel-heading {
@@ -31,8 +28,22 @@ body {
   height: 350px;
 }
 
-.carousel-inner p {
-  font-size: 20px;
+@media (min-width: 576px) {
+   .carousel-caption p {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-caption p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-caption p {
+    font-size: 20px;
+  }
 }
 
 .carousel-item img {
@@ -60,7 +71,7 @@ body {
   font-size: smaller;
 }
 
-.carousel-container {
+.ne-carousel-container {
   padding: 50px;
   background-color: #f7f7f7;
   margin-top: 40px;
