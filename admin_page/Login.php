@@ -22,7 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_password = $row['password'];
 		
 		if (password_verify($password, $hashed_password)) {
-			session_start();
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
 			$_SESSION['loggedin'] = true;
 			$_SESSION['username'] = $username;
 			$_SESSION['first_name'] = $row['first_name'];
