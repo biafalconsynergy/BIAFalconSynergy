@@ -3,13 +3,6 @@
 if (session_status() === PHP_SESSION_NONE) {
          session_start();
 }
-
-// Check if user is logged in
-if (!isset($_SESSION['roleid'])) {
-    // Redirect to a different page or show an error message
-    header('Location: no_access.php'); // Replace with your access denied page
-    exit();
-}
 	
 ?>
 <!DOCTYPE html>
@@ -17,9 +10,7 @@ if (!isset($_SESSION['roleid'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Home | KONNEXIO</title>
-	<link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
-	
+    <title>Admin</title>
     <!-- References Top -->
     <?php include 'ReferencesTop.php'; ?>
     <!-- End of References --> 
@@ -37,7 +28,7 @@ $role = $_SESSION['roleid'];
 
 ?>
 
-    <body id="page-top">
+<body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -81,15 +72,16 @@ $role = $_SESSION['roleid'];
                         <!-- Content Row -->
                         <div class="row">
 
-                            <!-- View Users -->
-                            <a class="col-xl-3 col-md-6 mb-4" href="UserManagement.php">
+                            <!-- Users -->
+                            <div class="col-xl-3 col-md-6 mb-4">
                                 <div class="card border-left-primary shadow h-100 py-2">
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                <div class="text-m font-weight-bold text-primary text-uppercase mb-1">
                                                     Users</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">View</div>
+                                                <a class="h7 mb-0 font-weight-bold text-gray-800" href="UserManagement.php">View</a><br>
+                                                <a class="h7 mb-0 font-weight-bold text-gray-800" href="signup.php">Create</a>
                                             </div>
                                             <div class="col-auto">
                                                 <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -97,35 +89,16 @@ $role = $_SESSION['roleid'];
                                         </div>
                                     </div>
                                 </div>
-                            </a>
-
-                            <!-- Create Users -->
-                            <a class="col-xl-3 col-md-6 mb-4" href="signup.php">
-                                <div class="card border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                    Users</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">Create</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-user fa-2x text-gray-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                    </div>
 
                             <!-- View Support Tickets -->
-                            <a class="col-xl-3 col-md-6 mb-4" href="SupportTicket.php">
+                            <div class="col-xl-3 col-md-6 mb-4">
                                 <div class="card border-left-warning shadow h-100 py-2">
                                     <div class="card-body">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                    Support Tickets</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">View</div>
+                                                <div class="text-m font-weight-bold text-warning text-uppercase mb-1">Support Tickets</div>
+                                                <a class="h7 mb-0 font-weight-bold text-gray-800" href="SupportTicket.php">View</a>
                                             </div>
                                             <div class="col-auto">
                                                 <i class="fas fa-exclamation-triangle fa-2x text-gray-300" ></i>
@@ -133,7 +106,7 @@ $role = $_SESSION['roleid'];
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                    </div>
                         </div>
                     
                     <?php endif; ?>
@@ -146,15 +119,15 @@ $role = $_SESSION['roleid'];
                     <!-- Content Row -->
                     <div class="row">
 
-                        <!-- Case Studies View -->
-                        <a class="col-xl-3 col-md-6 mb-4" href="CaseStudy.php">
+                        <!-- Case Studies -->
+                        <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Case Studies</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">View</div>
+                                            <div class="text-m font-weight-bold text-primary text-uppercase mb-1">Case Studies</div>
+                                            <a class="h7 mb-0 font-weight-bold text-gray-800" href="CaseStudy.php">View</a><br>
+                                            <a class="h7 mb-0 font-weight-bold text-gray-800" href="CaseStudyNew.php">Create</a>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-star fa-2x text-gray-300"></i>
@@ -162,76 +135,35 @@ $role = $_SESSION['roleid'];
                                     </div>
                                 </div>
                             </div>
-                        </a>
-
-                        <!-- Case Studies Create -->
-                        <a class="col-xl-3 col-md-6 mb-4" href="CaseStudyNew.php">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Case Studies</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Create</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-star fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <!-- Careers View -->
-                        <a class="col-xl-3 col-md-6 mb-4" href="Careers.php">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Careers</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">View</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-smile fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <!-- Careers Create -->
-                        <a class="col-xl-3 col-md-6 mb-4" href="CareersNew.php">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Careers</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Create</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-smile fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
                     </div>
 
-                    <!-- Content Row -->
+                        <!-- Careers -->
+                        <div class="col-xl-3 col-md-6 mb-4" >
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-m font-weight-bold text-warning text-uppercase mb-1">Careers</div>
+                                            <a class="h7 mb-0 font-weight-bold text-gray-800" href="Careers.php">View</a><br>
+                                            <a class="h7 mb-0 font-weight-bold text-gray-800" href="CareersNew.php">Create</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-smile fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <div class="row">
-                        <!-- Testimonials View -->
-                        <a class="col-xl-3 col-md-6 mb-4" href="Testimonials.php">
+                        <!-- Testimonials -->
+                        <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Testimonials</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">View</div>
+                                            <div class="text-m font-weight-bold text-success text-uppercase mb-1">Testimonials</div>
+                                            <a class="h7 mb-0 font-weight-bold text-gray-800" href="Testimonials.php">View</a><br>
+                                            <a class="h7 mb-0 font-weight-bold text-gray-800" href="TestimonialNew.php">Create</a>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-bullhorn fa-2x text-gray-300"></i>
@@ -239,37 +171,20 @@ $role = $_SESSION['roleid'];
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                        <!-- Testimonials Create -->
-                        <a class="col-xl-3 col-md-6 mb-4" href="TestimonialNew.php">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Testimonials</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Create</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-bullhorn fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        </div>
 
-                        <!-- News and Events View-->
-                        <a class="col-xl-3 col-md-6 mb-4" href="NewsEvents.php">
+                        <!-- News and Events -->
+                        <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-info shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                News and Events
+                                            <div class="text-m font-weight-bold text-info text-uppercase mb-1">News & Events
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">View</div>
+                                                    <a class="h7 mb-0 mr-3 font-weight-bold text-gray-800" href="NewsEvents.php">View</a><br>
+                                                    <a class="h7 mb-0 mr-3 font-weight-bold text-gray-800" href="NewsEventsNew.php">Create</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -279,33 +194,7 @@ $role = $_SESSION['roleid'];
                                     </div>
                                 </div>
                             </div>
-                        </a>
-
-                        <!-- News and Events Create -->
-                        <a class="col-xl-3 col-md-6 mb-4" href="NewsEventsNew.php">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                News and Events
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Create</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-rss fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-
+                        </div>
 
                 <!-- /.container-fluid -->
 

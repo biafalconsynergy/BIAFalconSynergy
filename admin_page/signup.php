@@ -1,4 +1,9 @@
 <?php 
+    // Prevent caching
+    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
+    
     //starts session if it is not active
     if (session_status() === PHP_SESSION_NONE) {
             session_start();
@@ -15,7 +20,7 @@
 // Retrieve form data from session if available
 $form_data = isset($_SESSION['form_data']) ? $_SESSION['form_data'] : [];
 
-$tableName = 'user';
+$tableName = 'Users';
 
 // Clear session data
 unset($_SESSION['form_data']);
