@@ -62,7 +62,7 @@
                         </div>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                           <li class="nav-item">
-                            <a class="nav-link active" id="formSales-tab" data-toggle="tab" href="#formSales" role="tab" aria-controls="formSales" aria-selected="true">Sales</a>
+                            <a class="nav-link active" id="formSales-tab" data-toggle="tab" href="#formSales" role="tab" aria-controls="formSales" aria-selected="true">Inquiry</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" id="formSupport-tab" data-toggle="tab" href="#formSupport" role="tab" aria-controls="formSupport" aria-selected="false">Support</a>
