@@ -102,7 +102,7 @@
             <div class="col-md-4 text-center">
                 <div class="person">
                     <div class="icon mb-3">
-                        <img src="Images/Image7b.jpeg" alt="Operations Manager" class="img-fluid mb-3">
+                        <img src="Images/Image7c.jpeg" alt="Operations Manager" class="img-fluid mb-3">
                     </div>
                     <h3>Operations Manager</h3>
                     <p>We believe in building a community that supports and grows together.</p>
@@ -111,7 +111,7 @@
             <div class="col-md-4 text-center">
                 <div class="person">
                     <div class="icon mb-3">
-                        <img src="Images/image7c.jpeg" alt="Mechanical Engineer" class="img-fluid mb-3">
+                        <img src="Images/image7a.jpeg" alt="Mechanical Engineer" class="img-fluid mb-3">
                     </div>
                     <h3>Mechanical Engineer</h3>
                     <p>Our strategic decisions are guided by a commitment to excellence and ethical principles.</p>
@@ -257,7 +257,7 @@
                 <div class="text-center mb-4">
                     <h1 class="section-title">Join Our Team</h1>
 					<p class="section-subtitle">We are always on the lookout for inspiring individuals to join our dynamic team.</p>
-					<p class="section-subtitle">If you are passionate and eager to be a part of our innovative company, we encourage you to send your resume to <a href="mailto:careers@konnexio.ca">careers@konnexio.com</a></p>
+					<p class="section-subtitle">If you are passionate and eager to be a part of our innovative company, we encourage you to send your resume to <a href="mailto:careers@konnexio.ca">careers@konnexio.com</a>.</p>
                 </div>
 				<div class="row justify-content-center">
 					<div class="col-lg-8">

@@ -7,7 +7,7 @@
         <title>Contact Us | KONNEXIO</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Konnexio is a custom machine builder located in London Ontario. Our specialty is adapto� which is a modular assembly line construction technology.">
+        <meta name="description" content="Konnexio is a custom machine builder located in London Ontario. Our specialty is adapto™ which is a modular assembly line construction technology.">
         <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
     
         <!-- CSS Libraries -->
