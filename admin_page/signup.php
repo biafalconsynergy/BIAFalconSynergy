@@ -15,7 +15,7 @@
 // Retrieve form data from session if available
 $form_data = isset($_SESSION['form_data']) ? $_SESSION['form_data'] : [];
 
-$tableName = 'user';
+$tableName = 'Users';
 
 // Clear session data
 unset($_SESSION['form_data']);
