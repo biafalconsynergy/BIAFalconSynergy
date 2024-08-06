@@ -12,7 +12,7 @@ $result = $conn->query($sql);
 $sql_1 = "SELECT * FROM news_events WHERE isactive = 1 order by posted_date desc LIMIT 3";
 $result_1 = $conn->query($sql_1);
 
-$sql_2 = "SELECT * FROM news_events WHERE isactive = 1 AND content_type = 'Event' ORDER BY posted_date DESC";
+$sql_2 = "SELECT * FROM news_events WHERE isactive = 1 AND content_type = 'Events' ORDER BY posted_date DESC";
 $result_2 = $conn->query($sql_2);
 ?>
 
@@ -60,12 +60,12 @@ $result_2 = $conn->query($sql_2);
   
 
  <!-- Carousel Section -->
-<div class="ne-carousel-container">
-  <div id="ne-carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-container">
+  <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#ne-carouselCaptions" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#ne-carouselCaptions" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#ne-carouselCaptions" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
     </div>
 
     <div class="carousel-inner">
@@ -77,11 +77,11 @@ $result_2 = $conn->query($sql_2);
           while ($row = $result_1->fetch_assoc()) {
       ?>
         <div class="carousel-item <?php echo $first ? 'active' : ''; ?>">
-          <img src="Images/<?php echo $row['image']; ?>" alt="News Highlights" >
-          <div class="carousel-caption d-block w-100">
+          <img src="./admin_page/upload/<?php echo $row['image']; ?>" alt="News Highlights">
+          <div class="carousel-caption d-none d-md-block">
               <h3 ><?php echo $row["title"]; ?></h3>
               <p class="carousel-text"><?php echo $row["content"]; ?></p>
-              <!-- <a href="#" class="btn btn-primary">Read More</a>  -->
+              <a href="#" class="btn btn-primary">Read More</a> 
             </div>
         </div>
       <?php
@@ -93,11 +93,11 @@ $result_2 = $conn->query($sql_2);
       ?>
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#ne-carouselCaptions"
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
       data-bs-slide="prev">
       <span class="carousel-control-prev-icon"></span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#ne-carouselCaptions"
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
       data-bs-slide="next">
       <span class="carousel-control-next-icon"></span>
     </button>
@@ -123,7 +123,7 @@ $result_2 = $conn->query($sql_2);
                     while ($row = $result->fetch_assoc()) {
                         ?>
                         <div class="news-card">
-                            <img src="Images/<?php echo $row['image']; ?>" alt="News and Events">
+                            <img src="./admin_page/upload/<?php echo $row['image']; ?>" alt="News and Events">
                             <div class="news-content">
                                 <h3 class="news-title"><?php echo $row["title"]; ?></h3>
                                 <p class="news-content-text"><?php echo $row["content"]; ?></p>
@@ -194,7 +194,7 @@ $result_2 = $conn->query($sql_2);
                     <div class="event-container mb-4">
                         <div class="event-item d-flex align-items-center my-3 p-3">
                             <div class="event-img">
-                                <img src="Images/<?php echo $row['image']; ?>" alt="Industry Event" class="rounded-circle img-thumbnail">
+                                <img src="./admin_page/upload/<?php echo $row['image']; ?>" alt="Industry Event" class="rounded-circle img-thumbnail">
                             </div>
                             <div class="event-content ms-4">
                                 <h3><?php echo $row["title"]; ?></h3>
@@ -216,7 +216,7 @@ $result_2 = $conn->query($sql_2);
         <?php include 'footer.php'; ?>
 
     </main>
-    <script src="js/ne_scripts.js" defer></script>
+    <script src="ne_scripts.js" defer></script>
 </body>
 
 </html>
