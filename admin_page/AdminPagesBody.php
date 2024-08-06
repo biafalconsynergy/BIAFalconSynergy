@@ -395,8 +395,8 @@ $hideCreateButton = in_array($pageName, $pagesToHideCreateButton);
                 success: function(response) {
                     var result = JSON.parse(response);
                     if (result.success) {
-                        //checkbox.data('status', newStatus);
-                        //window.location.reload();
+                        checkbox.prop('checked', newStatus == 1);
+                        checkbox.data('status', newStatus);
                     } else {
                         alert('Failed to update status');
                         // Revert checkbox if update failed
