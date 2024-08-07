@@ -164,10 +164,10 @@
 		  </section>
 		
         <!-- Testimonials -->
-        <section class="container-fluid p-3 bg-light text-dark" id="testimonials">
+			<section class="container-fluid p-3 bg-light text-dark" id="testimonials">
         <?php
             // Check if there are any rows in the result set
-            if ($result->num_rows > 0) {
+            if ($result2->num_rows > 0) {
             ?>    
         <hr>
    <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
@@ -177,7 +177,7 @@
             <?php
                 $activeClass = "active";
                 $indicatorIndex = 0;
-                while ($row = $result->fetch_assoc()) {
+                while ($row = $result2->fetch_assoc()) {
             ?>
             <div class="carousel-item testi-carousel-item <?php echo $activeClass; ?> text-center p-4">
                 <blockquote class="blockquote text-center">
