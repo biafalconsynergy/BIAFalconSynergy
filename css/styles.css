@@ -219,8 +219,39 @@ ul {
     padding-block: 20%;
 }
 
-.carousel-caption p {
-    padding-block: 2rem;
+@media (max-width: 576px) {
+    .main p {
+        padding-block: 1rem;
+        width: 90%;
+    }
+}
+
+@media (min-width: 576px) {
+    .main p {
+        padding-block: 1rem;
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    .main p {
+        padding-block: 2rem;
+        width: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+    .main p {
+        padding-block: 2rem;
+        width: 60%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main p {
+        padding-block: 3rem;
+        width: 50%;
+    }
 }
 
 .carousel-inner img {
@@ -228,8 +259,6 @@ ul {
     max-height: 80vh;
     object-fit: cover;
 }
-
-
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -641,10 +670,9 @@ ul {
     justify-content: center;
     background-color: #2a577e;
     color: white;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .testi-carousel-item blockquote {
     max-width: 80%;
