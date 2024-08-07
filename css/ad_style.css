@@ -80,6 +80,7 @@
 }
 
 /* Adapto Intro Section */
+
 .adapto_intro {
     position: relative;
     height: 100vh;
@@ -99,12 +100,14 @@
 }
 
 .heroText h1 {
+    font-size: 4rem;
     margin-top: 50px;
     margin-bottom: 40px;
     font-weight: bold;
 }
 
 .heroText p {
+    font-size: 1.5rem;
     color: #f8f9fa;
 }
 
@@ -114,16 +117,19 @@
 
 .videoWrapper {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .videoWrapper img.custom-video {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
 }
 
@@ -137,10 +143,56 @@
     z-index: 1;
 }
 
+
+/* Adapto Text Section */
+.adapto_text {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    line-height: 2; /* 2x spacing */
+}
+
+.adapto_text h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.adapto_text p {
+    font-size: 1.5rem;
+    line-height: 2; /* Ensure 2x spacing */
+    margin-bottom: 2rem;
+}
+
+.adapto_text strong {
+    font-weight: bold;
+}
+
+/* Responsive Utilities */
+@media (max-width: 576px) {
+    .heroText h1 {
+        font-size: 1.5rem;
+    }
+
+    .heroText p {
+        font-size: 1rem;
+    }
+
+    .services_box {
+        height: 300px; /* Adjust height for small screens */
+    }
+
+    .services_box h3 {
+        font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+
+    .services_box p {
+        font-size: 1.2rem; /* Adjust font size for small screens */
+    }
+}
 /* Adapto Key Features Section */
 .bg_full {
     background-color: #f8f9fa;
-    padding: 60px 0;
+    padding: 60px 1rem; /* Added padding for small screens */
 }
 
 .services_box {
@@ -149,23 +201,41 @@
     background: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Ensure the elements are in a column */
+    justify-content: space-between; /* Ensure the spacing between elements */
+    height: 350px; /* Fixed height */
+    width: 100%; /* Adjust width as needed */
+    max-width: 300px; /* Ensure max width */
+    margin: 0 auto; /* Center the box */
+}
+
+.services_box figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /* Allow the figure to grow and take available space */
+    margin: 0; /* Remove default margins */
 }
 
 .services_box figure img {
     width: 100%;
-    height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image maintains its aspect ratio and covers the area */
+    height: auto; /* Ensure image maintains aspect ratio */
+    max-height: 200px; /* Set a maximum height */
+    object-fit: contain; /* Ensure the entire image is visible within its container */
     border-radius: 10px;
 }
 
 .services_box h3 {
-    margin-top: 20px;
-    margin-bottom: 15px;
+    font-size: 1.8rem; /* Ensure all headers within services_box have the same font size */
     color: #343a40;
 }
 
 .services_box p {
+    font-size: 1.3rem; /* Font size one size smaller than the headers */
     color: #6c757d;
+    margin-top: 10px;
 }
 
 .margin_bott {
@@ -176,6 +246,7 @@
     display: inline-block;
     margin-top: 20px;
     padding: 10px 30px;
+    font-size: 1rem;
     color: #ffffff;
     background-color: #007bff;
     border-radius: 5px;
@@ -185,24 +256,4 @@
 .read_more:hover {
     background-color: #0056b3;
     text-decoration: none;
-}
-
-/* Adapto Text Section */
-.adapto_text {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    text-align: center;
-}
-
-.adapto_text h2 {
-    margin-bottom: 1.5rem;
-}
-
-.adapto_text p {
-    line-height: 1.8;
-    margin-bottom: 2rem;
-}
-
-.adapto_text strong {
-    font-weight: bold;
 }

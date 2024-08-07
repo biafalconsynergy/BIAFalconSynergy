@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>adapto™ | KONNEXIO</title>
     <meta charset="utf-8">
@@ -17,12 +16,19 @@
     <link rel="stylesheet" href="css/ad_style.css">
     <link rel="stylesheet" href="css/styles.css">
 
+<<<<<<< Updated upstream
     <!-- JS Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+=======
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="js/ad_scripts.js" defer></script>
+>>>>>>> Stashed changes
 </head>
 
 <body>
@@ -43,7 +49,7 @@
             <div class="videoWrapper">
                 <img src="images/adapto.gif" alt="Adapto Intro GIF" class="custom-video">
             </div>
-            
+
             <div class="overlay"></div>
         </section>
 
@@ -69,21 +75,21 @@
                         <div class="row">
                             <div class="col-xl-4 col-lg-4 col-md-4 margin_bott">
                                 <div class="services_box">
-                                    <figure><img src="images/01.png" alt="#" class="img-fluid"/></figure>
+                                    <figure><img src="images/01.png" alt=""/></figure>
                                     <h3>Modular Assembly</h3>
                                     <p>Smart Cells can function alone or be integrated into larger systems</p>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 margin_bott">
                                 <div class="services_box">
-                                    <figure><img src="images/adapto_02.png" alt="#" class="img-fluid"/></figure>
+                                    <figure><img src="images/adapto_02.png" alt=""/></figure>
                                     <h3>Adaptive Processes</h3>
                                     <p>Easily add vision systems, feeders, and robots as needed.</p>
                                 </div>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4">
                                 <div class="services_box">
-                                    <figure><img src="images/adapto_03.png" alt="#" class="img-fluid"/></figure>
+                                    <figure><img src="images/adapto_03.png" alt=""/></figure>
                                     <h3>Swift Modifications</h3>
                                     <p>Quickly adapt to changes, ensuring faster time-to-market.</p>
                                 </div>
@@ -98,5 +104,4 @@
     <?php include 'footer.php'; ?>
     <script src="js/ad_scripts.js"></script>
 </body>
-
 </html>
