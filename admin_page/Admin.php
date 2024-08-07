@@ -11,6 +11,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
     <!-- References Top -->
     <?php include 'ReferencesTop.php'; ?>
     <!-- End of References --> 
