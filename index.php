@@ -21,7 +21,6 @@
     <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -56,25 +55,25 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="Images/Image1a.jpg" alt="Image1a" class="d-block w-100">
-                        <div class="carousel-caption main">
+                        <div class="carousel-caption">
                             <h1>Welcome</h1>
-                            <p>Welcome to Konnexio - where dedication meets innovation. As your trusted partners in automation excellence, we bring expertise and reliable solutions to every challenge you face. No matter what your industry is, we are here to transform your production processes and lead you to new heights of success.</p>
+                            <p>This is the welcome page!</p>
                             <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Contact Us</button>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="Images/Image1b.jpg" alt="Image1b" class="d-block w-100">
-                        <div class="carousel-caption main">
+                        <div class="carousel-caption">
                             <h1>adapto™</h1>
-                            <p>Optimize your Investments, Elevate Productivity, and Stay Market-Responsive with Adapto's Groundbreaking Automation - Build for the Future!</p>
+                            <p>This is the adapto page!</p>
                             <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Contact Us</button>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="Images/Image1c.jpg" alt="Image1c" class="d-block w-100">
-                        <div class="carousel-caption main">
+                        <div class="carousel-caption">
                             <h1>Mission</h1>
-                            <p>Empowering manufacturers to revolutionize their production with Adapto's pioneering automation solutions. By making your operations smarter, more efficient, and Market responsive, we transform your investments into scalable, reliable growth, positioning you as the leader in your industry.</p>
+                            <p>This is the mission page!</p>
                             <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Contact Us</button>
                         </div>
                     </div>
@@ -98,12 +97,12 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div class="card-body sec2a">
-                                    <h1 class="card-title">Increased<br>Productivity</h1>
+                                    <h1 class="card-title">Industrial</h1>
                                 </div>
                             </div>
                             <div class="card-back">
                                 <div class="card-body sec2a">
-                                    <h3 class="card-title">Increased Productivity</h3>
+                                    <h3 class="card-title">Industrial</h3>
                                     <p class="card-text">Description for this section</p>
                                     <button class="btn btn-dark" onclick="location.href='industries.php#industrial';">Know More</button>
                                 </div>
@@ -116,12 +115,12 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div class="card-body sec2b">
-                                    <h1 class="card-title">Scalability</h1>
+                                    <h1 class="card-title">Agriculture</h1>
                                 </div>
                             </div>
                             <div class="card-back">
                                 <div class="card-body sec2b">
-                                    <h3 class="card-title">Scalability</h3>
+                                    <h3 class="card-title">Agriculture</h3>
                                     <p class="card-text">Description for this section</p>
                                     <button class="btn btn-dark" onclick="location.href='industries.php#agriculture';">Know More</button>
                                 </div>
@@ -134,12 +133,12 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div class="card-body sec2c">
-                                    <h1 class="card-title">Competitive<br>Edge</h1>
+                                    <h1 class="card-title">Hydrogen<br>Fuel Cells</h1>
                                 </div>
                             </div>
                             <div class="card-back">
                                 <div class="card-body sec2c">
-                                    <h3 class="card-title">Competitive Edge</h3>
+                                    <h3 class="card-title">Hydrogen Fuel Cells</h3>
                                     <p class="card-text">Description for this section</p>
                                     <button class="btn btn-dark" onclick="location.href='industries.php#hydrogen_fuel_cells';">Know More</button>
                                 </div>
@@ -152,12 +151,12 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div class="card-body sec2d">
-                                    <h1 class="card-title">Reduce<br>Human<br>Error</h1>
+                                    <h1 class="card-title">Other<br>Industries</h1>
                                 </div>
                             </div>
                             <div class="card-back">
                                 <div class="card-body sec2d">
-                                    <h3 class="card-title">Reduce Human Error</h3>
+                                    <h3 class="card-title">Other Industries</h3>
                                     <p class="card-text">Description for this section</p>
                                     <button class="btn btn-dark" onclick="location.href='industries.php#other_industries';">Know More</button>
                                 </div>
@@ -266,51 +265,66 @@
             if ($result->num_rows > 0) {
             ?>    
         <hr>
-        <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
-        <h2 class="text-center mb-4">What Our Clients Say</h2>
-            <div id="testi-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-                <div class="carousel-inner" role="listbox">
-                <?php
-                            $activeClass = "active";
-                            $indicatorIndex = 0;
-                            while ($row = $result->fetch_assoc()) {
-                                ?>
-                    <div class="carousel-item testi-carousel-item <?php echo $activeClass; ?> text-center p-4">
-                        <blockquote class="blockquote text-center">
-                            <p class="mb-0"><i class="fa fa-quote-left"></i><?php echo $row["content"]; ?></p>
-                            <br><?php echo $row["title"]; ?>
-                        </blockquote>
-                    </div>
-                    <?php
-                                $activeClass = ""; // Only the first item should be active
-                                $indicatorIndex++;
-                            }
-                            ?>
-                    <!-- Add more testimonials here -->
+		
+
+		
+		
+		<div class="carousel-item" data-bs-interval="2000">
+            <!-- Instead of image, div with style and min-height --><div style="min-height: 140px;">
+                <div class="carousel-caption d-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
                 </div>
-                <a class="carousel-control-prev" href="#testi-carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
-                        <i class="fa fa-chevron-left"></i>
-                    </span>
-                    <span class="sr-only"></span>
-                </a>
-                <a class="carousel-control-next" href="#testi-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
-                        <i class="fa fa-chevron-right"></i>
-                    </span>
-                    <span class="sr-only"></span>
-                </a>
-                <ol class="carousel-indicators testi-carousel-indicators">
-                <?php
-                            for ($i = 0; $i < $indicatorIndex; $i++) {
-                                ?>
-                    <li data-target="#testi-carousel" data-slide-to="<?php echo $i; ?>" class="<?php echo ($i === 0) ? 'active' : '$i'; ?>"></li>
-                    <?php
-                            }
-                            ?>
-                </ol>
-            </div>
+            </div><!-- end of div style min-height: 140px; -->
         </div>
+		
+   <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
+    <h2 class="text-center mb-4">What Our Clients Say</h2>
+    <div id="testi-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner" role="listbox" style="border-radius: 20px;">
+            <?php
+                $activeClass = "active";
+                $indicatorIndex = 0;
+                while ($row = $result->fetch_assoc()) {
+            ?>
+            <div class="carousel-item testi-carousel-item <?php echo $activeClass; ?> text-center p-4">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0"><i class="fa fa-quote-left"></i><?php echo $row["content"]; ?></p>
+                    <br><?php echo $row["title"]; ?>
+                </blockquote>
+            </div>
+            <?php
+                $activeClass = ""; // Only the first item should be active
+                $indicatorIndex++;
+                }
+            ?>
+        </div>
+        <a class="carousel-control-prev" href="#testi-carousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
+                <i class="fa fa-chevron-left"></i>
+            </span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#testi-carousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
+                <i class="fa fa-chevron-right"></i>
+            </span>
+            <span class="visually-hidden">Next</span>
+        </a>
+		
+		<ol class="carousel-indicators testi-carousel-indicators">
+            <?php
+                for ($i = 0; $i < $indicatorIndex; $i++) {
+            ?>
+            <button type="button" data-bs-target="#testi-carousel" data-bs-slide-to="<?php echo $i; ?>" class="<?php echo ($i === 0) ? 'active' : ''; ?>"></button>
+            <?php
+                }
+            ?>
+        </ol>
+        
+    </div>
+</div>
+
         <?php
             } else {
                 ?>
@@ -338,7 +352,7 @@
                             <span class="sr-only"></span>
                         </a>
                         <ol class="carousel-indicators testi-carousel-indicators">
-                            <li data-target="#testi-carousel" data-slide-to="0" class="active"></li>
+                            <button type="button" data-target="#testi-carousel" data-slide-to="0" class="active"></button>
                         </ol>
                     </div>
                 </div>
