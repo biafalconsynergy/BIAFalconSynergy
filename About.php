@@ -23,7 +23,6 @@
     <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -165,91 +164,93 @@
 		  </section>
 		
         <!-- Testimonials -->
-			<section class="container-fluid p-3 bg-light text-dark" id="testimonials">
-				<?php
-				// Check if there are any rows in the result set
-				if ($result2->num_rows > 0) {
-					?>
-					<hr>
-					<div class="col-lg-10 offset-lg-1 pt-5 pb-5" >
-					<h2 class="text-center mb-4">What Our Clients Say</h2>
-						<div id="testi-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-							<div class="carousel-inner" role="listbox">
-								<?php
-								$activeClass = "active";
-								$indicatorIndex = 0;
-								while ($row = $result2->fetch_assoc()) {
-									?>
-									<div class="carousel-item testi-carousel-item <?php echo $activeClass; ?> text-center p-4">
-										<blockquote class="blockquote text-center">
-										<p class="mb-0"><i class="fa fa-quote-left"></i><?php echo $row["content"]; ?></p>
-											<br><?php echo $row["title"]; ?>
-										</blockquote>
-									</div>
-									<?php
-									$activeClass = ""; // the first item should be active
-									$indicatorIndex++;
-								}
-								?>
-							</div>
-							<a class="carousel-control-prev" href="#testi-carousel" role="button" data-slide="prev">
-								<span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
-									<i class="fa fa-chevron-left"></i>
-								</span>
-								<span class="sr-only"></span>
-							</a>
-							<a class="carousel-control-next" href="#testi-carousel" role="button" data-slide="next">
-								<span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
-									<i class="fa fa-chevron-right"></i>
-								</span>
-								<span class="sr-only"></span>
-							</a>
-							<ol class="carousel-indicators testi-carousel-indicators">
-								<?php
-								for ($i = 0; $i < $indicatorIndex; $i++) {
-									?>
-									<li data-target="#testi-carousel" data-slide-to="<?php echo $i; ?>" class="<?php echo ($i === 0) ? 'active' : ''; ?>"></li>
-									<?php
-								}
-								?>
-							</ol>
-						</div>
-					</div>
-					<?php
-				} else {
-					?>
-					<hr>
-					<div class="col-lg-10 offset-lg-1 pt-5 pb-5">
-						<h2 class="text-center mb-4">What Our Clients Say</h2>
-						<div id="testi-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-							<div class="carousel-inner" role="listbox">
-								<div class="carousel-item testi-carousel-item active text-center p-4">
-									<blockquote class="blockquote text-center">
-										<p class="mb-0"><i class="fa fa-quote-left"></i> No active Testimonials found.</p>
-									</blockquote>
-								</div>
-							</div>
-							<a class="carousel-control-prev" href="#testi-carousel" role="button" data-slide="prev">
-								<span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
-									<i class="fa fa-chevron-left"></i>
-								</span>
-								<span class="sr-only"></span>
-							</a>
-							<a class="carousel-control-next" href="#testi-carousel" role="button" data-slide="next">
-								<span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
-									<i class="fa fa-chevron-right"></i>
-								</span>
-								<span class="sr-only"></span>
-							</a>
-							<ol class="carousel-indicators testi-carousel-indicators">
-								<li data-target="#testi-carousel" data-slide-to="0" class="active"></li>
-							</ol>
-						</div>
-					</div>
-					<?php
-				}
-				?>
-			</section>
+        <section class="container-fluid p-3 bg-light text-dark" id="testimonials">
+        <?php
+            // Check if there are any rows in the result set
+            if ($result->num_rows > 0) {
+            ?>    
+        <hr>
+   <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
+    <h2 class="text-center mb-4">What Our Clients Say</h2>
+    <div id="testi-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner" role="listbox" style="border-radius: 20px;">
+            <?php
+                $activeClass = "active";
+                $indicatorIndex = 0;
+                while ($row = $result->fetch_assoc()) {
+            ?>
+            <div class="carousel-item testi-carousel-item <?php echo $activeClass; ?> text-center p-4">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0"><i class="fa fa-quote-left"></i><?php echo $row["content"]; ?></p>
+                    <br><?php echo $row["title"]; ?>
+                </blockquote>
+            </div>
+            <?php
+                $activeClass = ""; // Only the first item should be active
+                $indicatorIndex++;
+                }
+            ?>
+        </div>
+        <a class="carousel-control-prev" href="#testi-carousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
+                <i class="fa fa-chevron-left"></i>
+            </span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#testi-carousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
+                <i class="fa fa-chevron-right"></i>
+            </span>
+            <span class="visually-hidden">Next</span>
+        </a>
+		
+		<ol class="carousel-indicators testi-carousel-indicators">
+            <?php
+                for ($i = 0; $i < $indicatorIndex; $i++) {
+            ?>
+            <button type="button" data-bs-target="#testi-carousel" data-bs-slide-to="<?php echo $i; ?>" class="<?php echo ($i === 0) ? 'active' : ''; ?>"></button>
+            <?php
+                }
+            ?>
+        </ol>
+        
+    </div>
+</div>
+        <?php
+            } else {
+                ?>
+                <hr>
+                <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
+                    <h2 class="text-center mb-4">What Our Clients Say</h2>
+                    <div id="testi-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item testi-carousel-item active text-center p-4">
+                                <blockquote class="blockquote text-center">
+                                    <p class="mb-0"><i class="fa fa-quote-left"></i> No active Testimonials found.</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#testi-carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
+                                <i class="fa fa-chevron-left"></i>
+                            </span>
+                            <span class="sr-only"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#testi-carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
+                                <i class="fa fa-chevron-right"></i>
+                            </span>
+                            <span class="sr-only"></span>
+                        </a>
+                        <ol class="carousel-indicators testi-carousel-indicators">
+                            <button type="button" data-target="#testi-carousel" data-slide-to="0" class="active"></button>
+                        </ol>
+                    </div>
+                </div>
+                <?php
+            }
+        ?>
+        </section>
 
 	
         <!-- Careers Section -->
