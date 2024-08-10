@@ -27,7 +27,6 @@ $result_2 = $conn->query($sql_2);
     <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -54,10 +53,10 @@ $result_2 = $conn->query($sql_2);
         <br>
         <div class="page-sec-main-text">
             <h5>Stay updated with the latest news and events happening in our industry.</h5>
-        </div>
+        </div>  	 
     </div>
+	
 
-  
 
  <!-- Carousel Section -->
 <div class="carousel-container">
@@ -69,7 +68,6 @@ $result_2 = $conn->query($sql_2);
     </div>
 
     <div class="carousel-inner">
-      <h1 class="carousel-heading">News Highlights</h1>
 
       <?php
       if ($result_1->num_rows > 0) {
@@ -77,11 +75,11 @@ $result_2 = $conn->query($sql_2);
           while ($row = $result_1->fetch_assoc()) {
       ?>
         <div class="carousel-item <?php echo $first ? 'active' : ''; ?>">
-          <img src="./admin_page/upload/<?php echo $row['image']; ?>" alt="News Highlights">
-          <div class="carousel-caption d-none d-md-block">
-              <h3 ><?php echo $row["title"]; ?></h3>
-              <p class="carousel-text"><?php echo $row["content"]; ?></p>
-              <a href="#" class="btn btn-primary">Read More</a> 
+          <img src="./admin_page/upload/<?php echo $row['image']; ?>" alt="News Highlights" class="d-block w-100">
+          <div class="carousel-caption main">
+              <h1 ><?php echo $row["title"]; ?></h1>
+              <p><?php echo $row["content"]; ?></p>
+              <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Contact Us</button>
             </div>
         </div>
       <?php
@@ -92,6 +90,7 @@ $result_2 = $conn->query($sql_2);
       }
       ?>
     </div>
+	
 
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
       data-bs-slide="prev">
@@ -106,14 +105,8 @@ $result_2 = $conn->query($sql_2);
 
  <!-- Third Section (Image Containers) -->
         
- <div class="container mt-4">
-            <!-- Search bar -->
-            <div class="input-group mb-4">
-                <input type="text" class="form-control" id="searchInput" onkeyup="filterCards()" placeholder="Search by title or content...">
-                <div class="input-group-append">
-                    <span class="input-group-text"><i class="bi bi-search"></i></span>
-                </div>
-            </div>
+ <div class="container mt-4" style="margin-top: 50px !important;">
+          
 
             <div id="newsContainer" class="news-grid">
                 <?php
@@ -193,8 +186,7 @@ $result_2 = $conn->query($sql_2);
                     ?>
                     <div class="event-container mb-4">
                         <div class="event-item d-flex align-items-center my-3 p-3">
-                            <div class="event-img">
-                                <img src="./admin_page/upload/<?php echo $row['image']; ?>" alt="Industry Event" class="rounded-circle img-thumbnail">
+                            <div class="event-img" style="background-image: url(./admin_page/upload/<?php echo $row['image']; ?>)" alt="Industry Event">
                             </div>
                             <div class="event-content ms-4">
                                 <h3><?php echo $row["title"]; ?></h3>
