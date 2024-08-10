@@ -9,7 +9,6 @@
     <link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -52,56 +51,60 @@
             <!-- Mechanical design container -->
             <div class="col-md-6 mb-4">
                 <div class="design-container">
+					<div class="design-img">
+                        <img src="Images/Image6c.jpg" class="design-img-item" alt="Mechanical Design">
+                    </div>
                     <div class="section-title">
                         <h1 class="section-title-heading">Mechanical Design</h1>
                         <p class="section-title-text" data-full-text="The automotive industry has always been at the forefront of technological innovation, and mechanical design is no exception. Over the years, advancements in mechanical design have significantly transformed the way vehicles are manufactured, enhancing performance, safety, and efficiency.">The automotive industry has always been at the forefront of technological innovation, and mechanical design is no exception. Over the years, advancements in mechanical design have significantly...</p>
                         <button class="learn-more-btn">Learn More</button>
                     </div>
-                    <div class="design-img">
-                        <img src="Images/Image6c.jpg" class="design-img-item" alt="Mechanical Design">
-                    </div>
+                    
                 </div>
             </div>
 
             <!-- Electronics design container -->
             <div class="col-md-6 mb-4">
                 <div class="design-container">
+					<div class="design-img">
+                        <img src="Images/Image6b.jpg" class="design-img-item" alt="Electronics Design">
+                    </div>
                     <div class="section-title">
                         <h1 class="section-title-heading">Electronics Design</h1>
                         <p class="section-title-text" data-full-text="Electronics design in the automotive industry has revolutionized vehicle functionality and safety. Modern vehicles are equipped with advanced electronic systems that enhance performance, comfort, and driver assistance. From engine control units (ECUs) that optimize fuel efficiency to sophisticated infotainment systems and advanced driver-assistance systems (ADAS) like adaptive cruise control and automatic emergency braking, electronics design plays a crucial role.">Electronics design in the automotive industry has revolutionized vehicle functionality and safety. Modern vehicles are equipped with advanced electronic systems that enhance performance, comfort, and driver assistance....</p>
                         <button class="learn-more-btn">Learn More</button>
                     </div>
-                    <div class="design-img">
-                        <img src="Images/Image6b.jpg" class="design-img-item" alt="Electronics Design">
-                    </div>
+                    
                 </div>
             </div>
 
             <!-- Electrical design container -->
             <div class="col-md-6 mb-4">
                 <div class="design-container">
+					<div class="design-img">
+                        <img src="Images/cm_controls.jpg" class="design-img-item" alt="Electrical Design">
+                    </div>
                     <div class="section-title">
                         <h1 class="section-title-heading">Electrical Design</h1>
                         <p class="section-title-text" data-full-text="Electrical design is fundamental to the automotive industry, ensuring the seamless integration of various systems and components. It encompasses the design and layout of wiring harnesses, power distribution, and battery management systems, especially crucial in electric vehicles (EVs). Effective electrical design optimizes the vehicle’s electrical architecture, enhancing performance and reliability while minimizing weight and complexity. This discipline also ensures the efficient operation of lighting systems, infotainment, and safety features like airbags and stability control.">Electrical design is fundamental to the automotive industry, ensuring the seamless integration of various systems and components. It encompasses the design and layout of wiring harnesses, power distribution, and battery management systems,...</p>
                         <button class="learn-more-btn">Learn More</button>
                     </div>
-                    <div class="design-img">
-                        <img src="Images/cm_controls.jpg" class="design-img-item" alt="Electrical Design">
-                    </div>
+                   
                 </div>
             </div>
 
             <!-- Industrial design container -->
             <div class="col-md-6 mb-4">
                 <div class="design-container">
+					<div class="design-img">
+                        <img src="Images/Image2a.jpg" class="design-img-item" alt="Industrial Design">
+                    </div>
                     <div class="section-title">
                         <h1 class="section-title-heading">Industrial Design</h1>
                         <p class="section-title-text" data-full-text="Industrial design in the automotive industry focuses on the aesthetic and ergonomic aspects of vehicles, aiming to create visually appealing and user-friendly designs. It involves shaping the vehicle's exterior and interior, considering factors like aerodynamics, material selection, and user experience. Industrial designers collaborate with engineers to ensure that the vehicle's form complements its function, creating harmonious and innovative designs.">Industrial design in the automotive industry focuses on the aesthetic and ergonomic aspects of vehicles, aiming to create visually appealing and user-friendly designs. It involves shaping the vehicle's exterior and interior, considering factors like...</p>
                         <button class="learn-more-btn">Learn More</button>
                     </div>
-                    <div class="design-img">
-                        <img src="Images/Image2a.jpg" class="design-img-item" alt="Industrial Design">
-                    </div>
+                    
                 </div>
             </div>
         </div>
