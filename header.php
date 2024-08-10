@@ -12,7 +12,7 @@
                 <ul class="navbar-nav ms-auto">
                     <!-- Navigation Items -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">Solutions</a>
+                        <a class="nav-link" href="adapto.php" role="button" aria-haspopup="true" aria-expanded="false">Solutions</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="adapto.php">adapto™</a></li>
                             <li><a class="dropdown-item" href="custom_machines.php">Custom Machines</a></li>

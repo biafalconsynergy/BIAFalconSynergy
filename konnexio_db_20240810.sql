@@ -238,9 +238,9 @@ CREATE TABLE `testimonial` (
 
 INSERT INTO `testimonial` (`testimonial_id`, `userid`, `title`, `content`, `posted_date`, `image`, `isactive`, `last_updated_date`) VALUES
 (1, 1, 'John Smith - CEO at Tech Innovations Ltd', 'Working with Konnexio has been a game-changer for our business. Their expertise in automation has not only improved our efficiency but also increased our production capacity. The team\'s commitment to excellence and customer satisfaction is unparalleled.', '2024-07-12', 'Image5a.jpg', 1, '2024-07-29 19:24:14'),
-(2, 1, 'Jane Doe - CEO, Example Corp', 'Amazing experience. The team went above and beyond to deliver results', '2024-07-12', 'Image5b.jpg', 1, NULL),
-(3, 1, 'Emily Johnson - Product Lead, Demo Inc', 'The quality of work is outstanding. We couldn’t be happier!', '2024-07-30', NULL, 1, NULL),
-(4, 1, 'Jane Doe - CEO, Example Corp', 'This is the best service we’ve ever used. Highly recommend it to anyone!', '2024-07-30', NULL, 1, NULL);
+(2, 1, 'Emily Harris - Operations Manager at AutoTech Corp', 'Konnexio\'s custom automation solutions have transformed our production line. Their innovative approach and attention to detail allowed us to streamline our processes and significantly reduce our time-to-market. The team was incredibly professional.', '2024-07-12', 'Image5a.jpg', 1, '2024-07-29 19:24:14'),
+(3, 1, 'John Smith - CEO at Tech Innovations Ltd', 'Working with Konnexio has been a game-changer for our business. Their expertise in automation has not only improved our efficiency but also increased our production capacity. The team\'s commitment to excellence and customer satisfaction is unparalleled.', '2024-07-12', 'Image5b.jpg', 1, '2024-07-29 19:27:22'),
+(4, 1, 'Sarah Johnson - Production Manager at Industrial Solutions Inc', 'Konnexio\'s automation solutions have revolutionized our manufacturing process. Their tailored approach and cutting-edge technology have significantly boosted our productivity and reduced operational costs. The team\'s professionalism and dedication were evident throughout the project.', '2024-07-12', 'Image5b.jpg', 1, '2024-07-29 19:29:44');
 
 -- --------------------------------------------------------
 
