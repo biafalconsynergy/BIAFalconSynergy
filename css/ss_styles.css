@@ -126,7 +126,7 @@ body {
     .design-img-item,
     .build-img-item,
     .support-img-item {
-        height: auto;
+        /*height: auto;*/
     }
 }
 
