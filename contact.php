@@ -193,7 +193,7 @@
                             <span class="fa fa-phone"></span>
                           </div>
                           <div class="text pl-3">
-                            <p><span>Phone:</span> <a href="tel://5194578836">+1 (519) 457-8836</a></p>
+                            <p><span>Phone:</span> <a href="tel://5194578836" aria-label="Call Us for more information">+1 (519) 457-8836</a></p>
                           </div>
                         </div>
                         <div class="dbox w-100 d-flex align-items-center">
@@ -201,7 +201,7 @@
                             <span class="fa fa-paper-plane"></span>
                           </div>
                           <div class="text pl-3">
-                            <p><span>Email:</span> <a href="mailto:info@konnexio.com">info@konnexio.com</a></p>
+                            <p><span>Email:</span> <a href="mailto:info@konnexio.com" aria-label="Email Us for more information">info@konnexio.com</a></p>
                           </div>
                         </div>
                         <div class="dbox w-100 d-flex align-items-center">
@@ -209,7 +209,7 @@
                             <span class="fa fa-globe"></span>
                           </div>
                           <div class="text pl-3">
-                            <p><span>Website:</span> <a href="https://www.konnexio.com/">www.konnexio.com</a></p>
+                            <p><span>Website:</span> <a href="https://www.konnexio.com/" aria-label="Visit Us at Konnexio.com">www.konnexio.com</a></p>
                           </div>
                         </div>
                       </div>
