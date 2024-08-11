@@ -96,12 +96,12 @@
                     <div class="card card-industries bg-light">
                         <div class="card-inner">
                             <div class="card-front">
-                                <div class="card-body sec2a">
+                                <div class="card-body sec2">
                                     <h1 class="card-title">Increased<br>Productivity</h1>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <div class="card-body sec2a">
+                                <div class="card-body sec2">
                                     <h3 class="card-title">Increased Productivity</h3>
                                     <p class="card-text">Description for this section</p>
                                     <button class="btn btn-dark" onclick="location.href='industries.php#industrial';">Know More</button>
@@ -114,12 +114,12 @@
                     <div class="card card-industries bg-light">
                         <div class="card-inner">
                             <div class="card-front">
-                                <div class="card-body sec2b">
+                                <div class="card-body sec2">
                                     <h1 class="card-title">Scalability</h1>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <div class="card-body sec2b">
+                                <div class="card-body sec2">
                                     <h3 class="card-title">Scalability</h3>
                                     <p class="card-text">Description for this section</p>
                                     <button class="btn btn-dark" onclick="location.href='industries.php#agriculture';">Know More</button>
@@ -132,12 +132,12 @@
                     <div class="card card-industries bg-light">
                         <div class="card-inner">
                             <div class="card-front">
-                                <div class="card-body sec2c">
+                                <div class="card-body sec2">
                                     <h1 class="card-title">Competitive<br>Edge</h1>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <div class="card-body sec2c">
+                                <div class="card-body sec2">
                                     <h3 class="card-title">Competitive Edge</h3>
                                     <p class="card-text">Description for this section</p>
                                     <button class="btn btn-dark" onclick="location.href='industries.php#hydrogen_fuel_cells';">Know More</button>
@@ -150,12 +150,12 @@
                     <div class="card card-industries bg-light">
                         <div class="card-inner">
                             <div class="card-front">
-                                <div class="card-body sec2d">
+                                <div class="card-body sec2">
                                     <h1 class="card-title">Reduce<br>Human<br>Error</h1>
                                 </div>
                             </div>
                             <div class="card-back">
-                                <div class="card-body sec2d">
+                                <div class="card-body sec2">
                                     <h3 class="card-title">Reduce Human Error</h3>
                                     <p class="card-text">Description for this section</p>
                                     <button class="btn btn-dark" onclick="location.href='industries.php#other_industries';">Know More</button>

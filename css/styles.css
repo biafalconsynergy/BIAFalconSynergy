@@ -413,24 +413,9 @@ ul {
     background-color: rgba(42, 87, 126, 0.2);
 }
 
-.sec2a {
-    background-color: rgba(42, 87, 126, 0.4);
-    color: rgb(0, 0, 0);
-}
-
-.sec2b {
+.sec2 {
     background-color: rgba(42, 87, 126, 0.2);
-    color: rgb(0, 0, 0);
-}
-
-.sec2c {
-    background-color: rgba(42, 87, 126, 0.2);
-    color: rgb(0, 0, 0);
-}
-
-.sec2d {
-    background-color: rgba(42, 87, 126, 0.4);
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 50);
 }
 
 .sec3 p, .sec3 h4 {
