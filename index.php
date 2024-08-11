@@ -46,9 +46,9 @@
             <div id="demo" class="carousel slide" data-bs-ride="carousel">
                 <!-- Indicators/dots -->
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    <button type="button" aria-label="Welcome" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" aria-label="Adapto" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" aria-label="Mission" data-bs-target="#demo" data-bs-slide-to="2"></button>
                 </div>
 
                 <!-- The slideshow/carousel -->
@@ -80,10 +80,10 @@
                 </div>
 
                 <!-- Left and right controls/icons -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" aria-label="previous" data-bs-target="#demo" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" aria-label="next" data-bs-target="#demo" data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
@@ -268,7 +268,7 @@
    <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
     <h2 class="text-center mb-4">What Our Clients Say</h2>
     <div id="testi-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-        <div class="carousel-inner" role="listbox" style="border-radius: 20px;">
+        <div class="carousel-inner" aria-label="testimonials" role="listbox" style="border-radius: 20px;">
             <?php
                 $activeClass = "active";
                 $indicatorIndex = 0;
@@ -276,7 +276,7 @@
             ?>
             <div class="carousel-item testi-carousel-item <?php echo $activeClass; ?> text-center p-4">
                 <blockquote class="blockquote text-center">
-                    <p class="mb-0"><i class="fa fa-quote-left"></i><?php echo $row["content"]; ?></p>
+                    <p class="mb-0" aria-label="content"><i class="fa fa-quote-left"></i><?php echo $row["content"]; ?></p>
                     <br><?php echo $row["title"]; ?>
                 </blockquote>
             </div>
@@ -286,14 +286,14 @@
                 }
             ?>
         </div>
-        <a class="carousel-control-prev" href="#testi-carousel" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
+        <a class="carousel-control-prev" href="#testi-carousel" aria-label="previous" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon testi-carousel-control-prev-icon">
                 <i class="fa fa-chevron-left"></i>
             </span>
             <span class="visually-hidden">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#testi-carousel" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
+        <a class="carousel-control-next" href="#testi-carousel" aria-label="next" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon testi-carousel-control-next-icon">
                 <i class="fa fa-chevron-right"></i>
             </span>
             <span class="visually-hidden">Next</span>
@@ -318,21 +318,21 @@
                 <div class="col-lg-10 offset-lg-1 pt-5 pb-5">
                     <h2 class="text-center mb-4">What Our Clients Say</h2>
                     <div id="testi-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
-                        <div class="carousel-inner" role="listbox">
+                        <div class="carousel-inner" aria-label="testimonials" role="listbox">
                             <div class="carousel-item testi-carousel-item active text-center p-4">
                                 <blockquote class="blockquote text-center">
-                                    <p class="mb-0"><i class="fa fa-quote-left"></i> No active Testimonials found.</p>
+                                    <p class="mb-0" aria-label="content"><i class="fa fa-quote-left"></i> No active Testimonials found.</p>
                                 </blockquote>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#testi-carousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon testi-carousel-control-prev-icon" aria-hidden="true">
+                        <a class="carousel-control-prev" href="#testi-carousel" aria-label="previous" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon testi-carousel-control-prev-icon">
                                 <i class="fa fa-chevron-left"></i>
                             </span>
                             <span class="sr-only"></span>
                         </a>
-                        <a class="carousel-control-next" href="#testi-carousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon testi-carousel-control-next-icon" aria-hidden="true">
+                        <a class="carousel-control-next" href="#testi-carousel" aria-label="next" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon testi-carousel-control-next-icon">
                                 <i class="fa fa-chevron-right"></i>
                             </span>
                             <span class="sr-only"></span>
