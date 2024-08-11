@@ -78,44 +78,9 @@
                               });
                             </script>
 
-                            <!-- <form method="POST" id="salesForm" name="salesForm" class="contactForm">
-                              <div class="row">
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                    <label class="label" for="nameSales">Full Name</label>
-                                    <input type="text" class="form-control" name="nameSales" id="nameSales" placeholder="Name">
-                                  </div>
-                                </div>
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                    <label class="label" for="emailSales">Email Address</label>
-                                    <input type="email" class="form-control" name="emailSales" id="emailSales" placeholder="Email">
-                                  </div>
-                                </div>
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    <label class="label" for="subjectSales">Subject</label>
-                                    <input type="text" class="form-control" name="subjectSales" id="subjectSales" placeholder="Subject">
-                                  </div>
-                                </div>
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    <label class="label" for="#">Message</label>
-                                    <textarea name="messageSales" class="form-control" id="messageSales" cols="30" rows="4" placeholder="Message"></textarea>
-                                  </div>
-                                </div>
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    <input type="submit" value="Send Message" class="btn btn-custom">
-                                    <div class="submitting"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </form> -->
-
                           </div>
                           <div class="tab-pane fade" id="formSupport" role="tabpanel" aria-labelledby="formSupport-tab">
-                            <form method="POST" id="supportForm" name="supportForm" class="contactForm">
+                            <form action="email.php" method="POST" id="supportForm" name="supportForm" class="contactForm">
                               <div class="row">
                                 <div class="col-md-12">
                                   <div class="form-group">
@@ -238,12 +203,19 @@
         <!-- Footer Section -->
         <?php include 'footer.php'; ?>
     
-        <script src="js/ct_jquery.min.js"></script>
+        <!-- <script src="js/ct_jquery.min.js"></script>
         <script src="js/ct_popper.js"></script>
         <script src="js/ct_bootstrap.min.js"></script>
         <script src="js/ct_jquery.validate.min.js"></script>
         <script src="js/ct_form_sales.js"></script>
-        <script src="js/ct_form_support.js"></script>
-    
+        <script src="js/ct_form_support.js"></script> -->
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        // Check if the URL contains the hash for formSupport
+        if (window.location.hash === '#formSupport') {
+          document.querySelector('#formSupport-tab').click();}
+        });
+        </script>   
     </body>
 </html>
