@@ -726,3 +726,15 @@ ul {
     width: 70%;
     margin: 0 auto; /* Center the text container */
 }
+
+/* Focus style for links */
+.f-icon:focus {
+    outline: 2px solid #000; /* Provide a clear focus indicator */
+    outline-offset: 2px; /* Adds space between the element and the outline */
+}
+
+/* Focus style for buttons */
+.btn:focus {
+    outline: 2px solid #000; /* Provide a clear focus indicator */
+    outline-offset: 2px; /* Adds space between the element and the outline */
+}

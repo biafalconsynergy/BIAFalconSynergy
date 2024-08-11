@@ -104,7 +104,7 @@
                                 <div class="card-body sec2">
                                     <h3 class="card-title">Increased Productivity</h3>
                                     <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-dark" onclick="location.href='industries.php#industrial';">Know More</button>
+                                    <button class="btn btn-dark" onclick="location.href='industries.php#industrial';" aria-label="Know more about Increased Productivity">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                                 <div class="card-body sec2">
                                     <h3 class="card-title">Scalability</h3>
                                     <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-dark" onclick="location.href='industries.php#agriculture';">Know More</button>
+                                    <button class="btn btn-dark" onclick="location.href='industries.php#agriculture';" aria-label="Know more about Scalability">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                                 <div class="card-body sec2">
                                     <h3 class="card-title">Competitive Edge</h3>
                                     <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-dark" onclick="location.href='industries.php#hydrogen_fuel_cells';">Know More</button>
+                                    <button class="btn btn-dark" onclick="location.href='industries.php#hydrogen_fuel_cells';" aria-label="Know more about Competitive Edge">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -158,7 +158,7 @@
                                 <div class="card-body sec2">
                                     <h3 class="card-title">Reduce Human Error</h3>
                                     <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-dark" onclick="location.href='industries.php#other_industries';">Know More</button>
+                                    <button class="btn btn-dark" onclick="location.href='industries.php#other_industries';" aria-label="Know more about Reduce Human Error">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -181,7 +181,7 @@
                         <div class="sec3a">
                             <h1>adapto™ Technology</h1>
                             <p>A unique and innovative assembly automation and testing machine system comprised of modular Smart Cells.</p>
-                            <button class="btn btn-danger btn-lg" onclick="location.href='adapto.php';">Learn More</button>
+                            <button class="btn btn-danger btn-lg" onclick="location.href='adapto.php';" aria-label="Learn more about Adapto Technology">Learn More</button>
                         </div>
                     </div>
                 </div>
@@ -194,7 +194,7 @@
                     <div class="sec3b bg-light">
                         <h1>Custom Machines</h1>
                         <p>Explore KONNEXIO's custom automation solutions, where our team of experts transforms your project vision into reality with tailored machine designs, efficient project management and seamless integration for optimal production efficiency.</p>
-                        <button class="btn btn-danger btn-lg" onclick="location.href='custom_machines.php';">Learn More</button>
+                        <button class="btn btn-danger btn-lg" onclick="location.href='custom_machines.php';" aria-label="Learn more about Custom Machines">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -208,7 +208,7 @@
         <section class="container-fluid p-3 bg-light">
             <div class="row no-gutters">
                 <div class="col-sm-4">
-                    <a href="services.php#design">
+                    <a href="services.php#design" aria-label="Learn more about Design">
                         <div class="sec4">
                             <img src="Images/Image4a.jpg" class="img-fluid" alt="Image4a">
                             <div class="sec4-body">
@@ -218,7 +218,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="services.php#build">
+                    <a href="services.php#build" aria-label="Learn more about Build">
                         <div class="sec4">
                             <img src="Images/Image4b.jpg" class="img-fluid" alt="Image4b">
                             <div class="sec4-body">
@@ -228,7 +228,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="services.php#support">
+                    <a href="services.php#support" aria-label="Learn more about Support">
                         <div class="sec4">
                             <img src="Images/Image4c.jpg" class="img-fluid" alt="Image4c">
                             <div class="sec4-body">
