@@ -1,0 +1,74 @@
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .order-sm-first {
+        order: -1;
+    }
+    .order-sm-last {
+        order: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .order-sm-first {
+        order: -1;
+    }
+    .order-sm-last {
+        order: 1;
+    }
+}
+
+@media (max-width: 375px) {
+    .order-sm-first {
+        order: -1;
+    }
+    .order-sm-last {
+        order: 1;
+    }
+}
+
+/* Initial state: elements are hidden and slightly moved down */
+.slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Active state: elements are fully visible and in their final position */
+.slide-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.be_sec {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 4/3;
+}
+
+.be_sec h1 {
+    color: rgb(0, 0, 0);
+    padding-top: 1em;
+}
+
+.be_sec p, 
+.be_sec h4 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-top: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.be_sec img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 10%;
+}
