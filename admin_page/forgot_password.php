@@ -161,11 +161,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
     <title>Forgot Password</title>
+    <!-- References Top -->
+      <?php include 'ReferencesTop.php'; ?>
+    <!-- End of References --> 
 </head>
-<body>
+<body class="bg-gradient-primary">
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <form action="forgot_password.php" method="POST">
         <div class="container">
+            <img src="konnexio-logo.png" class="img-fluid" alt="Company Logo" width="400" height="auto" style="display: block; margin: auto;">
             <h2 class="text-center">Forgot Password</h2>
             <?php
             if (isset($_GET['message'])) {
@@ -177,8 +181,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             ?>
             <label for="email"><b>Email Address</b></label>
-            <input type="email" placeholder="Enter your email" name="email" required>
-            <button type="submit">Submit</button>
+            <input type="email" placeholder="Enter your email" name="email" required><br><br>
+            <button class="btn btn-primary" type="submit">Submit</button><br><br>
+            <button class="btn btn-secondary" onclick="window.location.href='LoginPage.php'">Login</button>
         </div>
     </form>
 </div>
