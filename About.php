@@ -55,7 +55,7 @@
     </div>	
         
 		  <!-- Our Story -->
-		  <section class="container-fluid p-3 bg-light text-dark" id="company_story">
+		  <section class="container-fluid p-3 bg-white text-dark" id="company_story">
 			<div class="row justify-content-center text-center">
 					<div class="col-lg-8 col-12">
 			  <h2 class="mb-4 mt-5" data-aos="fade-up">Our Story</h2>
@@ -65,7 +65,7 @@
 		</section>  
 
     <!-- Founder and CEO Section -->
-<hr>
+     
 <section class="container-fluid slide-up" style="padding: 0;">
   <div class="row no-gutters" id="founder-and-ceo">
     <div class="col-sm-6 order-sm-first order-md-first">
@@ -140,7 +140,7 @@
 				<div class="col-md-4 mb-4">
 				  <div class="association-item d-flex align-items-center p-3 bg-light">
 					<div class="association-logo">
-					  <img src="Images/Image5b.jpg" alt="Association 2" class="img-fluid rounded-circle">
+					  <img src="Images/Image5a.jpg" alt="Association 2" class="img-fluid rounded-circle">
 					</div>
 					<div class="association-content ms-3">
 					  <h4>Association Two</h4>
