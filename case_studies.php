@@ -54,6 +54,11 @@ $result1 = $stmt->get_result();
 		.modal-content {
 			padding: 20px; 
 		}
+		/* Focus style for buttons /
+		.btn:focus {
+			outline: 2px solid #000; / Provide a clear focus indicator /
+			outline-offset: 2px; / Adds space between the element and the outline */
+		}
     </style>
 </head>
 <body>
@@ -83,9 +88,9 @@ $result1 = $stmt->get_result();
                     </div>
                     <div class="col-md-6">
                         <div class="sec3b bg-light p-3">
-                            <h2><?php echo htmlspecialchars($row["title"]); ?></h2>
-                            <p><?php echo htmlspecialchars($row["content"]); ?></p>
-                            <button class="btn btn-danger btn-lg learn-more-btn" data-caseid="<?php echo htmlspecialchars($row['caseid']); ?>" data-bs-toggle="modal" data-bs-target="#infoModal<?php echo htmlspecialchars($row['caseid']); ?>">Receive More Info</button>
+                            <h2 class="text-center"><?php echo htmlspecialchars($row["title"]); ?></h2>
+                            <p class="text-left"><?php echo htmlspecialchars($row["content"]); ?></p>
+                            <button class="btn btn-danger btn-lg learn-more-btn" type="button" aria-label="Click to Receive More Information" data-caseid="<?php echo htmlspecialchars($row['caseid']); ?>" data-bs-toggle="modal" data-bs-target="#infoModal<?php echo htmlspecialchars($row['caseid']); ?>">Receive More Info</button>
                         </div>
                     </div>
                 </div>
@@ -94,8 +99,7 @@ $result1 = $stmt->get_result();
 				<div class="modal fade" id="infoModal<?php echo htmlspecialchars($row['caseid']); ?>" tabindex="-1" aria-labelledby="infoModalLabel<?php echo htmlspecialchars($row['caseid']); ?>" aria-hidden="true">
 					<div class="modal-dialog custom-margin modal-lg">
 						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title text-center" id="infoModalLabel<?php echo htmlspecialchars($row['caseid']); ?>">Enter Your Details Below</h5>
+							<div class="modal-header">		
 								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
@@ -103,7 +107,7 @@ $result1 = $stmt->get_result();
 								if (!empty($row['form'])) {
 									echo $row['form'];
 								} else {
-									echo "<p class='text-danger'>Error! Form Script not Found</p>";
+									echo "<p class='text-danger'>Coming Soon!!</p>";
 								}
 								?>
 							</div>
