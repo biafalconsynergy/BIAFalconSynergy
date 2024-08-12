@@ -53,10 +53,18 @@
 
 .be_sec h1 {
     color: rgb(0, 0, 0);
-    padding-top: 1em;
+    padding-top: 2em;
 }
 
 .be_sec p, 
+.be_sec h5 {
+    text-align: justify;
+    color: rgb(0, 0, 0);
+    padding-top: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
 .be_sec h4 {
     text-align: center;
     color: rgb(0, 0, 0);

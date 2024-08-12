@@ -49,7 +49,13 @@
                     <h4>Evolving Market Demands</h4>
                     <p>Traditional automation companies, require precise specifications upfront. This rigidity can create challenges when market demands shift or project specifications change, leading to scope creep, project delays, and inefficient investments. Adapto addresses these issues by offering a system designed to adapt to future uncertainties, ensuring that your manufacturing processes remain agile and responsive.</p>
                     <h4>Innovative Features</h4>
+                    <h5>Flexible Tooling Mounts</h5>
                     <p>Traditional automation companies, require precise specifications upfront. This rigidity can create challenges when market demands shift or project specifications change, leading to scope creep, project delays, and inefficient investments. Adapto addresses these issues by offering a system designed to adapt to future uncertainties, ensuring that your manufacturing processes remain agile and responsive.</p>
+                    <h5>Programmable Machine Functions</h5>
+                    <p>Our machinery offers fully programmable primary and secondary functions, including robotic movements, allowing for precise positioning and operation without the necessity for physical tool changes. This capability eliminates the need for physical tool changes, buying new machinery for different tasks, or incurring costly redesigns. By eliminating these expenses, Adapto ensures operational efficiency and cost effectiveness.</p>
+                    <h5>Modular Cells</h5>
+                    <p>Each Adapto cell functions as an independent unit within the overall system, executing specific tasks or processes. This modularity allows you to integrate or modify individual cells as new processes or requirements arise, without the need for a complete system overhaul. The Adapto solution is designed to adapt in real-time, accommodating changes efficiently and without the need for pre-defined designs or specifications.</p>
+                    
                     <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Book a Consultation</button>
                 </div>
             </div>
