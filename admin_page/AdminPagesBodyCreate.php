@@ -19,7 +19,7 @@ $pageName = basename($_SERVER['PHP_SELF']);
 $hideImageButton = ($pageName === 'CareersNew.php'); 
 $showContentTypeButton = ($pageName === 'NewsEventsNew.php'); 
 $showHubSpotForm = ($pageName === 'CaseStudyNew.php'); 
-$showCareerURL = ($pageName === 'CareersNew.php'); 
+$showEventURL = ($pageName === 'NewsEventsNew.php'); 
 $showEventDate = ($pageName === 'NewsEventsNew.php'); 
 $showNewsLocationField = ($pageName === 'NewsEventsNew.php'); 
 
@@ -47,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Prepare SQL insert statement
 	if ($hideImageButton && !$showContentTypeButton && !$showHubSpotForm &&  $showCareerURL && !$showNewsLocationField && !$showEventDate) {
-		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?)");
-		$stmt->bind_param("isss", $userid, $title, $content, $URL);
+		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?)");
+		$stmt->bind_param("iss", $userid, $title, $content);
 	} else if (!$hideImageButton && !$showContentTypeButton && !$showHubSpotForm && !$showCareerURL && !$showNewsLocationField && !$showEventDate) {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?)");
 		$stmt->bind_param("isss", $userid, $title, $content, $uploadfile);
@@ -56,8 +56,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?, ?)");
 		$stmt->bind_param("issss", $userid, $title, $content, $uploadfile, $form);
 	} else if (!$hideImageButton && $showContentTypeButton && !$showHubSpotForm && !$showCareerURL && $showNewsLocationField && $showEventDate) {
-		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("issssss", $userid, $title, $location, $content, $contentType, $uploadfile, $event_date);		
+		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("isssssss", $userid, $title, $location, $content, $contentType, $URL, $uploadfile, $event_date);		
 	}
     if ($stmt->execute()) {
         echo "<script>
@@ -159,7 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
 								
 								<!-- URL Input -->
-								<?php if ($showCareerURL): ?>
+								<?php if ($showEventURL): ?>
                                 <div class="form-group">
                                     <label for="URL">URL</label>
                                     <textarea class="form-control" id="URL" name="URL" rows="4" placeholder="Enter URL" required><?php echo isset($row['URL']) ? $row['URL'] : ''; ?></textarea>
