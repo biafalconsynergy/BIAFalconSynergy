@@ -5,7 +5,7 @@
         }
 		
 		// Check if user is logged in
-	if (!isset($_SESSION['roleid']) ) {
+	if (!isset($_SESSION['roleid'])  ) {
 		// Redirect to a different page or show an error message
 		header('Location: no_access.php'); 
 		exit();
@@ -16,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Admin Careers | KONNEXIO</title>
+    <title>Admin News_Events | KONNEXIO</title>
 	<link rel="icon" href="Logo/konnexio-icon.ico" type="image/x-icon">
 
     <!-- References Top -->
@@ -32,16 +32,16 @@
         include 'connection.php';
 
         //Variables particular to this page
-        $tableTitles = ['Career id', 'Author', 'Title', 'Content', 'URL', 'Date Posted', 'Status'];
-        $tableColumnNames = ['careerid', 'first_name', 'title', 'content', 'URL', 'posted_date','cs.isactive'];
-        $tableName = 'Careers';
-        $tableDbName = 'careers';
-		$createButtonUrl = 'CareersNew.php';		
-		$editButtonUrl = 'CareersEdit.php';
+        $tableTitles = ['News and Events Id', 'Author', 'Title', 'Location', 'Content', 'Content Type', 'Event Date', 'Date Posted','Image', 'Status'];
+        $tableColumnNames = ['newsid',  'first_name', 'title', 'location', 'content', 'content_type', 'event_date', 'posted_date','image','cs.isactive'];
+        $tableName = 'News and Events';
+        $tableDbName = 'news_events';
+		$createButtonUrl = 'NewsEventsNew.php';	
+		$editButtonUrl = 'NewsEventsEdit.php';
 		
 		// Define the primary key column name
-		$tablePrimaryKey = 'careerid'; 
- 
+		$tablePrimaryKey = 'newsid';		
+
         //Creates and assigns the query 
         $query = 'SELECT ' . implode(',', $tableColumnNames) . ' 
                   FROM ' . $tableDbName . ' cs 
@@ -57,6 +57,7 @@
 
         $activeCount = $activeResult->fetch_assoc()['active_count'];
         $inactiveCount = $inactiveResult->fetch_assoc()['inactive_count'];		
+		
         //Page standard body
         include 'AdminPagesBody.php';
     ?>
