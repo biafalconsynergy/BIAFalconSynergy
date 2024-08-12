@@ -189,7 +189,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button class="btn btn-primary" type="submit">Reset Password</button><br><br>
             <?php
             if (isset($_GET['message']) && $_GET['message'] === 'success') {
-                echo '<button class="btn btn-secondary" type="button" href="loginPage.php">Login</button>';
+                echo "<button class=\"btn btn-secondary\" type=\"button\" onclick=\"window.location.href='LoginPage.php';\">Login</button>";
             }
             ?>
         </div>

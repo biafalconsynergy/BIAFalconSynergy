@@ -181,7 +181,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             ?>
             <label for="email"><b>Email Address</b></label>
-            <input type="email" placeholder="Enter your email" name="email" required>
+            <input type="email" placeholder="Enter your email" name="email" required><br><br>
             <button class="btn btn-primary" type="submit">Submit</button><br><br>
             <button class="btn btn-secondary" type="button" onclick="window.location.href='LoginPage.php'">Login</button>		
         </div>
