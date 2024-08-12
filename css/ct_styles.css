@@ -144,6 +144,10 @@
     resize: vertical;
   }
 
+.required {
+    color: red !important;
+}
+
 #salesForm .error {
 color: red;
 font-size: 12px; }
@@ -157,6 +161,10 @@ font-size: 12px; }
 
 #supportForm .form-control {
 font-size: 16px; }
+
+#supportForm .form-control::placeholder {
+    color: #bfbfbf;
+}
 
 #form-message-warning, #form-message-success {
     display: none; }

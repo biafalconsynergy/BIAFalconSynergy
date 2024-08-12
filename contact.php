@@ -84,26 +84,26 @@
                               <div class="row">
                                 <div class="col-md-12">
                                   <div class="form-group">
-                                    <label class="label" for="emailSupport">Email</label>
-                                    <input type="email" class="form-control" name="emailSupport" id="emailSupport" placeholder="email@email.com">
+                                    <label class="label" for="emailSupport">Email<span class="required">*</span></label>
+                                    <input type="email" class="form-control" name="emailSupport" id="emailSupport" placeholder="email@email.com" required>
                                   </div>
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group">
-                                    <label class="label" for="firstNameSupport">First Name</label>
-                                    <input type="text" class="form-control" name="firstNameSupport" id="firstNameSupport" placeholder="First Name">
+                                    <label class="label" for="firstNameSupport">First Name<span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="firstNameSupport" id="firstNameSupport" placeholder="First Name" required>
                                   </div>
                                 </div>
                                 <div class="col-md-6">
                                   <div class="form-group">
-                                    <label class="label" for="lastNameSupport">Last Name</label>
-                                    <input type="text" class="form-control" name="lastNameSupport" id="lastNameSupport" placeholder="Last Name">
+                                    <label class="label" for="lastNameSupport">Last Name<span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="lastNameSupport" id="lastNameSupport" placeholder="Last Name" required>
                                   </div>
                                 </div>
                                 <div class="col-md-12">
                                   <div class="form-group">
-                                    <label class="label" for="subjectSupport">Subject</label>
-                                    <input type="text" class="form-control" name="subjectSupport" id="subjectSupport" placeholder="Subject">
+                                    <label class="label" for="subjectSupport">Subject<span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="subjectSupport" id="subjectSupport" placeholder="Subject" required>
                                   </div>
                                 </div>
                                 <div class="col-md-3">
@@ -126,8 +126,8 @@
                                 </div>
                                 <div class="col-md-12">
                                   <div class="form-group">
-                                    <label class="label" for="#">Message</label>
-                                    <textarea name="messageSupport" class="form-control message-box" id="messageSupport" cols="30" rows="4" placeholder="What can we do to support your business?"></textarea>
+                                    <label class="label" for="#">Message<span class="required">*</span></label>
+                                    <textarea name="messageSupport" class="form-control message-box" id="messageSupport" cols="30" rows="4" placeholder="What can we do to support your business?" required></textarea>
                                   </div>
                                 </div>
                                 <div class="col-md-12">
