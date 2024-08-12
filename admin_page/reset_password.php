@@ -150,6 +150,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
     <title>Reset Password</title>
+    <!-- References Top -->
+    <?php include 'ReferencesTop.php'; ?>
+    <!-- End of References --> 
     <script>
         function validateForm() {
             var password = document.forms["resetForm"]["password"].value;
@@ -163,10 +166,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </script>
 </head>
-<body>
+<body class="bg-gradient-primary">
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <form name="resetForm" action="reset_password.php" method="POST" onsubmit="return validateForm()">
         <div class="container">
+            <img src="konnexio-logo.png" class="img-fluid" alt="Company Logo" width="400" height="auto" style="display: block; margin: auto;">
             <h2 class="text-center">Reset Password</h2>
             <?php
             if (isset($_GET['message'])) {
@@ -181,8 +185,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="password"><b>New Password</b></label>
             <input type="password" placeholder="Enter new password" name="password" required>
             <label for="confirm_password"><b>Confirm Password</b></label>
-            <input type="password" placeholder="Confirm new password" name="confirm_password" required>
-            <button type="submit">Reset Password</button>
+            <input type="password" placeholder="Confirm new password" name="confirm_password" required><br><br>
+            <button class="btn btn-primary" type="submit">Reset Password</button>
             <?php
             if (isset($_GET['message']) && $_GET['message'] === 'success') {
                 echo '<a class="login-button" href="loginPage.php">Login</a>';
