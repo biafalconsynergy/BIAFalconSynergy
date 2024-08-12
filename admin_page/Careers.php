@@ -32,8 +32,8 @@
         include 'connection.php';
 
         //Variables particular to this page
-        $tableTitles = ['Career id', 'Author', 'Title', 'Content', 'Date Posted', 'Status'];
-        $tableColumnNames = ['careerid', 'first_name', 'title', 'content', 'posted_date','cs.isactive'];
+        $tableTitles = ['Career id', 'Author', 'Title', 'Content', 'URL', 'Date Posted', 'Status'];
+        $tableColumnNames = ['careerid', 'first_name', 'title', 'content', 'URL', 'posted_date','cs.isactive'];
         $tableName = 'Careers';
         $tableDbName = 'careers';
 		$createButtonUrl = 'CareersNew.php';		

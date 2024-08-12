@@ -32,8 +32,8 @@
         include 'connection.php';
 
         //Variables particular to this page
-        $tableTitles = ['Career id', 'userid', 'Title', 'Content', 'Date Posted', 'Status','last_updated_date'];
-        $tableColumnNames = ['careerid', 'userid', 'title', 'content', 'posted_date' ,'isactive',  'last_updated_date'];
+        $tableTitles = ['Career id', 'userid', 'Title', 'Content', 'URL', 'Date Posted', 'Status','last_updated_date'];
+        $tableColumnNames = ['careerid', 'userid', 'title', 'content', 'URL', 'posted_date' ,'isactive',  'last_updated_date'];
         $tableName = 'Careers';
         $tableDbName = 'careers';
         $id = intval($_GET['id']); // Sanitize input

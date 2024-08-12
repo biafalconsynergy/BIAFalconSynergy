@@ -37,7 +37,7 @@
 include 'connection.php';
 
 
-$tableColumnNames = ['userid','title', 'content'];
+$tableColumnNames = ['userid','title', 'content', 'URL'];
 $columns = implode(',', $tableColumnNames);
 $placeholders = implode(',', array_fill(0, count($tableColumnNames), '?'));
 

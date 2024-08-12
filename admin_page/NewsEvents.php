@@ -32,8 +32,8 @@
         include 'connection.php';
 
         //Variables particular to this page
-        $tableTitles = ['News and Events Id', 'Author', 'Title', 'Location', 'Content', 'Content Type', 'Date Posted','Image', 'Status'];
-        $tableColumnNames = ['newsid',  'first_name', 'title', 'location', 'content', 'content_type', 'posted_date','image','cs.isactive'];
+        $tableTitles = ['News and Events Id', 'Author', 'Title', 'Location', 'Content', 'Content Type', 'Event Date', 'Date Posted','Image', 'Status'];
+        $tableColumnNames = ['newsid',  'first_name', 'title', 'location', 'content', 'content_type', 'event_date', 'posted_date','image','cs.isactive'];
         $tableName = 'News and Events';
         $tableDbName = 'news_events';
 		$createButtonUrl = 'NewsEventsNew.php';	
