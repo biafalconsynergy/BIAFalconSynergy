@@ -36,50 +36,81 @@
         <h1>Benefits of adapto™</h1>
     </div>
     
-    <section class="container-fluid slide-up" style="padding: 0;">
-        <div class="row no-gutters" id="industrial">
+    <!-- Future Ready  -->
+    <section class="container-fluid" style="padding: 0;">
+        <div class="row no-gutters" id="future_ready">
             <div class="col-sm-6 order-sm-first order-md-last">
                 <div class="be_sec bg-light">
-                    <img src="Images/benefits1.jpg" alt="Industrial Sector">
+                    <img src="Images/Image1a.jpg" alt="Industrial Sector">
                 </div>
             </div>
             <div class="col-sm-6 order-sm-last order-md-first">
                 <div class="be_sec bg-light">
                     <h2>Future Ready</h2>
                     <h4>Evolving Market Demands</h4>
-                    <p>Traditional automation companies, require precise specifications upfront. This rigidity can create challenges when market demands shift or project specifications change, leading to scope creep, project delays, and inefficient investments. Adapto addresses these issues by offering a system designed to adapt to future uncertainties, ensuring that your manufacturing processes remain agile and responsive.</p>
-                    <h4>Innovative Features</h4>
-                    <h5>Flexible Tooling Mounts</h5>
-                    <p>Traditional automation companies, require precise specifications upfront. This rigidity can create challenges when market demands shift or project specifications change, leading to scope creep, project delays, and inefficient investments. Adapto addresses these issues by offering a system designed to adapt to future uncertainties, ensuring that your manufacturing processes remain agile and responsive.</p>
-                    <h5>Programmable Machine Functions</h5>
-                    <p>Our machinery offers fully programmable primary and secondary functions, including robotic movements, allowing for precise positioning and operation without the necessity for physical tool changes. This capability eliminates the need for physical tool changes, buying new machinery for different tasks, or incurring costly redesigns. By eliminating these expenses, Adapto ensures operational efficiency and cost effectiveness.</p>
-                    <h5>Modular Cells</h5>
-                    <p>Each Adapto cell functions as an independent unit within the overall system, executing specific tasks or processes. This modularity allows you to integrate or modify individual cells as new processes or requirements arise, without the need for a complete system overhaul. The Adapto solution is designed to adapt in real-time, accommodating changes efficiently and without the need for pre-defined designs or specifications.</p>
-                    
-                    <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Book a Consultation</button>
+                    <p>Traditional automation companies, require precise specifications upfront. This rigidity can create challenges when market demands shift or project specifications change, leading to scope creep, project delays, and inefficient investments. adapto™ addresses these issues by offering a system designed to adapt to future uncertainties, ensuring that your manufacturing processes remain agile and responsive.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <hr>
-    <section class="container-fluid slide-up" style="padding: 0;">
-        <div class="row no-gutters" id="agriculture">
-            <div class="col-sm-6 order-sm-first order-md-first">
-                <div class="be_sec bg-light">
-                    <img src="Images/Image2b.jpg" alt="Agriculture Sector">
+    <!-- Future Ready Innovative Features Section -->
+    <section class="container-fluid py-5" id="be_features">
+        <div class="container">
+            <h2 class="text-center mb-5">Innovative Features</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="be_features-box p-4 mb-4">
+                        <img src="Images/adapto_01.png" alt="Flexible Tooling Mounts" class="feature-image mb-3">
+                        <h4>Flexible Tooling Mounts</h4>
+                        <p>adapto™'s flexible tooling mounts enable rapid reconfiguration and adjustments, ensuring your production line remains efficient and responsive to changes. Designed for easy modification, the system allows tooling to be repositioned or adjusted as product specifications evolve. This flexibility eliminates the need for costly redesigns and retooling, providing a streamlined solution for adapting to new or modified products.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-6 order-sm-last order-md-last">
-                <div class="be_sec bg-light">
-                    <h2>Bottleneck Optimization</h2>
-                    <h4>Over-automation and Under-automation</h4>
-                    <p>Many automation providers address bottlenecks by implementing large-scale automation solutions across entire production lines or extensive sections of the process. This method aims to enhance overall efficiency but often results in over-automation. These providers apply broad, generalized solutions without conducting a thorough analysis of which specific processes truly require automation. Consequently, manufacturers are burdened with the expense of automating non-critical stages while critical bottlenecks remain unaddressed. Additionally, such comprehensive systems are notoriously inflexible and costly to modify or expand as production needs evolve, leading to substantial initial investments and ongoing maintenance difficulties.</p>
-                    <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Schedule a Demo</button>
+                <div class="col-md-4">
+                    <div class="be_features-box p-4 mb-4">
+                        <img src="Images/adapto_02.png" alt="Programmable Machine Functions" class="feature-image mb-3">
+                        <h4>Programmable Machine Functions</h4>
+                        <p>Our machinery offers fully programmable primary and secondary functions, including robotic movements, allowing for precise positioning and operation without the necessity for physical tool changes. This capability eliminates the need for physical tool changes, buying new machinery for different tasks, or incurring costly redesigns. By eliminating these expenses, adapto™ ensures operational efficiency and cost effectiveness. </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="be_features-box p-4 mb-4">
+                        <img src="Images/adapto_03.png" alt="Modular Cells" class="feature-image mb-3">
+                        <h4>Modular Cells</h4>
+                        <p>Each adapto™ cell functions as an independent unit within the overall system, executing specific tasks or processes. This modularity allows you to integrate or modify individual cells as new processes or requirements arise, without the need for a complete system overhaul. The adapto™ solution is designed to adapt in real-time, accommodating changes efficiently and without the need for pre-defined designs or specifications.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Key Benefits Section with Vertical Stack -->
+    <section class="container py-5" id="key_benefits">
+        <h2 class="text-center mb-5">Key Benefits</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="be_benefits-stack mb-4">
+                    <h4>Enhanced Efficiency</h4>
+                    <p>Streamline production processes with quick reconfigurations and precise adjustments.</p>
+                </div>
+                <div class="be_benefits-stack mb-4">
+                    <h4>Optimized Investment</h4>
+                    <p>Reduce unnecessary expenses associated with frequent redesigns and retooling.</p>
+                </div>
+                <div class="be_benefits-stack mb-4">
+                    <h4>Market Responsiveness</h4>
+                    <p>Adapt to changing market demands with minimal disruption, ensuring that your operations remain competitive and resilient.</p>
+                </div>
+                <div class="text-center mt-5">
+                    <p>Adapto empowers manufacturers to stay ahead of the curve, providing a future-proof solution that adapts to the ever-changing landscape of the industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
 
 
     <!-- Footer Section -->

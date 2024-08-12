@@ -1,6 +1,5 @@
-
 /* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 576px), (max-width: 375px) {
     .order-sm-first {
         order: -1;
     }
@@ -9,37 +8,84 @@
     }
 }
 
-@media (max-width: 576px) {
-    .order-sm-first {
-        order: -1;
-    }
-    .order-sm-last {
-        order: 1;
-    }
-}
-
-@media (max-width: 375px) {
-    .order-sm-first {
-        order: -1;
-    }
-    .order-sm-last {
-        order: 1;
-    }
-}
-
-/* Initial state: elements are hidden and slightly moved down */
+/* Slide-Up Animation */
 .slide-up {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* Active state: elements are fully visible and in their final position */
 .slide-up.active {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Features Section Styling */
+#be_features {
+    background-color: #f9f9f9;
+}
+
+#be_features .row {
+    display: flex;
+}
+
+#be_features h2 {
+    font-weight: bold;
+}
+
+#be_features .col-md-4 {
+    display: flex;
+    align-items: stretch; /* Ensures that all columns stretch to the same height */
+}
+
+.be_features-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 350px; /* Set a minimum height to ensure all boxes are the same size */
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+    transition: transform 0.3s ease;
+}
+
+/* Feature Box Image Styling */
+.be_features-box img.feature-image {
+    width: auto; /* Makes the image responsive */
+    height: 200px; /* Keeps the aspect ratio */
+    max-width: 150px; /* Set a max-width for better layout control */
+    max-height: 150px; /* Set a max-height to ensure all images fit within the same space */
+    margin-bottom: 20px; /* Adds spacing below the image */
+    object-fit: contain; /* Ensures the image scales correctly within the set dimensions */
+}
+
+
+.be_features-box:hover {
+    transform: translateY(-5px);
+}
+
+.be_features-box i {
+    color: #2a577e;
+    font-size: 6rem; /* Increase this value to make the icons larger */
+}
+
+.be_features-box h4 {
+    font-weight: 700;
+    margin: 20px 0 15px 0; /* Adjusted margin for consistency */
+}
+
+.be_features-box p {
+    text-align: justify;
+    font-size: 16px;
+    color: #555;
+    margin-top: auto; /* Pushes the paragraph to the bottom of the box */
+    margin-bottom: 20px;
+}
+
+/* Section General Styling */
 .be_sec {
     position: relative;
     display: flex;
@@ -52,25 +98,21 @@
 }
 
 .be_sec h1 {
-    color: rgb(0, 0, 0);
-    padding-top: 2em;
+    color: #000;
+    padding-top: 1em;
 }
 
-.be_sec p, 
-.be_sec h5 {
+.be_sec h2 {
+    font-weight: bold;
+    color: #000;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+.be_sec p {
     text-align: justify;
-    color: rgb(0, 0, 0);
-    padding-top: 1em;
-    margin-left: 3em;
-    margin-right: 3em;
-}
-
-.be_sec h4 {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    padding-top: 1em;
-    margin-left: 3em;
-    margin-right: 3em;
+    color: #000;
+    padding: 1em 3em; /* Combined padding for top, bottom, left, and right */
 }
 
 .be_sec img {
@@ -80,3 +122,31 @@
     object-fit: cover;
     padding: 10%;
 }
+
+/* Key Benefits Section with Vertical Stack Styling */
+#key_benefits .be_benefits-stack {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#key_benefits .be_benefits-stack:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#key_benefits h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#key_benefits p {
+    font-size: 16px;
+    color: #555;
+    text-align: justify;
+}
+
+
