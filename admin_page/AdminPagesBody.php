@@ -13,7 +13,7 @@ if (!isset($_SESSION['first_name'])) {
 $pageName = basename($_SERVER['PHP_SELF']);
 
 // List of pages where the Create button should be hidden
-$pagesToHideCreateButton = ['UserManagement.php', 'SupportTicket.php'];
+$pagesToHideCreateButton = ['SupportTicket.php'];
 
 // Check if the current page is in the list of pages to hide the Create button
 $hideCreateButton = in_array($pageName, $pagesToHideCreateButton);

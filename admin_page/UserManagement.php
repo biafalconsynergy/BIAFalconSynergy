@@ -39,6 +39,7 @@
         $tableColumnNames = ['cs.userid', 'first_name', 'last_name', 'username', 'r.role_name', 'contact_no', 'email','Gender','Address', 'isactive'];
         $tableName = 'Users';
         $tableDbName = 'user';
+        $createButtonUrl = 'signup.php';	
 		$editButtonUrl = 'UserEdit.php';		
 		
 		// Define the primary key column name
