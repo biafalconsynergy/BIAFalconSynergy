@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Best regards,<br>
         Your Company
         ";
-        $mail->AltBody = "Hi,\n\nPlease click the following link to reset your password:\n$recoveryLink\n\nIf you did not request a password reset, please ignore this email.\n\nBest regards,\nYour Company";
+        $mail->AltBody = "Hi,\n\nPlease click the following link to reset your password:\n$recoveryLink\n\nIf you did not request a password reset, please ignore this email.\n\nBest regards,\nKonnexio";
 
         $mail->send();
         header('Location: forgot_password.php?message=success');
