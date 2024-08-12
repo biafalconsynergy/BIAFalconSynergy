@@ -6,10 +6,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM news_events WHERE isactive = 1 order by posted_date desc";
+$sql = "SELECT * FROM news_events WHERE isactive = 1 AND content_type = 'News' order by posted_date DESC";
 $result = $conn->query($sql);
 
-$sql_1 = "SELECT * FROM news_events WHERE isactive = 1 order by posted_date desc LIMIT 3";
+$sql_1 = "SELECT * FROM news_events WHERE isactive = 1 order by posted_date DESC LIMIT 3";
 $result_1 = $conn->query($sql_1);
 
 $sql_2 = "SELECT * FROM news_events WHERE isactive = 1 AND content_type = 'Events' ORDER BY posted_date DESC";
@@ -47,17 +47,6 @@ $result_2 = $conn->query($sql_2);
     <!-- Header -->
     <?php include 'header.php'; ?>
 
-    <!-- Main -->
-    <div class="page-sec-main">
-        <h1>News and Events</h1>
-        <br>
-        <div class="page-sec-main-text">
-            <h5>Stay updated with the latest news and events happening in our industry.</h5>
-        </div>  	 
-    </div>
-	
-
-
  <!-- Carousel Section -->
 <div class="carousel-container">
   <div id="carouselExampleCaptions" class="carousel slide">
@@ -75,18 +64,16 @@ $result_2 = $conn->query($sql_2);
           while ($row = $result_1->fetch_assoc()) {
       ?>
         <div class="carousel-item <?php echo $first ? 'active' : ''; ?>">
-          <img src="./admin_page/upload/<?php echo $row['image']; ?>" alt="News Highlights" class="d-block w-100">
+          <img src="./admin_page/upload/<?php echo $row['image']; ?>" alt="News Highlights" class="d-block w-100 carousel-img">
           <div class="carousel-caption main">
-              <h1 ><?php echo $row["title"]; ?></h1>
-              <p><?php echo $row["content"]; ?></p>
-              <button class="btn btn-danger btn-lg" onclick="location.href='contact.php';">Contact Us</button>
+              <button class="btn btn-danger btn-lg carousel-btn" onclick="location.href='<?php echo $row['URL']?>';" aria-label="Read more">Read more</button>
             </div>
         </div>
       <?php
           $first = false;
           }
       } else {
-          echo "<p>No active news found.</p>";
+          echo "<h2>No highlights found.</h2>";
       }
       ?>
     </div>
@@ -120,7 +107,8 @@ $result_2 = $conn->query($sql_2);
                             <div class="news-content">
                                 <h3 class="news-title"><?php echo $row["title"]; ?></h3>
                                 <p class="news-content-text"><?php echo $row["content"]; ?></p>
-                                <p class="content-type"><?php echo strtoupper($row["content_type"]); ?></p>
+                                <p class="content-type"><?php echo strtoupper($row["posted_date"]); ?></p>
+                                <button class="btn btn-danger btn-lg" onclick="location.href='<?php echo $row['URL']?>';" aria-label="Read more">Read more</button>
                             </div>
                         </div>
                         <?php
@@ -133,47 +121,11 @@ $result_2 = $conn->query($sql_2);
                         }
                     }
                 } else {
-                    echo "<p>No active case studies found.</p>";
+                    echo "<h2>No active news found.</h2>";
                 }
                 ?>
             </div>
         </div>
-
-         <!-- Funding Partners Section -->
-  <section class="funding-partners-section">
-    <div class="container my-5 text-center">
-      <h2>Funding Partners for Automation</h2>
-      <div class="row">
-        <div class="col-md-4 text-center">
-          <div class="icon mb-3">
-          <img src="Partners/Image_Konnerth.jpg" alt="Partner Konnerth" class="img-fluid mb-3">
-          </div>
-          <h3>Trust</h3>
-          <p>Our commitment to precision and innovation has earned us the trust of industry leaders. By consistently
-            delivering reliable and efficient automation solutions, we foster long-term partnerships grounded in mutual
-            respect and proven results.</p>
-        </div>
-        <div class="col-md-4 text-center">
-          <div class="icon mb-3">
-          <img src="Partners/Image_OKU.jpg" alt="Partner OKU" class="img-fluid mb-3">
-          </div>
-          <h3>Family</h3>
-          <p>We believe in building a community that supports and grows together. Our partners and clients are part of
-            our extended family, and we dedicate ourselves to providing unwavering support and cutting-edge technology
-            that they can rely on.</p>
-        </div>
-        <div class="col-md-4 text-center">
-          <div class="icon mb-3">
-          <img src="Partners/Image_Konnerth.jpg" alt="Partner Konnerth" class="img-fluid mb-3">
-          </div>
-          <h3>Choices</h3>
-          <p>Our strategic decisions are guided by a commitment to excellence and ethical principles. We choose to work
-            with partners who share our vision of advancing the automation industry through sustainable and
-            forward-thinking solutions.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Upcoming Industry Events Section -->
   <section class="upcoming-events-section bg-light">
@@ -190,25 +142,61 @@ $result_2 = $conn->query($sql_2);
                             </div>
                             <div class="event-content ms-4">
                                 <h3><?php echo $row["title"]; ?></h3>
+                                <p class="news-content-text"><?php echo $row["content"]; ?></p>
                                 <div class="event-date"><i class="bi bi-calendar"></i> <?php echo $row['posted_date']; ?></div>
+                                <button class="btn btn-danger btn-lg" onclick="location.href='<?php echo $row['URL']?>';" aria-label="Read more">Check event</button>
                             </div>
                         </div>
                     </div>    
                     <?php
                 }
             } else {
-                echo "<p>No active events found.</p>";
+                echo "<h2>No active events found.</h2>";
             }
             ?>
      
       </div>
   </section>
-  
-        <!-- Footer Data -->
-        <?php include 'footer.php'; ?>
 
-    </main>
-    <script src="ne_scripts.js" defer></script>
+  <!-- Funding Partners Section -->
+  <section class="funding-partners-section">
+    <div class="container my-5 text-center">
+      <h2>Funding Partners for Automation</h2>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <div class="fundingimg">
+            <img src="Images/ne_canada_flag.PNG" alt="Partner OKU" class="img-fluid mb-3">
+          </div>
+          <h3>Canada Government</h3>
+          <p>Find programs and services to help your business grow from the Government for entrepreneurs, businesses and not-for-profit organizations.</p>
+          <button class="btn btn-danger btn-lg" onclick="location.href='https://innovation.ised-isde.canada.ca/innovation/s/?language=en_CA';" aria-label="Visit Canada Government Business Benefits Finder">More information</button>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div class="fundingimg">
+            <img src="Images/ne_sbcontario.png" alt="Sbc Ontario Logo.png" class="img-fluid mb-3">
+          </div>
+          <h3>Small Business Centre</h3>
+          <p>Find support for entrepreneurs and business owners who are looking to launch a start-up or grow their small business.</p>
+          <button class="btn btn-danger btn-lg" onclick="location.href='https://www.sbcontario.ca/';" aria-label="Visit Small Business Enterprise Centre">More information</button>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div class="fundingimg">
+            <img src="Images/ne_DMS_Logo.png" alt="Digital Main Street" class="img-fluid mb-3">
+          </div>
+          <h3>Digital Main Street</h3>
+          <p>As part of a partnership between the Government of Canada and the Province of Ontario, delivers different programs to support businesses.</p>
+          <button class="btn btn-danger btn-lg" onclick="location.href='https://digitalmainstreet.ca/ontario/';" aria-label="Visit Digital Main Street">More information</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Data -->
+  <?php include 'footer.php'; ?>
+
+   <script src="ne_scripts.js" defer></script>
 </body>
 
 </html>

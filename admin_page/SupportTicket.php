@@ -33,7 +33,7 @@ if (session_status() === PHP_SESSION_NONE) {
         include 'connection.php';
 
         //Variables particular to this page
-        $tableTitles = [ 'Ticket Id', 'Checked By', 'Title', 'Description', 'Sent Date', 'Status'];
+        $tableTitles = [ 'Ticket Id', 'Checked By', 'Title', 'Description', 'Receive Date', 'Status'];
         $tableColumnNames = [ 'ticketid', 'first_name', 'title', 'description', 'sent_date', 'cs.isactive'];
         $tableName = 'Support Tickets';
         $tableDbName = 'support_ticket';

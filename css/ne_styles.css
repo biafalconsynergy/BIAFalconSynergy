@@ -25,7 +25,11 @@ body {
 }
 
 .carousel-inner {
-  /*height: 350px;*/
+  height: 250px;
+  display: flex;
+  overflow: hidden;
+  max-height: 50%;
+  width: auto;
 }
 
 @media (min-width: 576px) {
@@ -123,19 +127,17 @@ body {
 }
 
 .event-img {
-	width: 250px;
-    height: 250px;
-    border-radius: 250px;
+	width: 200px;
+  height: 200px;
+  border-radius: 200px;
 	border-style: solid;
 	border-color: #ffffff;
-    background-clip: padding-box;
-    margin: 0 20px 0 0;
-    float: left;
-    background-size: cover;
-    background-position: center center;
+  background-clip: padding-box;
+  margin: 0 20px 0 0;
+  float: left;
+  background-size: cover;
+  background-position: center center;
 }
-
-
 
 .event-content {
   flex: 1;
@@ -213,6 +215,43 @@ body {
 .news-card {
   flex: 1 1 calc(25% - 15px);
 }
+
+.fundingimg {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fundingimg img {
+  max-height: 50%;
+  width: auto;
+}
+
+.carousel-img {
+  opacity: 0.9;
+  height: 150px;
+  display: flex;
+  overflow: hidden;
+  max-height: 100%;
+  width: auto;
+}
+
+.black-overlay {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-btn{
+  position: absolute; 
+  bottom: 50px;
+}
+
 
 @media (max-width: 1200px) {
   .news-card {

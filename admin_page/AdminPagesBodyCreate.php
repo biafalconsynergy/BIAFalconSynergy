@@ -19,6 +19,8 @@ $pageName = basename($_SERVER['PHP_SELF']);
 $hideImageButton = ($pageName === 'CareersNew.php'); 
 $showContentTypeButton = ($pageName === 'NewsEventsNew.php'); 
 $showHubSpotForm = ($pageName === 'CaseStudyNew.php'); 
+$showCareerURL = ($pageName === 'CareersNew.php'); 
+$showEventDate = ($pageName === 'NewsEventsNew.php'); 
 $showNewsLocationField = ($pageName === 'NewsEventsNew.php'); 
 
 // Get the referer URL
@@ -30,6 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$userid = $_SESSION['userid'];
     $content = $_POST['content'];
 	$contentType = isset($_POST['contentType']) ? $_POST['contentType'] : null;
+	$URL = $_POST['URL'] ?? null;
+	$event_date = $_POST['event_date'] ?? null;
 	$uploadfile = isset($_FILES['uploadfile']['name']) ? $_FILES['uploadfile']['name'] : null;
 	$form = $_POST['form'] ?? null;
 	$location = $_POST['location'] ?? null;
@@ -42,18 +46,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Prepare SQL insert statement
-	if ($hideImageButton && !$showContentTypeButton && !$showHubSpotForm && !$showNewsLocationField) {
-		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?)");
-		$stmt->bind_param("iss", $userid, $title, $content);
-	} else if (!$hideImageButton && !$showContentTypeButton && !$showHubSpotForm && !$showNewsLocationField) {
+	if ($hideImageButton && !$showContentTypeButton && !$showHubSpotForm &&  $showCareerURL && !$showNewsLocationField && !$showEventDate) {
+		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?)");
+		$stmt->bind_param("isss", $userid, $title, $content, $URL);
+	} else if (!$hideImageButton && !$showContentTypeButton && !$showHubSpotForm && !$showCareerURL && !$showNewsLocationField && !$showEventDate) {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?)");
 		$stmt->bind_param("isss", $userid, $title, $content, $uploadfile);
-	} else if (!$hideImageButton && !$showContentTypeButton && $showHubSpotForm && !$showNewsLocationField) {
+	} else if (!$hideImageButton && !$showContentTypeButton && $showHubSpotForm && !$showCareerURL && !$showNewsLocationField && !$showEventDate) {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?, ?)");
 		$stmt->bind_param("issss", $userid, $title, $content, $uploadfile, $form);
-	} else if (!$hideImageButton && $showContentTypeButton && !$showHubSpotForm && $showNewsLocationField) {
-		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("isssss", $userid, $title, $location, $content, $contentType, $uploadfile);		
+	} else if (!$hideImageButton && $showContentTypeButton && !$showHubSpotForm && !$showCareerURL && $showNewsLocationField && $showEventDate) {
+		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("issssss", $userid, $title, $location, $content, $contentType, $uploadfile, $event_date);		
 	}
     if ($stmt->execute()) {
         echo "<script>
@@ -154,6 +158,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <textarea class="form-control" id="content" name="content" rows="4" placeholder="Enter content" required><?php echo isset($row['content']) ? $row['content'] : ''; ?></textarea>
                                 </div>
 								
+								<!-- URL Input -->
+								<?php if ($showCareerURL): ?>
+                                <div class="form-group">
+                                    <label for="URL">URL</label>
+                                    <textarea class="form-control" id="URL" name="URL" rows="4" placeholder="Enter URL" required><?php echo isset($row['URL']) ? $row['URL'] : ''; ?></textarea>
+                                </div>
+								<?php endif; ?>
+								
+								<!-- Event Date Input -->
+								<?php if ($showEventDate): ?>
+								<div class="form-group">
+									<label for="event_date">Event Date</label>
+									<input type="date" class="form-control" id="event_date" name="event_date" value="<?php echo isset($row['event_date']) ? $row['event_date'] : ''; ?>" required>
+								</div>
+								<?php endif; ?>								
+								
 								<!-- Location Input -->
 								<?php if ($showNewsLocationField): ?>
                                 <div class="form-group">
@@ -229,10 +249,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             const content = document.getElementById('content').value;
             const contentType = document.getElementById('contentType');
 			const form = document.getElementById('form').value;
-			const location = document.getElementById('location').value;			
+			const location = document.getElementById('location').value;	
+			const event_date = document.getElementById('event_date').value;	
+			const URL = document.getElementById('URL').value;
             const uploadfile = document.getElementById('uploadfile').value;
 
-		if (!title || !content || !form || !location || (contentType && !contentType.value) || (uploadfile && !uploadfile)) {
+		if (!title || !content || !event_date || !URL || !form || !location || (contentType && !contentType.value) || (uploadfile && !uploadfile)) {
                 alert("All fields are mandatory.");
                 return false;
             }

@@ -172,7 +172,11 @@ $hideCreateButton = in_array($pageName, $pagesToHideCreateButton);
 			color: #ffffff;
 			text-align: left;
 		}
-		
+		/* Add overflow and max-height for the container to enable scrolling */
+        .scrollable-content {
+            max-height: 100px; 
+            overflow-y: auto;  /* Enable vertical scrolling */
+        }
     </style>
     
 </head>

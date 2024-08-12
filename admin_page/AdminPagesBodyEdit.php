@@ -272,7 +272,20 @@
 													<textarea class="form-control" id="formGroupExampleInput'.$i.'" name="'.$columnName.'" rows="4">'.$row[$columnName].'</textarea>
 												</div>';
 											
-										    } elseif ($columnName == 'last_updated_date') {
+										    } elseif ($columnName == 'URL') {
+												// Add a textarea for 'content'
+												echo '<div class="mb-3">
+													<label for="formGroupExampleInput'.$i.'" class="form-label">'.$columnTitle.'</label>
+													<textarea class="form-control" id="formGroupExampleInput'.$i.'" name="'.$columnName.'" rows="4">'.$row[$columnName].'</textarea>
+												</div>';
+											
+										    } elseif ($columnName == 'event_date') {
+												// Add a date input for 'event_date'
+												echo '<div class="mb-3">
+													<label for="formGroupExampleInput'.$i.'" class="form-label">'.$columnTitle.'</label>
+													<input type="date" class="form-control" id="formGroupExampleInput'.$i.'" name="'.$columnName.'" value="'.htmlspecialchars($row[$columnName]).'" required>
+												</div>';
+											} elseif ($columnName == 'last_updated_date') {
 												continue;
 											} elseif ($columnName == 'content_type') {
 												// Add a dropdown for 'content_type'
