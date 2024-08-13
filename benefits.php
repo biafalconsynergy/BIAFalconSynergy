@@ -363,7 +363,7 @@
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#benefitsAccordion">
                         <div class="accordion-body">
-                            <p>By integrating only the necessary components and allowing for gradual expansion, adapto™™ ensures that businesses can grow cost-effectively, avoiding large upfront investments and unnecessary expenses.</p>
+                            <p>By integrating only the necessary components and allowing for gradual expansion, adapto™ ensures that businesses can grow cost-effectively, avoiding large upfront investments and unnecessary expenses.</p>
                         </div>
                     </div>
                 </div>
