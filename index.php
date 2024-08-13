@@ -251,9 +251,9 @@
                     <div class="d-flex justify-content-center align-items-center mx-4">
                         <img src="Partners/konnerth2.png" class="img-fluid partners-logo" alt="Konnerth Gruppe">
                     </div>
-                    <div class="d-flex justify-content-center align-items-center mx-4">
+                    <!-- <div class="d-flex justify-content-center align-items-center mx-4">
                         <img src="Partners/oku.png" class="img-fluid partners-logo" alt="OKU">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
