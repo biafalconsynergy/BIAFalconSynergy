@@ -147,7 +147,7 @@
             <div class="row no-gutters" id="bottleneck_optimization">
                 <div class="col-sm-6 order-sm-first order-md-last">
                     <div class="be_sec bg-light">
-                        <img src="Images/cm_controls.jpg" alt="benefits_bottleneck_optimization">
+                        <img src="Images/be_bottleneck_optimization.png" alt="benefits_bottleneck_optimization">
                     </div>
                 </div>
                 <div class="col-sm-6 order-sm-last order-md-first">
@@ -234,7 +234,7 @@
             <div class="row no-gutters" id="productivity_boost">
                 <div class="col-sm-6 order-sm-first order-md-last">
                     <div class="be_sec bg-light">
-                        <img src="Images/Image1a.jpg" alt="benefits_productivity_boost">
+                        <img src="Images/be_productivity_boost.jpg" alt="benefits_productivity_boost">
                     </div>
                 </div>
                 <div class="col-sm-6 order-sm-last order-md-first">
@@ -296,7 +296,7 @@
             <div class="row no-gutters" id="scalable_growth">
                 <div class="col-sm-6 order-sm-first order-md-last">
                     <div class="be_sec bg-light">
-                        <img src="Images/scalable_growth.jpg" alt="benefits_scalable_growth">
+                        <img src="Images/be_scalable_growth.jpg" alt="benefits_scalable_growth">
                     </div>
                 </div>
                 <div class="col-sm-6 order-sm-last order-md-first">
