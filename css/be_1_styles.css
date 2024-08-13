@@ -1,0 +1,101 @@
+/* Hero Section */
+#be_hero {
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#be_hero h1 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#be_hero p {
+    margin-bottom: 2rem;
+}
+
+#be_hero .btn {
+    padding: 0.75rem 2rem;
+}
+
+/* Future Ready Section */
+#be_future-ready h2 {
+    margin-bottom: 1.5rem;
+}
+
+#be_future-ready p {
+    margin-bottom: 2rem;
+}
+
+#be_futureReadyFeatures .accordion-button {
+    font-weight: bold;
+}
+
+#be_futureReadyFeatures .accordion-body {
+    line-height: 1.5;
+}
+
+/* Bottleneck Optimization Section */
+#be_bottleneck-optimization h2 {
+    margin-bottom: 1.5rem;
+}
+
+#be_bottleneck-optimization p {
+    margin-bottom: 2rem;
+}
+
+#be_bottleneckTab .nav-link {
+}
+
+#be_bottleneckTabContent .tab-pane {
+    line-height: 1.5;
+}
+
+/* Productivity Boost Section */
+#be_productivity-boost h2 {
+    margin-bottom: 1.5rem;
+}
+
+#be_productivity-boost p {
+    margin-bottom: 2rem;
+}
+
+#be_productivity-boost .row h3 {
+    margin-bottom: 1rem;
+}
+
+#be_productivity-boost .btn {
+}
+
+/* Contact Section */
+#be_contact h2 {
+    margin-bottom: 1.5rem;
+}
+
+#be_contact .form-label {
+    font-weight: bold;
+}
+
+#be_contact .form-control {
+    padding: 0.75rem;
+}
+
+#be_contact .btn {
+    padding: 0.75rem 1.5rem;
+}
+
+/* Miscellaneous */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}

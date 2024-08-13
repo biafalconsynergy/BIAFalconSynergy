@@ -47,6 +47,7 @@
             <div class="col-sm-6 order-sm-last order-md-first">
                 <div class="be_sec bg-light">
                     <h2>Future Ready</h2>
+                    <p>Adapto empowers manufacturers to stay ahead of the curve, providing a future-proof solution that adapts to the ever-changing landscape of the industry. </p>
                     <h4>Evolving Market Demands</h4>
                     <p>Traditional automation companies, require precise specifications upfront. This rigidity can create challenges when market demands shift or project specifications change, leading to scope creep, project delays, and inefficient investments. adapto™ addresses these issues by offering a system designed to adapt to future uncertainties, ensuring that your manufacturing processes remain agile and responsive.</p>
                 </div>
@@ -87,27 +88,50 @@
 
     <!-- Key Benefits Section with Vertical Stack -->
     <section class="container py-5" id="key_benefits">
-        <h2 class="text-center mb-5">Key Benefits</h2>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="be_benefits-stack mb-4">
-                    <h4>Enhanced Efficiency</h4>
-                    <p>Streamline production processes with quick reconfigurations and precise adjustments.</p>
-                </div>
-                <div class="be_benefits-stack mb-4">
-                    <h4>Optimized Investment</h4>
-                    <p>Reduce unnecessary expenses associated with frequent redesigns and retooling.</p>
-                </div>
-                <div class="be_benefits-stack mb-4">
-                    <h4>Market Responsiveness</h4>
-                    <p>Adapt to changing market demands with minimal disruption, ensuring that your operations remain competitive and resilient.</p>
-                </div>
-                <div class="text-center mt-5">
-                    <p>Adapto empowers manufacturers to stay ahead of the curve, providing a future-proof solution that adapts to the ever-changing landscape of the industry.</p>
+    <h2 class="text-center mb-5">Key Benefits</h2>
+    <div class="accordion" id="benefitsAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Enhanced Efficiency
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#benefitsAccordion">
+                <div class="accordion-body">
+                    Streamline production processes with quick reconfigurations and precise adjustments.
                 </div>
             </div>
         </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Optimized Investment
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#benefitsAccordion">
+                <div class="accordion-body">
+                    Reduce unnecessary expenses associated with frequent redesigns and retooling.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Market Responsiveness
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#benefitsAccordion">
+                <div class="accordion-body">
+                    Adapt to changing market demands with minimal disruption, ensuring that your operations remain competitive and resilient.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-5">
+        <p>Adapto empowers manufacturers to stay ahead of the curve, providing a future-proof solution that adapts to the ever-changing landscape of the industry.</p>
+    </div>
     </section>
+
 
 
 
