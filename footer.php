@@ -26,6 +26,8 @@
                     <li><a href="about.php#testimonials">Testimonials</a></li>
                     <li><a href="about.php#careers">Careers</a></li>
                 </ul>
+                <h5 class="footer-heading"><a href="news_and_events.php">News and Events</a></h5>
+                <h5 class="footer-heading"><a href="contact.php">Contact Us</a></h5>
             </div>
             <div class="col-lg-2 col-md-4 footer-section">
                 <h5 class="footer-heading"><a href="solutions.php">Solutions</a></h5>
@@ -45,8 +47,12 @@
             </div>
             <div class="col-lg-3 col-md-4 footer-section">
                 <h5 class="footer-heading"><a href="benefits.php">Benefits</a></h5>
-                <h5 class="footer-heading"><a href="news_and_events.php">News and Events</a></h5>
-                <h5 class="footer-heading"><a href="contact.php">Contact Us</a></h5>
+                <ul class="list-unstyled">
+                    <li><a href="benefits.php#benefits_future_ready" onclick="showTab('benefits_future_ready')">Future Ready</a></li>
+                    <li><a href="benefits.php#benefits_bottleneck_optimization" onclick="showTab('benefits_bottleneck_optimization')">Bottleneck Optimization</a></li>
+                    <li><a href="benefits.php#benefits_productivity_boost" onclick="showTab('benefits_productivity_boost')">Productivity Boost</a></li>
+                    <li><a href="benefits.php#benefits_scalable_growth" onclick="showTab('benefits_scalable_growth')">Scalable Growth</a></li>
+                </ul>
             </div>
         </div>
         <div class="text-center mt-2">

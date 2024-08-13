@@ -15,7 +15,10 @@ function showTab(tabId) {
     document.getElementById(tabId).classList.add('active');
     
     // Add active class to the clicked tab header
-    event.target.classList.add('active');
+    var clickedTab = document.querySelector('.tabs li[onclick="showTab(\'' + tabId + '\')"]');
+    if (clickedTab) {
+        clickedTab.classList.add('active');
+    }
 }
 
 // Ensure the correct tab is shown on page load based on the URL hash
@@ -24,18 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
     showTab(initialTab);
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var dropdownItems = document.querySelectorAll('.navbar-nav .dropdown-item');
-
-    dropdownItems.forEach(function(item) {
-        item.addEventListener('click', function() {
-            // Remove 'active' class from all dropdown items
-            dropdownItems.forEach(function(dropdownItem) {
-                dropdownItem.classList.remove('active');
-            });
-
-            // Add 'active' class to the clicked item
-            this.classList.add('active');
-        });
+// Update the tab status when navigating through header links
+document.querySelectorAll('.tabs li').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+        var targetTabId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+        window.location.hash = targetTabId;
     });
 });
