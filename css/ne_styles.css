@@ -178,6 +178,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   background-color: #fff;
+  text-align: center;
 }
 
 .news-card img {

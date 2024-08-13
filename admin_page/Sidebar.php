@@ -77,17 +77,7 @@
                 <span>Users</span>
             </a>
         </li>
-        <?php endif; ?>		
-
-        <?php if ($_SESSION['roleid'] == 1): ?>		
-        <!-- Conditional Signup Button -->
-         <li class="nav-item">
-                <a class="nav-link" href="signup.php">
-                    <i class="fas fa-fw fa-user-plus"></i>
-                    <span>New User</span>
-                </a>
-            </li>
-        <?php endif; ?>			
+        <?php endif; ?>				
 
         <?php if ($_SESSION['roleid'] == 1): ?>
         <!-- Nav Item - Support Tickets -->

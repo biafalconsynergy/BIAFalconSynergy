@@ -186,10 +186,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" placeholder="Enter new password" name="password" required>
             <label for="confirm_password"><b>Confirm Password</b></label>
             <input type="password" placeholder="Confirm new password" name="confirm_password" required><br><br>
-            <button class="btn btn-primary" type="submit">Reset Password</button>
+            <button class="btn btn-primary" type="submit">Reset Password</button><br><br>
             <?php
             if (isset($_GET['message']) && $_GET['message'] === 'success') {
-                echo '<a class="login-button" href="loginPage.php">Login</a>';
+                echo "<button class=\"btn btn-secondary\" type=\"button\" onclick=\"window.location.href='LoginPage.php';\">Login</button>";
             }
             ?>
         </div>
