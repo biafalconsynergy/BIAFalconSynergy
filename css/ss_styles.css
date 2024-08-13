@@ -82,7 +82,7 @@ body {
 }
 
 .section-title-heading {
-    font-size: 2rem; 
+    font-size: 3rem; 
     text-align: center;
 }
 
@@ -141,24 +141,6 @@ body {
 .build .box .section-title,
 .support-box .section-title {
     text-align: justify;
-}
-
-/* Learn more button */
-.learn-more-btn {
-    background-color: #1e3e5e;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    margin-top: auto; /* Push the button to the bottom */
-    font-size: 15px;
-}
-
-.learn-more-btn:hover {
-    background-color: #16314a;
-    color: #fff;
 }
 
 .build .build-row {
