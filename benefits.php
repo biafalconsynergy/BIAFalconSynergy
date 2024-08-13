@@ -51,7 +51,7 @@
             <div class="row no-gutters" id="future_ready">
                 <div class="col-sm-6 order-sm-first order-md-last">
                     <div class="be_sec bg-light">
-                        <img src="Images/Image1a.jpg" alt="benefits_future_ready">
+                        <img src="Images/be_future_ready.png" alt="benefits_future_ready">
                     </div>
                 </div>
                 <div class="col-sm-6 order-sm-last order-md-first">
