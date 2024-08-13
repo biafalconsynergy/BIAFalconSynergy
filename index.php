@@ -97,14 +97,14 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div class="card-body sec2">
-                                    <h1 class="card-title">Increased<br>Productivity</h1>
+                                    <h1 class="card-title">Future<br>Ready</h1>
                                 </div>
                             </div>
                             <div class="card-back">
                                 <div class="card-body sec2">
-                                    <h3 class="card-title">Increased Productivity</h3>
-                                    <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-dark" onclick="location.href='industries.php#industrial';" aria-label="Know more about Increased Productivity">Know More</button>
+                                    <h3 class="card-title">Future Ready</h3>
+                                    <p class="card-text">Evolving Market Demands</p>
+                                    <button class="btn btn-dark" onclick="location.href='benefits.php#benefits_future_ready';" aria-label="Know more about Future Ready benefits">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -115,14 +115,14 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div class="card-body sec2">
-                                    <h1 class="card-title">Scalability</h1>
+                                    <h1 class="card-title">Bottleneck<br>Optimization</h1>
                                 </div>
                             </div>
                             <div class="card-back">
                                 <div class="card-body sec2">
-                                    <h3 class="card-title">Scalability</h3>
-                                    <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-dark" onclick="location.href='industries.php#agriculture';" aria-label="Know more about Scalability">Know More</button>
+                                    <h3 class="card-title">Bottleneck Optimization</h3>
+                                    <p class="card-text">Over-automation and Under-automation</p>
+                                    <button class="btn btn-dark" onclick="location.href='benefits.php#benefits_bottleneck_optimization';" aria-label="Know more about Bottleneck Optimization benefits">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -133,14 +133,14 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div class="card-body sec2">
-                                    <h1 class="card-title">Competitive<br>Edge</h1>
+                                    <h1 class="card-title">Productivity<br>Boost</h1>
                                 </div>
                             </div>
                             <div class="card-back">
                                 <div class="card-body sec2">
-                                    <h3 class="card-title">Competitive Edge</h3>
-                                    <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-dark" onclick="location.href='industries.php#hydrogen_fuel_cells';" aria-label="Know more about Competitive Edge">Know More</button>
+                                    <h3 class="card-title">Productivity Boost</h3>
+                                    <p class="card-text">Downtime and maintenance costs</p>
+                                    <button class="btn btn-dark" onclick="location.href='benefits.php#benefits_productivity_boost';" aria-label="Know more about Productivity Boost benefits">Know More</button>
                                 </div>
                             </div>
                         </div>
@@ -151,14 +151,14 @@
                         <div class="card-inner">
                             <div class="card-front">
                                 <div class="card-body sec2">
-                                    <h1 class="card-title">Reduce<br>Human<br>Error</h1>
+                                    <h1 class="card-title">Scalable<br>Growth</h1>
                                 </div>
                             </div>
                             <div class="card-back">
                                 <div class="card-body sec2">
-                                    <h3 class="card-title">Reduce Human Error</h3>
-                                    <p class="card-text">Description for this section</p>
-                                    <button class="btn btn-dark" onclick="location.href='industries.php#other_industries';" aria-label="Know more about Reduce Human Error">Know More</button>
+                                    <h3 class="card-title">Scalable Growth</h3>
+                                    <p class="card-text">Scaling Operations</p>
+                                    <button class="btn btn-dark" onclick="location.href='benefits.php#benefits_scalable_growth';" aria-label="Know more about Scalable Growth benefits">Know More</button>
                                 </div>
                             </div>
                         </div>
