@@ -46,16 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Prepare SQL insert statement
-	if ($hideImageButton && !$showContentTypeButton && !$showHubSpotForm &&  $showCareerURL && !$showNewsLocationField && !$showEventDate) {
+	if ($hideImageButton && !$showContentTypeButton && !$showHubSpotForm &&  !$showEventURL && !$showNewsLocationField && !$showEventDate) {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?)");
 		$stmt->bind_param("iss", $userid, $title, $content);
-	} else if (!$hideImageButton && !$showContentTypeButton && !$showHubSpotForm && !$showCareerURL && !$showNewsLocationField && !$showEventDate) {
+	} else if (!$hideImageButton && !$showContentTypeButton && !$showHubSpotForm && !$showEventURL && !$showNewsLocationField && !$showEventDate) {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?)");
 		$stmt->bind_param("isss", $userid, $title, $content, $uploadfile);
-	} else if (!$hideImageButton && !$showContentTypeButton && $showHubSpotForm && !$showCareerURL && !$showNewsLocationField && !$showEventDate) {
+	} else if (!$hideImageButton && !$showContentTypeButton && $showHubSpotForm && !$showEventURL && !$showNewsLocationField && !$showEventDate) {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?, ?)");
 		$stmt->bind_param("issss", $userid, $title, $content, $uploadfile, $form);
-	} else if (!$hideImageButton && $showContentTypeButton && !$showHubSpotForm && !$showCareerURL && $showNewsLocationField && $showEventDate) {
+	} else if (!$hideImageButton && $showContentTypeButton && !$showHubSpotForm && $showEventURL && $showNewsLocationField && $showEventDate) {
 		$stmt = $conn->prepare("INSERT INTO $tableDbName ($columns) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 		$stmt->bind_param("isssssss", $userid, $title, $location, $content, $contentType, $URL, $uploadfile, $event_date);		
 	}
