@@ -142,7 +142,7 @@
 
 
     <!-- Bottleneck Optimization Section -->
-    <section class="tab-content active" id="benefits_bottleneck_optimization">
+    <section class="tab-content" id="benefits_bottleneck_optimization">
         <section class="container-fluid" style="padding: 0;">
             <div class="row no-gutters" id="bottleneck_optimization">
                 <div class="col-sm-6 order-sm-first order-md-last">
@@ -229,7 +229,7 @@
     </section>
 
     <!-- Productivity Boost Section -->
-    <section class="tab-content active" id="benefits_productivity_boost">
+    <section class="tab-content" id="benefits_productivity_boost">
         <section class="container-fluid" style="padding: 0;">
             <div class="row no-gutters" id="productivity_boost">
                 <div class="col-sm-6 order-sm-first order-md-last">
@@ -291,7 +291,7 @@
     </section>
 
     <!-- Scalable Growth Section -->
-    <section class="tab-content active" id="benefits_scalable_growth">
+    <section class="tab-content" id="benefits_scalable_growth">
         <section class="container-fluid" style="padding: 0;">
             <div class="row no-gutters" id="scalable_growth">
                 <div class="col-sm-6 order-sm-first order-md-last">

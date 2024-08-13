@@ -28,13 +28,13 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="industries.php" role="button" aria-haspopup="true" aria-expanded="false">Industries</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="industries.php#industrial">Industrial</a></li>
-                            <li><a class="dropdown-item" href="industries.php#agriculture">Agriculture</a></li>
-                            <li><a class="dropdown-item" href="industries.php#hydrogen_fuel_cells">Hydrogen Fuel Cells</a></li>
-                            <li><a class="dropdown-item" href="industries.php#other_industries">Other Industries</a></li>
-                        </ul>
+                        <a class="nav-link" href="benefits.php" role="button" aria-haspopup="true" aria-expanded="false">Benefits</a>
+<!--                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#benefits_future_ready" onclick="showTab('benefits_future_ready')">Future Ready</a></li>
+                            <li><a class="dropdown-item" href="#benefits_bottleneck_optimization" onclick="showTab('benefits_bottleneck_optimization')">Bottleneck Optimization</a></li>
+                            <li><a class="dropdown-item" href="#benefits_productivity_boost" onclick="showTab('benefits_productivity_boost')">Productivity Boost</a></li>
+                            <li><a class="dropdown-item" href="#benefits_scalable_growth" onclick="showTab('benefits_scalable_growth')">Scalable Growth</a></li>
+                        </ul> -->
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="news_and_events.php">News & Events</a>

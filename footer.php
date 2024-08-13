@@ -26,8 +26,6 @@
                     <li><a href="about.php#testimonials">Testimonials</a></li>
                     <li><a href="about.php#careers">Careers</a></li>
                 </ul>
-                <h5 class="footer-heading"><a href="news_and_events.php">News and Events</a></h5>
-                <h5 class="footer-heading"><a href="contact.php">Contact Us</a></h5>
             </div>
             <div class="col-lg-2 col-md-4 footer-section">
                 <h5 class="footer-heading"><a href="solutions.php">Solutions</a></h5>
@@ -46,13 +44,9 @@
                 </ul>
             </div>
             <div class="col-lg-3 col-md-4 footer-section">
-                <h5 class="footer-heading"><a href="industries.php">Industries</a></h5>
-                <ul class="list-unstyled">
-                    <li><a href="industries.php#industrial">Industrial</a></li>
-                    <li><a href="industries.php#agriculture">Agriculture</a></li>
-                    <li><a href="industries.php#hydrogen_fuel_cells">Hydrogen Fuel Cells</a></li>
-                    <li><a href="industries.php#other_industries">Other Industries</a></li>
-                </ul>
+                <h5 class="footer-heading"><a href="benefits.php">Benefits</a></h5>
+                <h5 class="footer-heading"><a href="news_and_events.php">News and Events</a></h5>
+                <h5 class="footer-heading"><a href="contact.php">Contact Us</a></h5>
             </div>
         </div>
         <div class="text-center mt-2">
