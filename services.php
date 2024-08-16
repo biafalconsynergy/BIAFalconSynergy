@@ -23,6 +23,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
+</head>
 
 <body>
     <!-- Header Section -->
@@ -57,7 +58,7 @@
                     <div class="section-title">
                         <h1 class="section-title-heading">Mechanical Design</h1>
                         <p class="section-title-text" data-full-text="The automotive industry has always been at the forefront of technological innovation, and mechanical design is no exception. Over the years, advancements in mechanical design have significantly transformed the way vehicles are manufactured, enhancing performance, safety, and efficiency.">The automotive industry has always been at the forefront of technological innovation, and mechanical design is no exception. Over the years, advancements in mechanical design have significantly...</p>
-                        <button class="learn-more-btn">Learn More</button>
+                        <button class="btn btn-danger read-more-btn" aria-label="Read more">Read More</button>
                     </div>
                     
                 </div>
@@ -72,7 +73,7 @@
                     <div class="section-title">
                         <h1 class="section-title-heading">Electronics Design</h1>
                         <p class="section-title-text" data-full-text="Electronics design in the automotive industry has revolutionized vehicle functionality and safety. Modern vehicles are equipped with advanced electronic systems that enhance performance, comfort, and driver assistance. From engine control units (ECUs) that optimize fuel efficiency to sophisticated infotainment systems and advanced driver-assistance systems (ADAS) like adaptive cruise control and automatic emergency braking, electronics design plays a crucial role.">Electronics design in the automotive industry has revolutionized vehicle functionality and safety. Modern vehicles are equipped with advanced electronic systems that enhance performance, comfort, and driver assistance....</p>
-                        <button class="learn-more-btn">Learn More</button>
+                        <button class="btn btn-danger read-more-btn" aria-label="Read more">Read More</button>
                     </div>
                     
                 </div>
@@ -87,7 +88,7 @@
                     <div class="section-title">
                         <h1 class="section-title-heading">Electrical Design</h1>
                         <p class="section-title-text" data-full-text="Electrical design is fundamental to the automotive industry, ensuring the seamless integration of various systems and components. It encompasses the design and layout of wiring harnesses, power distribution, and battery management systems, especially crucial in electric vehicles (EVs). Effective electrical design optimizes the vehicle’s electrical architecture, enhancing performance and reliability while minimizing weight and complexity. This discipline also ensures the efficient operation of lighting systems, infotainment, and safety features like airbags and stability control.">Electrical design is fundamental to the automotive industry, ensuring the seamless integration of various systems and components. It encompasses the design and layout of wiring harnesses, power distribution, and battery management systems,...</p>
-                        <button class="learn-more-btn">Learn More</button>
+                        <button class="btn btn-danger read-more-btn" aria-label="Read more">Read More</button>
                     </div>
                    
                 </div>
@@ -102,7 +103,7 @@
                     <div class="section-title">
                         <h1 class="section-title-heading">Industrial Design</h1>
                         <p class="section-title-text" data-full-text="Industrial design in the automotive industry focuses on the aesthetic and ergonomic aspects of vehicles, aiming to create visually appealing and user-friendly designs. It involves shaping the vehicle's exterior and interior, considering factors like aerodynamics, material selection, and user experience. Industrial designers collaborate with engineers to ensure that the vehicle's form complements its function, creating harmonious and innovative designs.">Industrial design in the automotive industry focuses on the aesthetic and ergonomic aspects of vehicles, aiming to create visually appealing and user-friendly designs. It involves shaping the vehicle's exterior and interior, considering factors like...</p>
-                        <button class="learn-more-btn">Learn More</button>
+                        <button class="btn btn-danger read-more-btn" aria-label="Read more">Read More</button>
                     </div>
                     
                 </div>
@@ -127,7 +128,7 @@
                         <img src="Images/Image4b.jpg" class="build-img-item" alt="Industrial Automation">
                         <h1 class="section-title-heading">Industrial Automation & Robotics Engineering</h1>
                         <p class="section-title-text" data-full-text="Industrial Automation & Robotics Engineering plays a pivotal role in modern manufacturing processes by integrating advanced technologies to control and monitor production. Industrial automation involves the use of control systems, such as computers or robots, and information technologies to handle different processes and machinery in an industry to replace human intervention. Robotics, as a subset of industrial automation, focuses on the design, construction, operation, and application of robots to perform tasks with high precision, speed, and efficiency.">Industrial Automation & Robotics Engineering plays a pivotal role in modern manufacturing processes by integrating advanced technologies to control and monitor production. Industrial automation involves the use of control systems, such as...</p>
-                        <button class="learn-more-btn">Learn More</button>
+                        <button class="btn btn-danger read-more-btn" aria-label="Read more">Read More</button>
                     </div>
                 </div>
 
@@ -136,7 +137,7 @@
                         <img src="Images/Image4c.jpg" class="build-img-item" alt="Safety Engineering">
                         <h1 class="section-title-heading">Safety Engineering</h1>
                         <p class="section-title-text" data-full-text="Safety Engineering is a critical discipline that focuses on minimizing risks and ensuring the safety of people, equipment, and the environment in various industrial settings. This field encompasses the identification, evaluation, and control of hazards through systematic processes and technologies. Safety engineers are responsible for designing and implementing safety protocols and systems to prevent accidents and mitigate the impact of hazardous events. They conduct risk assessments to identify potential dangers and develop safety plans that comply with regulatory standards and best practices. Key aspects of safety engineering include fire protection, electrical safety, and occupational health.">Safety Engineering is a critical discipline that focuses on minimizing risks and ensuring the safety of people, equipment, and the environment in various industrial settings. This field encompasses...</p>
-                        <button class="learn-more-btn">Learn More</button>
+                        <button class="btn btn-danger read-more-btn" aria-label="Read more">Read More</button>
                     </div>
                 </div>
 
@@ -145,7 +146,7 @@
                         <img src="Images/cm_consulting1.jpg" class="build-img-item" alt="Custom Machine Building">
                         <h1 class="section-title-heading">Custom Machine Building</h1>
                         <p class="section-title-text" data-full-text="Custom Machine Building involves designing, constructing, and integrating specialized machinery tailored to meet the specific needs of a particular application or industry. This process requires a deep understanding of the client's requirements, including the operational environment, production goals, and technical specifications. Custom machines are designed to perform specific tasks that standard machinery cannot efficiently accomplish. This customization can range from simple modifications to complex systems that integrate multiple functions. The process begins with detailed consultation and analysis to identify the exact needs and challenges of the client. Engineers then design the machine using advanced computer-aided design (CAD) software, ensuring that the proposed solution is both innovative and feasible.">Custom Machine Building involves designing, constructing, and integrating specialized machinery tailored to meet the specific needs of a particular application or industry. This process requires a deep understanding of...</p>
-                        <button class="learn-more-btn">Learn More</button>
+                        <button class="btn btn-danger read-more-btn" aria-label="Read more">Read More</button>
                     </div>
                 </div>
             </div>
@@ -171,7 +172,7 @@
             <div class="panel text-left">
               <h1 class="section-title-heading">Machine Maintenance</h1>
               <p class="section-title-text" data-full-text="Machine maintenance in the automotive industry is crucial to ensure optimal performance, safety, and longevity of machinery. Regular maintenance includes inspections, lubrication, and replacement of worn parts. Technicians check for signs of wear and tear, ensuring all components function correctly. Lubrication reduces friction, preventing overheating and damage. Scheduled replacements of parts like belts, hoses, and filters prevent unexpected breakdowns. Advanced diagnostics are used to monitor machine health, predicting potential issues before they become critical. Maintenance also involves calibration of machinery to ensure precision in manufacturing processes.">Machine maintenance in the automotive industry is crucial to ensure optimal performance, safety, and longevity of machinery. Regular maintenance includes inspections, lubrication, and replacement of worn parts. Technicians check for signs of wear and tear, ensuring all components function correctly. Lubrication reduces...</p>
-              <button class="learn-more-btn">Learn More</button>
+              <button class="btn btn-danger read-more-btn" aria-label="Read more">Read More</button>
             </div>
 
           </div>

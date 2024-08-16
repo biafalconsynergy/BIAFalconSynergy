@@ -94,6 +94,18 @@ $result_2 = $conn->query($sql_2);
         
  <div class="container mt-4" style="margin-top: 50px !important;">
           
+ <!-- Search bar -->
+<div class="d-flex justify-content-center mb-4">
+    <div class="input-group" style="width: 50%;">
+        <input type="text" class="form-control" id="searchInput" onkeyup="filterCards()" placeholder="Search by title or content...">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
 
             <div id="newsContainer" class="news-grid">
                 <?php
@@ -143,6 +155,7 @@ $result_2 = $conn->query($sql_2);
                             <div class="event-content ms-4">
                                 <h3><?php echo $row["title"]; ?></h3>
                                 <p class="news-content-text"><?php echo $row["content"]; ?></p>
+                                <div class="event-location"><i class="bi bi-geo-alt"></i> <?php echo $row['location']; ?></div>
                                 <div class="event-date"><i class="bi bi-calendar"></i> <?php echo $row['posted_date']; ?></div>
                                 <button class="btn btn-danger btn-lg" onclick="location.href='<?php echo $row['URL']?>';" aria-label="Read more">Check event</button>
                             </div>
@@ -196,7 +209,7 @@ $result_2 = $conn->query($sql_2);
   <!-- Footer Data -->
   <?php include 'footer.php'; ?>
 
-   <script src="ne_scripts.js" defer></script>
+  <script src="js/ne_scripts.js" defer></script>
 </body>
 
 </html>

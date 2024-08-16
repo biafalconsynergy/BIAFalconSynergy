@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".learn-more-btn");
+    const buttons = document.querySelectorAll(".btn-danger.read-more-btn");
 
     buttons.forEach(button => {
         button.addEventListener("click", () => {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (p.textContent === fullText) {
                 p.textContent = truncatedText;
-                button.textContent = "Learn More";
+                button.textContent = "Read More";
             } else {
                 p.textContent = fullText;
                 button.textContent = "Show Less";
@@ -17,5 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
 

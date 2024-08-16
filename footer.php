@@ -7,14 +7,14 @@
                         <img src="Logo/konnexio-logo-white.png" alt="Konnexio Logo" class="rounded img-fluid">
                     </a>
                 </div>
-                <p><i class="bi bi-envelope-fill"></i> info@konnexio.com</p>
-                <p><i class="bi bi-telephone-fill"></i> +1 (519) 457-8836</p>
-                <p><i class="bi bi-geo-alt-fill"></i> 70 Pacific Court, Unit 14<br>London, ON N5V 3R5</p>
+                <p><i class="bi bi-envelope-fill" aria-hidden="true"></i> <a href="mailto:info@konnexio.com">info@konnexio.com</a></p>
+                <p><i class="bi bi-telephone-fill" aria-hidden="true"></i> <a href="tel:+15194578836">+1 (519) 457-8836</a></p>
+                <p><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> 70 Pacific Court, Unit 14<br>London, ON N5V 3R5</p>
                 <div class="d-flex">
-                    <a class="f-icon" href="https://www.facebook.com/konnexioinc" aria-label="Visit Konnexio on Facebook"><i class="bi bi-facebook" style="font-size: 2.5rem;"></i></a>
-                    <a class="f-icon" href="https://www.youtube.com/@konnexio5801/videos" aria-label="Visit Konnexio on Youtube"><i class="bi bi-youtube" style="font-size: 2.5rem;"></i></a>
-                    <a class="f-icon" href="https://twitter.com/konnexio" aria-label="Visit Konnexio on Twitter"><i class="bi bi-twitter-x" style="font-size: 2.5rem;"></i></a>
-                    <a class="f-icon" href="https://www.linkedin.com/company/konnexio-inc-/" aria-label="Visit Konnexio on Linkedin"><i class="bi bi-linkedin" style="font-size: 2.5rem;"></i></a>
+                    <a class="f-icon" href="https://www.facebook.com/konnexioinc" aria-label="Visit Konnexio on Facebook"><i class="bi bi-facebook" style="font-size: 2.5rem;" aria-hidden="true"></i></a>
+                    <a class="f-icon" href="https://www.youtube.com/@konnexio5801/videos" aria-label="Visit Konnexio on Youtube"><i class="bi bi-youtube" style="font-size: 2.5rem;" aria-hidden="true"></i></a>
+                    <a class="f-icon" href="https://twitter.com/konnexio" aria-label="Visit Konnexio on Twitter"><i class="bi bi-twitter-x" style="font-size: 2.5rem;" aria-hidden="true"></i></a>
+                    <a class="f-icon" href="https://www.linkedin.com/company/konnexio-inc-/" aria-label="Visit Konnexio on Linkedin"><i class="bi bi-linkedin" style="font-size: 2.5rem;" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="col-lg-2 col-md-4 footer-section">
@@ -46,12 +46,12 @@
                 </ul>
             </div>
             <div class="col-lg-3 col-md-4 footer-section">
-                <h5 class="footer-heading"><a href="industries.php">Industries</a></h5>
+                <h5 class="footer-heading"><a href="benefits.php">Benefits</a></h5>
                 <ul class="list-unstyled">
-                    <li><a href="industries.php#industrial">Industrial</a></li>
-                    <li><a href="industries.php#agriculture">Agriculture</a></li>
-                    <li><a href="industries.php#hydrogen_fuel_cells">Hydrogen Fuel Cells</a></li>
-                    <li><a href="industries.php#other_industries">Other Industries</a></li>
+                    <li><a href="benefits.php#benefits_future_ready" onclick="showTab('benefits_future_ready')">Future Ready</a></li>
+                    <li><a href="benefits.php#benefits_bottleneck_optimization" onclick="showTab('benefits_bottleneck_optimization')">Bottleneck Optimization</a></li>
+                    <li><a href="benefits.php#benefits_productivity_boost" onclick="showTab('benefits_productivity_boost')">Productivity Boost</a></li>
+                    <li><a href="benefits.php#benefits_scalable_growth" onclick="showTab('benefits_scalable_growth')">Scalable Growth</a></li>
                 </ul>
             </div>
         </div>

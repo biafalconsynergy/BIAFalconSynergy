@@ -109,6 +109,11 @@
         color: #ffffff;
     }
 
+    .dropdown-item.active, .dropdown-item:active{
+        background-color: #2f2f2f;
+        color: #ffffff;
+    }
+
     .btn-contact {
         background-color: #212529;
         color: white !important;

@@ -88,11 +88,12 @@
 		<section class="team-section" id="our_people">
     <div class="container my-5 text-center">
         <h2>Our People</h2>
+        <br>
         <div class="row">
             <div class="col-md-4 text-center">
                 <div class="person">
                     <div class="icon mb-3">
-                        <img src="Images/Image7a.jpeg" alt="Founder" class="img-fluid mb-3">
+                        <img src="Images/Image7b.jpeg" alt="Founder" class="img-fluid mb-3">
                     </div>
                     <h3>Founder</h3>
                     <p>Our commitment to precision and innovation has earned us the trust of industry leaders.</p>
@@ -110,7 +111,7 @@
             <div class="col-md-4 text-center">
                 <div class="person">
                     <div class="icon mb-3">
-                        <img src="Images/image7a.jpeg" alt="Mechanical Engineer" class="img-fluid mb-3">
+                        <img src="Images/image7d.jpg" alt="Mechanical Engineer" class="img-fluid mb-3">
                     </div>
                     <h3>Mechanical Engineer</h3>
                     <p>Our strategic decisions are guided by a commitment to excellence and ethical principles.</p>
